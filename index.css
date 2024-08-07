@@ -87,6 +87,20 @@
   padding: 10px;
   margin-top: 4px;
 }
+.baskets {
+  display: flex;
+}
+
+.count {
+  width: 20px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+  color: white;
+  border-radius: 50%;
+}
 
 #search-input {
   width: 26em;
