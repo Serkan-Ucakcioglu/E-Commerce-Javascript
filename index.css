@@ -20,10 +20,10 @@
 }
 
 .container {
-  width: 90%;
+  width: 95%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .product-title {
@@ -40,9 +40,12 @@
 }
 
 .head-left {
+  width: 20rem;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+
+  justify-content: flex-end;
+  margin-left: 0;
+  align-content: center;
 }
 
 .basket {
@@ -57,7 +60,7 @@
   padding: 5px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   background-color: rgb(79 70 229);
   border: 1px solid rgb(79 70 229);
   color: white;
@@ -65,8 +68,31 @@
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
+  margin: auto;
 }
 
 .login-btn:hover {
   background-color: rgb(56, 47, 224);
+}
+
+#search {
+  position: relative;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  margin-right: 10px;
+}
+.search-svg {
+  position: absolute;
+  padding: 10px;
+  margin-top: 4px;
+}
+
+#search-input {
+  width: 26em;
+  height: 3em;
+  padding: 2px 50px;
+  background-color: rgb(241, 241, 241);
+  border: none;
+  border-radius: 5px;
 }
