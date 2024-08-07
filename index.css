@@ -6,7 +6,40 @@
 
 .header {
   width: 100%;
+  display: flex;
+  justify-content: center;
   height: 95px;
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
     0 2px 6px 2px rgba(60, 64, 67, 0.149);
+  padding: 10px;
+}
+
+.shoplane-title {
+  font-size: 35px;
+  font-family: Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.product-title {
+  font-size: 16px;
+  font-family: "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.head-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.c2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
