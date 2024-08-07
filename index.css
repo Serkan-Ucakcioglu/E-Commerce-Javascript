@@ -23,6 +23,7 @@
   width: 90%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .product-title {
@@ -31,7 +32,7 @@
 }
 
 .head-title {
-  width: 100%;
+  width: 800px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -39,7 +40,12 @@
 }
 
 .c2 {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.basket {
+  background-color: rgba(255, 255, 255, 0);
+  width: 50px;
+  height: 50px;
 }
