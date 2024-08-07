@@ -55,12 +55,13 @@
 }
 
 .login-btn {
-  width: 50px;
+  width: 55px;
   height: 40px;
   padding: 5px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  text-align: center;
   background-color: rgb(79 70 229);
   border: 1px solid rgb(79 70 229);
   color: white;
