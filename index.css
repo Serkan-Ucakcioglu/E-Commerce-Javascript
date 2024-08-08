@@ -8,6 +8,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 90px;
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
     0 2px 6px 2px rgba(60, 64, 67, 0.149);
@@ -21,6 +22,9 @@
 
 .container {
   width: 95%;
+}
+
+.head-bar {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -110,4 +114,27 @@
   background-color: rgb(241, 241, 241);
   border: none;
   border-radius: 5px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.slider {
+  width: 65%;
+  margin-top: 10px;
+}
+
+.slider img {
+  width: 100%;
+  display: none;
+  height: 400px;
+}
+
+.slider img:nth-child(1) {
+  display: block;
+}
+.active-img {
+  display: block;
 }
