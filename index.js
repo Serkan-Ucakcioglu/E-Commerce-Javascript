@@ -27,6 +27,8 @@ function showSlider(index) {
 function prevStep() {
   clearInterval(invalidTimer);
   sliderIndex--;
+  console.log(sliderIndex, "prev");
+
   showSlider(sliderIndex);
 }
 
