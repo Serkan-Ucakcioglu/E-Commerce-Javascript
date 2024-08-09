@@ -29,4 +29,5 @@ function nextStep() {
   sliderIndex++;
   showSlider(sliderIndex);
 }
+
 window.addEventListener("DOMContentLoaded", startSlider);
