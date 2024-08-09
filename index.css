@@ -122,19 +122,22 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  transition: margin-right 4s;
 }
 .slider {
   width: 65%;
   margin-top: 50px;
   position: relative;
 }
+.slider button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
 
 .slider img {
   width: 100%;
   display: none;
   height: 400px;
-  transition: margin-right 4s;
 }
 
 .active-img {
@@ -148,11 +151,10 @@ section {
   top: 50%;
   right: 0;
   background: transparent;
-  border: none;
-  outline: none;
-  box-shadow: none;
+
   cursor: pointer;
 }
+
 .next-slider svg {
   width: 50px;
   height: 50px;
@@ -163,11 +165,9 @@ section {
   left: 0;
   top: 50%;
   background: transparent;
-  border: none;
-  outline: none;
-  box-shadow: none;
   cursor: pointer;
 }
+
 .prev-slider svg {
   width: 50px;
   height: 50px;
