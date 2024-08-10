@@ -186,3 +186,14 @@ section {
     opacity: 1;
   }
 }
+
+/* Product List */
+.product {
+  background: red;
+  display: inline;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+}
