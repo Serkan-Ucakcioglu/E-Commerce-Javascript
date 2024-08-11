@@ -1,9 +1,17 @@
-import base_url from "./api";
+import base_url from "./api.js";
 
-async function getCategories() {
+const categoryDiv = document.querySelector(".check");
+
+export async function getCategories() {
   const response = await fetch(`${base_url}/categories`);
   const data = await response.json();
-  console.log(data, "data");
+
+  data.forEach((item) => {
+    categoryDiv.innerHTML += ` <label>
+              <input type="checkbox" id="${item}" />
+             ${item.charAt(0).toUpperCase() + item.slice(1)}
+            </label>`;
+  });
 }
 
 getCategories();

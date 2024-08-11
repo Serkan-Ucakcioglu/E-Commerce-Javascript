@@ -1,4 +1,7 @@
+import { getCategories } from "./category.js";
+
 const slider = document.querySelectorAll(".slider img");
+
 let sliderIndex = 0;
 let invalidTimer = null;
 
