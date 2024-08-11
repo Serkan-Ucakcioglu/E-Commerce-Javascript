@@ -46,7 +46,8 @@ a {
 }
 
 .product-title {
-  font-size: 16px;
+  font-size: 18px;
+  align-self: center;
   font-family: "IBM Plex Mono", monospace;
   color: black;
 }
