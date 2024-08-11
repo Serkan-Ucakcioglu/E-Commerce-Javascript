@@ -52,17 +52,16 @@ a {
 }
 
 .head-title {
-  width: 800px;
+  width: 50rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .head-left {
   width: 20rem;
   display: flex;
-
   justify-content: flex-end;
   margin-left: 0;
   align-content: center;
