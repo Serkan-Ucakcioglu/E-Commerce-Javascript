@@ -1,4 +1,5 @@
 import base_url from "./api.js";
+import { capitalizeFirstLetter } from "./utils/firsletter.js";
 
 const categoryDiv = document.querySelector(".check");
 
@@ -9,9 +10,7 @@ export async function getCategories() {
   data.forEach((item) => {
     categoryDiv.innerHTML += ` <label>
               <input type="checkbox" id="${item}" />
-             ${item.charAt(0).toUpperCase() + item.slice(1)}
+             ${capitalizeFirstLetter(item)}
             </label>`;
   });
 }
-
-getCategories();

@@ -1,18 +1,16 @@
-import { getCategories } from "./category.js";
-
 const slider = document.querySelectorAll(".slider img");
 
 let sliderIndex = 0;
 let invalidTimer = null;
 
-function startSlider() {
+export function initializeSlider() {
   if (sliderIndex < 3) {
     slider[sliderIndex].classList.add("active-img");
     invalidTimer = setInterval(nextStep, 3500);
   }
 }
 
-function showSlider(index) {
+export function showSlider(index) {
   if (index >= slider.length) {
     sliderIndex = 0;
   } else if (index < 0) {
@@ -32,5 +30,3 @@ function nextStep() {
   sliderIndex++;
   showSlider(sliderIndex);
 }
-
-window.addEventListener("DOMContentLoaded", startSlider);
