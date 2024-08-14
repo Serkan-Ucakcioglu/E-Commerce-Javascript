@@ -2,6 +2,8 @@ const slider = document.querySelectorAll(".slider img");
 
 let sliderIndex = 0;
 let invalidTimer = null;
+const nextButton = document.querySelector(".next-slider");
+const prevButton = document.querySelector(".prev-slider");
 
 export function initializeSlider() {
   if (sliderIndex < 3) {
@@ -21,12 +23,14 @@ export function showSlider(index) {
 }
 
 function prevStep() {
-  clearInterval(invalidTimer);
   sliderIndex--;
   showSlider(sliderIndex);
 }
 
-function nextStep() {
+export function nextStep() {
   sliderIndex++;
   showSlider(sliderIndex);
 }
+
+nextButton.addEventListener("click", nextStep);
+prevButton.addEventListener("click", prevStep);

@@ -218,5 +218,42 @@ section {
   flex-direction: column;
   align-items: start;
   height: 9rem;
+  margin-top: 10px;
   justify-content: space-evenly;
+}
+.category-item {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.category-item input {
+  display: none;
+}
+
+.item-title {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.checkbox {
+  width: 27px;
+  display: inline;
+  height: 27px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.a:checked + .checkbox {
+  color: white;
+  border: none;
+  background-color: blue;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogIDxwYXRoIGQ9Ik0yMCA2TDkgMTdsLTUtNSIvPgo8L3N2Zz4=");
+  background-size: 27px 27px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
 }

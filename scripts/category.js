@@ -8,9 +8,12 @@ export async function getCategories() {
   const data = await response.json();
 
   data.forEach((item) => {
-    categoryDiv.innerHTML += ` <label>
-              <input type="checkbox" id="${item}" />
+    categoryDiv.innerHTML += `<div class="category-item">
+              <input type="checkbox" id="${item}" class="a" />
+              <label for="${item}" class="checkbox"></label>
+                 <label for="${item}" class="item-title">
              ${capitalizeFirstLetter(item)}
-            </label>`;
+            </label>
+    </div>`;
   });
 }
