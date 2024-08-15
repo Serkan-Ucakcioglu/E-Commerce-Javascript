@@ -18,6 +18,16 @@ export async function getCategories() {
   });
 }
 
+async function getSelectedCategory(query) {
+  let endpoint = `${base_url}/category`;
+
+  if (query) {
+    endpoint += `/${query}`;
+  }
+  const response = await fetch(endpoint);
+  const data = await response.json();
+}
+
 categoryDiv.addEventListener("click", (event) => {
   if (event.target.matches("input[type='checkbox']")) {
     const checkbox = event.target;
@@ -36,6 +46,5 @@ categoryDiv.addEventListener("click", (event) => {
     } else {
       checkbox.classList.remove("on");
     }
-    console.log(checkbox.id, "id");
   }
 });
