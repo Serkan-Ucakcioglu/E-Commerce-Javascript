@@ -17,6 +17,7 @@ export async function getCategories() {
     </div>`;
   });
 }
+
 categoryDiv.addEventListener("click", (event) => {
   if (event.target.matches("input[type='checkbox']")) {
     const checkbox = event.target;
@@ -35,5 +36,6 @@ categoryDiv.addEventListener("click", (event) => {
     } else {
       checkbox.classList.remove("on");
     }
+    console.log(checkbox.id, "id");
   }
 });
