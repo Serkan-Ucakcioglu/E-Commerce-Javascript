@@ -23,9 +23,8 @@ async function getSelectedCategory(query) {
   let endpoint = "";
 
   if (query) {
-    endpoint += `${query}`;
+    endpoint += `/category/${query}`;
   }
-
   getProducts(endpoint);
 }
 

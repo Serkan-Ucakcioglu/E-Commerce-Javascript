@@ -11,10 +11,9 @@ export async function getProducts(query) {
   }
 
   const response = await fetch(`${endpoint}`);
-  console.log(response);
-
   const data = await response.json();
 
+  productList.innerHTML = "";
   data.forEach((item) => {
     productList.innerHTML += `<div class="card" id="${item.id}">
             <img
