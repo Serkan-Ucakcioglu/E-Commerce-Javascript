@@ -31,7 +31,6 @@ async function getSelectedCategory(query) {
 categoryDiv.addEventListener("click", (event) => {
   if (event.target.matches("input[type='checkbox']")) {
     const checkbox = event.target;
-
     const allCheckboxes = document.querySelectorAll(".category-checkbox");
 
     allCheckboxes.forEach((cb) => {
