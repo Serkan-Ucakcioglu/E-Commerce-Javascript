@@ -247,7 +247,7 @@ section {
   border: 1px solid gray;
 }
 
-.a:checked + .checkbox {
+.category-checkbox:checked + .checkbox {
   color: white;
   border: none;
   background-color: blue;
