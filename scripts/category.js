@@ -1,4 +1,5 @@
 import base_url from "./api.js";
+import { getProducts } from "./Product/product.js";
 import { capitalizeFirstLetter } from "./utils/firsletter.js";
 
 const categoryDiv = document.querySelector(".check");
@@ -19,13 +20,13 @@ export async function getCategories() {
 }
 
 async function getSelectedCategory(query) {
-  let endpoint = `${base_url}/category`;
+  let endpoint = "";
 
   if (query) {
-    endpoint += `/${query}`;
+    endpoint += `${query}`;
   }
-  const response = await fetch(endpoint);
-  const data = await response.json();
+
+  getProducts(endpoint);
 }
 
 categoryDiv.addEventListener("click", (event) => {
@@ -45,5 +46,6 @@ categoryDiv.addEventListener("click", (event) => {
     } else {
       checkbox.classList.remove("on");
     }
+    getSelectedCategory(checkbox.id);
   }
 });

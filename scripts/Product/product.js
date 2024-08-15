@@ -3,8 +3,16 @@ import { capitalizeFirstLetter } from "../utils/firsletter.js";
 
 const productList = document.querySelector(".product-list");
 
-export async function getProducts() {
-  const response = await fetch(`${base_url}`);
+export async function getProducts(query) {
+  let endpoint = `${base_url}`;
+
+  if (query) {
+    endpoint += `/${query}`;
+  }
+
+  const response = await fetch(`${endpoint}`);
+  console.log(response);
+
   const data = await response.json();
 
   data.forEach((item) => {
