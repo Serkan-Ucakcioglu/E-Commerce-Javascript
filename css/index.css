@@ -199,7 +199,7 @@ section {
 
 /* Product List */
 .product {
-  background: gray;
+  background: white;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -256,4 +256,47 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 4px;
+}
+/* Product List */
+
+.product-list {
+  height: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px 10px 10px 10px;
+  -moz-box-shadow: -1px 1px 24px 10px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 24px 10px rgba(139, 139, 139, 0.75);
+}
+
+.product-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-category {
+  width: 70px;
+  text-align: center;
+  height: 30px;
+  background: gray;
+  font-weight: bold;
+  border-radius: 60px;
+  color: white;
+  padding: 5px;
+}
+
+.card-price {
+  font-size: 25px;
+  font-weight: 600;
 }
