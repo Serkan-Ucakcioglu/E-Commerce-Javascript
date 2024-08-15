@@ -2,7 +2,7 @@ import base_url from "./api.js";
 import { capitalizeFirstLetter } from "./utils/firsletter.js";
 
 const categoryDiv = document.querySelector(".check");
-let nulls = [];
+
 export async function getCategories() {
   const response = await fetch(`${base_url}/categories`);
   const data = await response.json();
