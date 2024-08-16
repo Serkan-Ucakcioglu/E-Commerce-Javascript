@@ -7,7 +7,7 @@ export async function getProducts(query) {
   let endpoint = `${base_url}`;
 
   if (query) {
-    endpoint += `/${query}`;
+    endpoint = `${base_url}/${query}`;
   }
 
   const response = await fetch(`${endpoint}`);
@@ -15,7 +15,7 @@ export async function getProducts(query) {
 
   productList.innerHTML = "";
   data.forEach((item) => {
-    productList.innerHTML += `<div class="card" id="${item.id} >
+    productList.innerHTML += `<div class="card" id="${item.id}">
             <div>
             <img
               class="product-img"
@@ -23,14 +23,17 @@ export async function getProducts(query) {
               alt="img"
             />
             </div>
-            <div class="items"><h1 class="card-title">${capitalizeFirstLetter(
-              item.title
-            )}</h1>
+
+            <div class="items">
+            <h1 class="card-title">${capitalizeFirstLetter(item.title)}</h1>
+            <div style="width: 100%; display:flex; justify-content:space-between; align-items:center;">
             <div class="card-category">#${capitalizeFirstLetter(
               item.category
             )}</div>
             
-            <div class="card-price">$${item.price}</div></div>
+            <div class="card-price" >$${item.price}</div>
+            </div>
+            </div>
           </div>`;
   });
 }

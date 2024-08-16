@@ -23,7 +23,7 @@ async function getSelectedCategory(query) {
   let endpoint = "";
 
   if (query) {
-    endpoint += `/category/${query}`;
+    endpoint += `category/${query}`;
   }
   getProducts(endpoint);
 }
@@ -42,9 +42,10 @@ categoryDiv.addEventListener("click", (event) => {
 
     if (checkbox.checked) {
       checkbox.classList.add("on");
+      getSelectedCategory(checkbox.id);
     } else {
       checkbox.classList.remove("on");
+      getSelectedCategory();
     }
-    getSelectedCategory(checkbox.id);
   }
 });

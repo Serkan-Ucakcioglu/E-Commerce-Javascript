@@ -23,6 +23,7 @@ export function showSlider(index) {
 }
 
 function prevStep() {
+  clearInterval(invalidTimer);
   sliderIndex--;
   showSlider(sliderIndex);
 }
