@@ -16,17 +16,21 @@ export async function getProducts(query) {
   productList.innerHTML = "";
   data.forEach((item) => {
     productList.innerHTML += `<div class="card" id="${item.id}">
+            <div>
             <img
               class="product-img"
               src="${item.image}"
               alt="img"
             />
-            <h1 class="card-title">${capitalizeFirstLetter(item.title)}</h1>
+            </div>
+            <div class="items"><h1 class="card-title">${capitalizeFirstLetter(
+              item.title
+            )}</h1>
             <div class="card-category">${capitalizeFirstLetter(
               item.category
             )}</div>
             
-            <div class="card-price">$${item.price}</div>
+            <div class="card-price">$${item.price}</div></div>
           </div>`;
   });
 }
