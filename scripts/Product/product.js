@@ -26,7 +26,7 @@ export async function getProducts(query) {
             <div class="items"><h1 class="card-title">${capitalizeFirstLetter(
               item.title
             )}</h1>
-            <div class="card-category">${capitalizeFirstLetter(
+            <div class="card-category">#${capitalizeFirstLetter(
               item.category
             )}</div>
             
