@@ -18,7 +18,6 @@ a {
 
 /* Header */
 .header {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,6 +64,7 @@ a {
   display: flex;
   justify-content: flex-end;
   margin-left: 0;
+  margin-right: 50px !important;
   align-content: center;
 }
 
@@ -257,20 +257,61 @@ section {
   background-repeat: no-repeat;
   border-radius: 4px;
 }
+@media only screen and (max-width: 767px) {
+  .product {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 10px;
+  }
+
+  .slider img {
+    width: 100%;
+    height: 300px;
+  }
+
+  #search-input {
+    display: none;
+  }
+  .search-svg {
+    display: none;
+  }
+  .category {
+    display: inline;
+    height: 8rem;
+  }
+  .category h1 {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .check {
+    display: flex;
+    flex-direction: column;
+  }
+  .category-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 10px;
+    justify-content: center;
+  }
+}
 /* Product List */
 
 .product-list {
   height: auto;
   display: flex;
+  max-width: 1400px;
   gap: 20px;
   flex-wrap: wrap;
   margin-left: 50px;
 }
 
 .card {
-  width: 300px;
+  max-width: 290px;
   display: flex;
-
   flex-direction: column;
   align-items: center;
   justify-content: start;
