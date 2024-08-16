@@ -15,7 +15,7 @@ export async function getProducts(query) {
 
   productList.innerHTML = "";
   data.forEach((item) => {
-    productList.innerHTML += `<div class="card" id="${item.id}">
+    productList.innerHTML += `<div class="card" id="${item.id} >
             <div>
             <img
               class="product-img"
