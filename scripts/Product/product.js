@@ -26,7 +26,7 @@ export async function getProducts(query) {
 
             <div class="items">
             <h1 class="card-title">${capitalizeFirstLetter(item.title)}</h1>
-            <div style="width: 100%; display:flex; justify-content:space-between; align-items:center;">
+            <div class="card-detail">
             <div class="card-category">#${capitalizeFirstLetter(
               item.category
             )}</div>

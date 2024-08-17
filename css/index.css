@@ -150,13 +150,13 @@ section {
 .slider img {
   width: 100%;
   display: none;
-  height: 250px;
-  object-fit: cover;
+  height: 300px;
+  object-fit: fill;
 }
 
 .active-img {
   display: block !important;
-  height: 250px;
+
   animation-name: slide;
   animation-duration: 2s;
 }
@@ -218,6 +218,7 @@ section {
   align-items: start;
   height: 9rem;
   margin-top: 10px;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .category-item {
@@ -238,7 +239,7 @@ section {
 }
 
 .checkbox {
-  width: 1.4rempx;
+  width: 1.4rem;
   display: inline;
   height: 1.4rem;
   background: white;
@@ -317,6 +318,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+  margin-top: 5px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -345,6 +347,11 @@ section {
   .slider img {
     width: 100%;
     object-fit: fill;
+    min-height: 200px;
+  }
+
+  .active-img {
+    display: block;
   }
   .product-title {
     display: none;
