@@ -305,7 +305,7 @@ section {
 .product-list {
   display: flex;
   max-width: 1300px;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
@@ -379,16 +379,16 @@ section {
     flex-direction: column;
     gap: 1px;
     padding: 10px;
+    margin-top: 5px;
   }
 
   .category {
     display: inline;
     height: 9rem;
-    padding: 0.2rem;
+    padding: 0.3rem;
   }
   .category h1 {
     text-align: center;
-    margin-bottom: 20px;
   }
 
   .check {
