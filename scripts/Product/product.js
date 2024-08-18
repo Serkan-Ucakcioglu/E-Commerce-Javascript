@@ -33,6 +33,7 @@ export async function getProducts(query) {
             
             <div class="card-price" >$${item.price}</div>
             </div>
+            <button class="view-btn">View Product</button>
             </div>
           </div>`;
   });
