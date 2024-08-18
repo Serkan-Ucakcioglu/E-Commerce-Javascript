@@ -377,10 +377,11 @@ section {
   font-size: 14px;
   font-family: Calibri, "Trebuchet MS", sans-serif;
   border: none;
+  text-align: center;
   border-radius: 5px;
 }
 .view-btn:hover {
-  background: #0d6efd;
+  background: #0f5aca;
 }
 
 .card-detail {
