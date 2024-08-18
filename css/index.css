@@ -317,9 +317,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  padding: 10px;
-  gap: 10px;
+  padding: 8px;
   border: 2px solid white;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
@@ -331,7 +329,7 @@ section {
 
 .product-img {
   width: 100%;
-  height: 17rem;
+  height: 16rem;
   object-fit: contain;
 }
 
@@ -348,7 +346,7 @@ section {
   max-width: 10rem;
   text-align: center;
   height: 1.7rem;
-  background: rgb(41, 36, 124);
+  background: rgb(58, 57, 93);
   font-weight: bold;
   border-radius: 60px;
   color: white;
@@ -364,9 +362,8 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
-  gap: 15px;
-  margin-top: 5px;
+  gap: 1rem;
+  margin-top: 8px;
 }
 .view-btn {
   width: 95%;
