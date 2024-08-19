@@ -36,5 +36,15 @@ export async function getProducts(query) {
             <a class="view-btn">View Product</a>
             </div>
           </div>`;
+
+    const viewBtn = document.querySelectorAll(".view-btn");
+    viewBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        console.log("click");
+        const productId = item.id;
+        const productCategory = item.category;
+        window.location.href = `product.html?id=${productId}&category=${productCategory}`;
+      });
+    });
   });
 }
