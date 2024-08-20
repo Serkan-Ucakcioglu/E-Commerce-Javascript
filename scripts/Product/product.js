@@ -17,7 +17,6 @@ export async function getProducts(query) {
   data.forEach((item) => {
     const cardHTML = createCard(item);
     productList.innerHTML += cardHTML;
-
     const viewBtn = document.querySelectorAll(".view-btn");
     viewBtn.forEach((btn) => {
       btn.addEventListener("click", () => {
