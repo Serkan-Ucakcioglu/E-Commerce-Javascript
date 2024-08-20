@@ -492,6 +492,9 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 10px;
+  > span {
+    font-size: 20px;
+  }
 }
 
 .product-description {

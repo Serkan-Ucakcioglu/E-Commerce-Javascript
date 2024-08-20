@@ -22,7 +22,7 @@ async function getProductDetail() {
           </div>
           <div class="details-product">
             <div class="product-description">
-  ${capitalizeFirstLetter(data.description)}
+<strong>Description</strong>:${capitalizeFirstLetter(data.description)}
             </div>
             <span><strong>Price: </strong>$${data.price}</span>
             <span><strong>Price: </strong> ${capitalizeFirstLetter(
