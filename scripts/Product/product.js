@@ -1,17 +1,11 @@
-import base_url from "../api.js";
+import base_url from "../Api/api.js";
+import { useFetch } from "../Api/useFetch.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 
 const productList = document.querySelector(".product-list");
 
 export async function getProducts(query) {
-  let endpoint = `${base_url}`;
-
-  if (query) {
-    endpoint = `${base_url}/${query}`;
-  }
-
-  const response = await fetch(`${endpoint}`);
-  const data = await response.json();
+  const data = await useFetch(query);
 
   productList.innerHTML = "";
   data.forEach((item) => {

@@ -1,12 +1,11 @@
-import base_url from "./api.js";
 import { getProducts } from "./Product/product.js";
+import { useFetch } from "./Api/useFetch.js";
 import { capitalizeFirstLetter } from "./utils/firsletter.js";
 
 const categoryDiv = document.querySelector(".check");
 
 export async function getCategories() {
-  const response = await fetch(`${base_url}/categories`);
-  const data = await response.json();
+  const data = await useFetch("categories");
 
   data.forEach((item) => {
     categoryDiv.innerHTML += `<div class="category-item" data-item-name="${item}">
