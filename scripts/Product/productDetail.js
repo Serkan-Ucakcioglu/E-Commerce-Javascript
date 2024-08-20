@@ -5,13 +5,9 @@ import { capitalizeFirstLetter } from "../utils/firsletter.js";
 let params = new URLSearchParams(window.location.search);
 let productId = params.get("id");
 const productElement = document.querySelector(".products .container");
-console.log(productElement);
-
-console.log(productId, "params");
 
 async function getProductDetail() {
   const data = await useFetch(`${productId}`);
-  console.log(data);
 
   productElement.innerHTML = `
   <div class="product-detail" id=${data.id}>
