@@ -3,7 +3,7 @@ export function createHeader() {
   selectedElement.innerHTML = ` <div class="container">
           <div class="head-bar">
             <div class="head-title">
-              <h1 class="shoplane-title">SHOPLANE</h1>
+              <a href="/" class="shoplane-title">SHOPLANE</a>
               <h1 class="product-title">Product</h1>
               <h1 class="product-title">Product</h1>
             </div>
