@@ -13,7 +13,7 @@ async function getProductDetail() {
   console.log(data);
 
   productElement.innerHTML = `
-  <div class="product-detail">
+  <div class="product-detail" id=${data.id}>
   <div class="product-images">
             <h1>${data.title}</h1>
             <img
@@ -27,9 +27,9 @@ async function getProductDetail() {
             <div class="product-description">
   ${data.description}
             </div>
-            <span><strong>Price: </strong>$109</span>
-            <span><strong>Price: </strong> Men</span>
-            <span> <strong>Price: </strong> 3.9</span>
+            <span><strong>Price: </strong>$${data.price}</span>
+            <span><strong>Price: </strong> ${data.category}</span>
+            <span> <strong>Rating: </strong> ${data.rating.rate} (${data.rating.count} reviews)</span>
           </div>
           </div>`;
 }
