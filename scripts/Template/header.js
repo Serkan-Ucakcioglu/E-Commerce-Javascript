@@ -41,7 +41,7 @@ export function createHeader() {
                 />
                 <div class="count"><strong>2</strong></div>
               </a>
-              <a href="#" class="login-btn">Login</a>
+              <a href="/login.html" class="login-btn">Login</a>
             </div>
           </div>
         </div>`;
