@@ -8,8 +8,12 @@ let category = params.get("category");
 const productElement = document.querySelector(".products .container");
 
 async function getProductDetail() {
-  const data = await useFetch(`${productId}`);
-  const categorys = await useFetch(`${category}`);
+  try {
+    const data = await useFetch(`${productId}`);
+    const categorys = await useFetch(`${category}`);
+  } catch (error) {
+    alert(error);
+  }
   console.log(categorys, "category");
 
   productElement.innerHTML = `
