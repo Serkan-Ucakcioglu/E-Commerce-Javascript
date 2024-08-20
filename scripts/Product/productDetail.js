@@ -9,37 +9,37 @@ const productElement = document.querySelector(".products .container");
 
 async function getProductDetail() {
   try {
-    const data = await useFetch(`${productId}`);
-    const categorys = await useFetch(`${category}`);
-  } catch (error) {
-    alert(error);
-  }
-  console.log(categorys, "category");
-
-  productElement.innerHTML = `
-  <div class="product-detail" id=${data.id}>
+    const [data1, data2] = await Promise.all([
+      useFetch(`${productId}`),
+      useFetch(`category/${category}`),
+    ]);
+    productElement.innerHTML = `
+  <div class="product-detail" id=${data1.id}>
   <div class="product-images">
-            <h1>${capitalizeFirstLetter(data.title)}</h1>
+            <h1>${capitalizeFirstLetter(data1.title)}</h1>
             <img
               width="400px"
               heigh="400px"
-              src=${data.image}
+              src=${data1.image}
               alt="image"
             />
           </div>
           <div class="details-product">
             <div class="product-description">
-<strong>Description</strong>:${capitalizeFirstLetter(data.description)}
+<strong>Description</strong>:${capitalizeFirstLetter(data1.description)}
             </div>
-            <span><strong>Price: </strong>$${data.price}</span>
+            <span><strong>Price: </strong>$${data1.price}</span>
             <span><strong>Price: </strong> ${capitalizeFirstLetter(
-              data.category
+              data1.category
             )}</span>
-            <span> <strong>Rating: </strong> ${data.rating.rate} (${
-    data.rating.count
-  } reviews)</span>
+            <span> <strong>Rating: </strong> ${data1.rating.rate} (${
+      data1.rating.count
+    } reviews)</span>
           </div>
           </div>`;
+  } catch (error) {
+    alert(error);
+  }
 }
 
 getProductDetail();
