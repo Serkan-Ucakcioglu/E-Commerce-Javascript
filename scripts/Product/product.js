@@ -1,4 +1,3 @@
-import base_url from "../Api/api.js";
 import { useFetch } from "../Api/useFetch.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 
