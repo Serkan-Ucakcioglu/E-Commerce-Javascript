@@ -481,9 +481,6 @@ a {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  > h1 {
-    margin-bottom: 20px;
-  }
 }
 
 .details-product {
@@ -495,6 +492,10 @@ a {
   > span {
     font-size: 16px;
     font-family: "IBM Plex Mono", monospace;
+  }
+  > h3 {
+    white-space: pre-line;
+    white-space-collapse: collapse;
   }
 }
 

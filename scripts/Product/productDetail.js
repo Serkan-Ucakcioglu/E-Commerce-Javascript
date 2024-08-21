@@ -16,7 +16,7 @@ async function getProductDetail() {
     productElement.innerHTML = `
   <div class="product-detail" id=${data1.id}>
   <div class="product-images">
-            <h3>${capitalizeFirstLetter(data1.title)}</h3>
+            
             <img
               width="400px"
               heigh="400px"
@@ -25,6 +25,7 @@ async function getProductDetail() {
             />
           </div>
           <div class="details-product">
+          <h3>${capitalizeFirstLetter(data1.title)}</h3>
             <div class="product-description">
 <strong>Description</strong>:${capitalizeFirstLetter(data1.description)}
             </div>
