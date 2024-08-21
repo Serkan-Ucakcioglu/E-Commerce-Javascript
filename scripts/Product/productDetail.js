@@ -65,6 +65,7 @@ async function getProductDetail() {
           <span> ${capitalizeFirstLetter(item.category)} </span>
           <span class="card-price">$${item.price}</span>
         </div>
+        <a  class="view-btn">View Product</a>
       </li>`;
     });
   } catch (error) {

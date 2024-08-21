@@ -537,9 +537,12 @@ a {
       font-weight: 400 !important;
     }
   }
+  > a {
+    margin-top: 5px !important;
+    padding: 5px;
+  }
   > img {
     object-fit: contain;
-
     width: 100%;
   }
 }
