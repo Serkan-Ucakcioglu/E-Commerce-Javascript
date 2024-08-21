@@ -493,12 +493,14 @@ a {
   justify-content: space-evenly;
   gap: 10px;
   > span {
-    font-size: 20px;
+    font-size: 16px;
+    font-family: "IBM Plex Mono", monospace;
   }
 }
 
 .product-description {
   white-space: pre-line;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
+  font-family: "IBM Plex Mono", monospace;
 }
