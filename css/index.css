@@ -326,6 +326,11 @@ a {
   box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
 }
 
+.card-img {
+  display: flex;
+  flex-grow: 1;
+}
+
 .card:hover {
   box-shadow: 1px 2px 8px 4px rgba(120, 119, 119, 0.649);
 }

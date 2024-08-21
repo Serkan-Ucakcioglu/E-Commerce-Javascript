@@ -12,7 +12,7 @@ export async function getProducts(query) {
   data.forEach((item) => {
     productList.innerHTML += `
       <div class="card" id="${item.id}">
-        <div>
+        <div class="card-img">
           <img
             class="product-img"
             src="${item.image}"
