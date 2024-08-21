@@ -488,12 +488,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 10px;
+  gap: 7px;
   > span {
     font-size: 16px;
     font-family: "IBM Plex Mono", monospace;
   }
-  > h3 {
+  > h4 {
     white-space: pre-line;
     white-space-collapse: collapse;
   }
