@@ -1,6 +1,7 @@
 import { useFetch } from "../Api/useFetch.js";
 import { createHeader } from "../Template/header.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
+import { viewProduct } from "./view-product.js";
 
 let params = new URLSearchParams(window.location.search);
 let productId = params.get("id");
@@ -67,15 +68,7 @@ async function getProductDetail() {
       </li>`;
     });
 
-    const viewBtns = document.querySelectorAll(".view-btn");
-    viewBtns.forEach((btn) => {
-      btn.addEventListener("click", (event) => {
-        const productId = event.currentTarget.getAttribute("data-id");
-        const productCategory =
-          event.currentTarget.getAttribute("data-category");
-        window.location.href = `product.html?id=${productId}&category=${productCategory}`;
-      });
-    });
+    viewProduct(".view-btn");
   } catch (error) {
     console.error("Error fetching product details:", error);
   }

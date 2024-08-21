@@ -1,5 +1,6 @@
 import { useFetch } from "../Api/useFetch.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
+import { viewProduct } from "./view-product.js";
 
 const productList = document.querySelector(".product-list");
 
@@ -34,12 +35,5 @@ export async function getProducts(query) {
       </div>`;
   });
 
-  const viewBtns = document.querySelectorAll(".view-btn");
-  viewBtns.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      const productId = event.currentTarget.getAttribute("data-id");
-      const productCategory = event.currentTarget.getAttribute("data-category");
-      window.location.href = `product.html?id=${productId}&category=${productCategory}`;
-    });
-  });
+  viewProduct(".view-btn");
 }
