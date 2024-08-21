@@ -14,7 +14,8 @@ async function getProductDetail() {
       useFetch(`category/${category}`),
     ]);
     productElement.innerHTML = `
-  <div class="product-detail" id=${data1.id}>
+    <div class="tree-product">
+     <div class="product-detail" id=${data1.id}>
   <div class="product-images">
             
             <img
@@ -37,7 +38,24 @@ async function getProductDetail() {
       data1.rating.count
     } reviews)</span>
           </div>
-          </div>`;
+          
+          </div>
+          <ul class="similar-category">
+      <li class="similar-card">
+        <img
+          width="100px"
+          height="100px"
+          src="https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
+          alt="image"
+        />
+        <h3>Product name</h3>
+        <div>
+          <span>Category Name</span>
+          <span>Price</span>
+        </div>
+      </li>
+    </ul></div>
+ `;
   } catch (error) {
     alert(error);
   }
