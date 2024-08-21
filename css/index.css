@@ -513,6 +513,7 @@ a {
 
 .similar-category {
   display: flex;
+
   border: 1px solid red;
   padding: 10px;
 }
@@ -521,6 +522,23 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
   border: 1px solid blue;
+  > div {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > span {
+      font-size: 15px !important;
+      font-weight: 400 !important;
+    }
+  }
+  > img {
+    object-fit: contain;
+
+    width: 100%;
+  }
 }
