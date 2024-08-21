@@ -13,8 +13,6 @@ async function getProductDetail() {
       useFetch(`${productId}`),
       useFetch(`category/${category}`),
     ]);
-    console.log(data1, "d1");
-    console.log(categoryData, "d2");
 
     productElement.innerHTML = `
     <div class="tree-product">
@@ -50,8 +48,6 @@ async function getProductDetail() {
     let similarCategory = document.querySelector(".similar-category");
 
     categoryData.forEach((item) => {
-      console.log(item, "item");
-
       similarCategory.innerHTML += `
       <li class="similar-card" id=${item.id}>
         <img
@@ -65,8 +61,20 @@ async function getProductDetail() {
           <span> ${capitalizeFirstLetter(item.category)} </span>
           <span class="card-price">$${item.price}</span>
         </div>
-        <a  class="view-btn">View Product</a>
+        <a class="view-btn" data-id="${item.id}" data-category="${
+        item.category
+      }">View Product</a>
       </li>`;
+    });
+
+    const viewBtns = document.querySelectorAll(".view-btn");
+    viewBtns.forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        const productId = event.currentTarget.getAttribute("data-id");
+        const productCategory =
+          event.currentTarget.getAttribute("data-category");
+        window.location.href = `product.html?id=${productId}&category=${productCategory}`;
+      });
     });
   } catch (error) {
     console.error("Error fetching product details:", error);

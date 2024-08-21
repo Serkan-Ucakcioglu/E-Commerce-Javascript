@@ -32,7 +32,7 @@ export async function getProducts(query) {
     const viewBtn = document.querySelectorAll(".view-btn");
     viewBtn.forEach((btn) => {
       btn.addEventListener("click", () => {
-        console.log("click");
+        console.log("click", click);
         const productId = item.id;
         const productCategory = item.category;
         window.location.href = `product.html?id=${productId}&category=${productCategory}`;
