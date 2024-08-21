@@ -60,7 +60,7 @@ async function getProductDetail() {
         <h5 class="card-title">${capitalizeFirstLetter(item.title)}</h5>
         <div>
           <span> ${capitalizeFirstLetter(item.category)} </span>
-          <span class="card-price">$${item.price}</span>
+          <span class="card-price"><strong>$</strong>${item.price}</span>
         </div>
         <a class="view-btn" data-id="${item.id}" data-category="${
         item.category
