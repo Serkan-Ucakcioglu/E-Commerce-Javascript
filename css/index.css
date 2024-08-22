@@ -532,6 +532,7 @@ a {
 .similar-category-title {
   margin-left: 20px;
   margin-bottom: 5px;
+  font-weight: 450;
   font-family: "IBM Plex Mono", monospace;
 }
 
