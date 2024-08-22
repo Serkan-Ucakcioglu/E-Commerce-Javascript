@@ -42,7 +42,10 @@ async function getProductDetail() {
     } reviews)</span>
         </div>
       </div>
-      <ul class="similar-category"></ul>
+      <h2 class="similar-category-title">Similar Product</h2>
+      <ul class="similar-category">
+        
+      </ul>
     </div>
     `;
 
@@ -50,6 +53,7 @@ async function getProductDetail() {
 
     categoryData.forEach((item) => {
       similarCategory.innerHTML += `
+    
       <li class="similar-card" id=${item.id}>
         <img
           width="100px"
