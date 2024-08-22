@@ -486,6 +486,10 @@ a {
   justify-content: center;
   align-items: center;
   gap: 15px;
+
+  > img {
+    object-fit: contain;
+  }
 }
 
 .details-product {

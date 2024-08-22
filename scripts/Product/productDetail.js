@@ -22,7 +22,6 @@ async function getProductDetail() {
           <img
             width="400px"
             height="400px"
-            style="object-fit:contain;"
             src="${data1.image}"
             alt="image"
           />
