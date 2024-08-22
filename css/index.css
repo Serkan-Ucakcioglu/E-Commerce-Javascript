@@ -247,7 +247,7 @@ a {
   background: white;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 15px;
   padding: 20px;
   margin-top: 20px;
 }
@@ -310,8 +310,8 @@ a {
   max-width: 1300px;
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
+  flex-grow: 1;
+  justify-content: space-evenly;
 }
 
 .card {
