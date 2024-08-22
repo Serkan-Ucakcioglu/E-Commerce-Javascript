@@ -247,7 +247,7 @@ a {
   background: white;
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 10px;
   padding: 20px;
   margin-top: 20px;
 }
@@ -563,6 +563,7 @@ a {
     margin-top: 5px !important;
     width: 70% !important;
     padding: 5px;
+    cursor: pointer;
   }
   > img {
     object-fit: contain;
