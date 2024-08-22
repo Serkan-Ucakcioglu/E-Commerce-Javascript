@@ -477,7 +477,8 @@ a {
 
 .products {
   width: 100%;
-  height: calc(100vh - 90px);
+  padding: 10px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -490,6 +491,8 @@ a {
   gap: 15px;
   > img {
     object-fit: contain;
+    background: transparent;
+    z-index: -1;
   }
 }
 
