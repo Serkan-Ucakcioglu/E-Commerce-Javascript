@@ -524,7 +524,7 @@ a {
 .similar-category {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   border: 1px solid red;
   padding: 10px;
   gap: 10px;
