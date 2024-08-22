@@ -471,6 +471,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   border: 1px solid gray;
+  gap: 5px;
 }
 
 .products {
@@ -522,19 +523,23 @@ a {
 
 .similar-category {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   border: 1px solid red;
   padding: 10px;
+  gap: 10px;
 }
 
 .similar-card {
-  width: 300px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
   gap: 5px;
-  border: 1px solid blue;
+  border: 1px solid rgb(183, 161, 161);
+  border-radius: 30%;
   > div {
     width: 90%;
     display: flex;
@@ -547,6 +552,7 @@ a {
   }
   > a {
     margin-top: 5px !important;
+    width: 70% !important;
     padding: 5px;
   }
   > img {
@@ -555,4 +561,7 @@ a {
     height: 100px;
     flex-grow: 1;
   }
+}
+.similar-card:hover {
+  box-shadow: 1px 2px 8px 4px rgba(120, 119, 119, 0.649);
 }
