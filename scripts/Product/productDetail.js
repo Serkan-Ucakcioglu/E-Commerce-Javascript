@@ -56,7 +56,6 @@ async function getProductDetail() {
 
     categoryData.forEach((item) => {
       similarCategory.innerHTML += `
-    
       <li class="similar-card" id=${item.id}>
         <img
           width="100px"
