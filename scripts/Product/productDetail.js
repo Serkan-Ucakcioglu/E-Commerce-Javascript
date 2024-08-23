@@ -42,6 +42,7 @@ async function getProductDetail() {
           <span><strong>Rating: </strong> ${data1.rating.rate} (${
       data1.rating.count
     } reviews)</span>
+     <a class="buy-btn">Buy</a>
         </div>
       </div>
       <h2 class="similar-category-title">Similar Product</h2>

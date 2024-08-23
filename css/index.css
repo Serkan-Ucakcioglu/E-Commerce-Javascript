@@ -391,6 +391,7 @@ a {
   border: none;
   text-align: center;
   border-radius: 5px;
+  cursor: pointer;
 }
 .view-btn:hover {
   background: #0f5aca;
@@ -574,6 +575,22 @@ a {
     height: 100px;
     flex-grow: 1;
   }
+}
+
+.buy-btn {
+  width: 100%;
+  background: #0d6efd;
+  color: white;
+  outline: none;
+  padding: 8px;
+  font-size: 14px;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buy-btn:hover {
+  background: #0f5aca;
 }
 .similar-card:hover {
   box-shadow: 1px 2px 8px 4px rgba(120, 119, 119, 0.649);
