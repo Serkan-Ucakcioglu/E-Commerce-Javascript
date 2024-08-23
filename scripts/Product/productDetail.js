@@ -1,13 +1,16 @@
 import { useFetch } from "../Api/useFetch.js";
 import { createHeader } from "../Template/header.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
+import { hideLoader, showLoader } from "../utils/loader.js";
 import { viewProduct } from "./view-product.js";
 
 let params = new URLSearchParams(window.location.search);
 let productId = params.get("id");
 let category = params.get("category");
+const productElement = document.querySelector(".products .container");
 
 async function getProductDetail() {
+  showLoader();
   try {
     let [data1, categoryData] = await Promise.all([
       useFetch(`${productId}`),
@@ -75,6 +78,8 @@ async function getProductDetail() {
   } catch (error) {
     productElement.innerHTML = `<p>Error loading product details. Please try again later.</p>`;
     console.error("Error fetching product details:", error);
+  } finally {
+    hideLoader();
   }
 }
 

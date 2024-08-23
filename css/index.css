@@ -14,18 +14,12 @@
 .loader {
   display: none;
   position: fixed;
+  width: 250px;
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   height: 100px;
-  background: red;
-  color: black;
-  transition: 300ms all;
-  > .show {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    visibility: hidden;
-  }
+  transition: all 2s ease-out;
 }
 
 a {
