@@ -11,6 +11,22 @@
   flex-direction: column;
   gap: 10px;
 }
+.loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  background: red;
+  color: black;
+  transition: 300ms all;
+  > .show {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    visibility: hidden;
+  }
+}
 
 a {
   text-decoration: none;

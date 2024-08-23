@@ -6,7 +6,6 @@ import { viewProduct } from "./view-product.js";
 let params = new URLSearchParams(window.location.search);
 let productId = params.get("id");
 let category = params.get("category");
-const productElement = document.querySelector(".products .container");
 
 async function getProductDetail() {
   try {
@@ -74,6 +73,7 @@ async function getProductDetail() {
 
     viewProduct(".view-btn");
   } catch (error) {
+    productElement.innerHTML = `<p>Error loading product details. Please try again later.</p>`;
     console.error("Error fetching product details:", error);
   }
 }
