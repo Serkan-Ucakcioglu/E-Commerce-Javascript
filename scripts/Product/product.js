@@ -1,16 +1,19 @@
 import { useFetch } from "../Api/useFetch.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
+import { hideLoader, showLoader } from "../utils/loader.js";
 import { viewProduct } from "./view-product.js";
 
 const productList = document.querySelector(".product-list");
 
 export async function getProducts(query) {
-  const data = await useFetch(query);
+  showLoader();
+  try {
+    const data = await useFetch(query);
 
-  productList.innerHTML = "";
+    productList.innerHTML = "";
 
-  data.forEach((item) => {
-    productList.innerHTML += `
+    data.forEach((item) => {
+      productList.innerHTML += `
       <div class="card" id="${item.id}">
         <div class="card-img">
           <img
@@ -29,11 +32,16 @@ export async function getProducts(query) {
             <div class="card-price">$${item.price}</div>
           </div>
           <a class="view-btn" data-id="${item.id}" data-category="${
-      item.category
-    }">View Product</a>
+        item.category
+      }">View Product</a>
         </div>
       </div>`;
-  });
-
-  viewProduct(".view-btn");
+    });
+    viewProduct(".view-btn");
+  } catch (error) {
+    console.log(error);
+    productList.innerHTML = error;
+  } finally {
+    hideLoader();
+  }
 }

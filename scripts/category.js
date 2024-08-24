@@ -1,10 +1,13 @@
 import { getProducts } from "./Product/product.js";
 import { useFetch } from "./Api/useFetch.js";
 import { capitalizeFirstLetter } from "./utils/firsletter.js";
+import { hideLoader, showLoader } from "./utils/loader.js";
 
 const categoryDiv = document.querySelector(".check");
 
+showLoader();
 export async function getCategories() {
+  hideLoader();
   const data = await useFetch("categories");
 
   data.forEach((item) => {
