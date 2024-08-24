@@ -23,11 +23,13 @@ function card() {
       const newCard = card.filter((product) => product.id !== item.id);
       card = newCard;
       localStorage.setItem("basket", JSON.stringify(card));
+      localStorage.setItem("basketCount", basketCount);
     },
     updateQuantity: (item) => {
       let isProductInBasket = card.find((product) => product.id === item.id);
       if (!isProductInBasket) {
-        basketCount--;
+        basketCount -= 1;
+        localStorage.setItem("basketCount", basketCount);
       } else {
         isProductInBasket.quantity > 1 && isProductInBasket.quantity--;
       }
