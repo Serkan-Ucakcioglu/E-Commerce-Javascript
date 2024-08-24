@@ -1,3 +1,5 @@
+import { getCount } from "../Product/Card/card.js";
+
 export function createHeader() {
   let selectedElement = document.querySelector(".header");
   selectedElement.innerHTML = ` <div class="container">
@@ -39,10 +41,16 @@ export function createHeader() {
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDSScOc9jICGGssMug0jWrOgeoFX6K78kLtw&amp;usqp=CAU"
                   alt="basket"
                 />
-                <div class="count"><strong>2</strong></div>
+                
               </a>
               <a href="/login.html" class="login-btn">Login</a>
             </div>
           </div>
         </div>`;
+
+  const basket = document.querySelector(".head-left .baskets");
+
+  if (getCount() > 0) {
+    basket.innerHTML = `<div class="count"><strong>${getCount()}</strong></div>`;
+  }
 }
