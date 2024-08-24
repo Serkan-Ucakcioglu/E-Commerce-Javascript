@@ -55,7 +55,8 @@ async function getProductDetail() {
     let addBtn = productElement.querySelector(".buy-btn");
 
     addBtn.addEventListener("click", () => {
-      addCard(data1), updateBasketCount(getCount());
+      addCard(data1);
+      updateBasketCount(getCount());
       console.log(getCount());
     });
 
@@ -92,4 +93,7 @@ async function getProductDetail() {
 
 getProductDetail();
 
-window.addEventListener("DOMContentLoaded", createHeader);
+window.addEventListener("DOMContentLoaded", () => {
+  createHeader();
+  updateBasketCount(getCount());
+});

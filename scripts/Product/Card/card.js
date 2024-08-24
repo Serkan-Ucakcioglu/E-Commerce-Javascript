@@ -1,6 +1,7 @@
 function card() {
   let card = JSON.parse(localStorage.getItem("basket")) || [];
-  let basketCount = 0;
+  let basketCount = parseInt(localStorage.getItem("basketCount"), 10) || 0;
+  console.log(basketCount, "basketcount");
 
   return {
     addCard: (item) => {
@@ -16,6 +17,7 @@ function card() {
       }
 
       localStorage.setItem("basket", JSON.stringify(card));
+      localStorage.setItem("basketCount", basketCount);
     },
     removeCard: (item) => {
       const newCard = card.filter((product) => product.id !== item.id);
