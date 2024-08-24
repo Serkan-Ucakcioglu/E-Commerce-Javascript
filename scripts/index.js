@@ -4,8 +4,10 @@ import { getProducts } from "./Product/product.js";
 import { initializeSlider } from "./slider.js";
 import { createHeader, updateBasketCount } from "./Template/header.js";
 
-window.addEventListener("DOMContentLoaded", () => {
+function init() {
   initializeSlider(), getCategories(), getProducts();
   createHeader();
   updateBasketCount(getCount());
-});
+}
+
+window.addEventListener("DOMContentLoaded", init);
