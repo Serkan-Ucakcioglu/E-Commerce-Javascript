@@ -13,5 +13,10 @@ function card() {
       isProductInBasket.quantity++;
       localStorage.setItem("basket", JSON.stringify(card));
     },
+    removeCard: (item) => {
+      const newCard = card.filter((product) => product.id !== item.id);
+      card = newCard;
+      localStorage.setItem("basket", JSON.stringify(card));
+    },
   };
 }
