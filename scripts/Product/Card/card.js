@@ -39,5 +39,5 @@ function card() {
   };
 }
 
-const { addCard } = card();
-console.log(addCard);
+export const { addCard, removeCard, updateQuantity, getCount, getCard } =
+  card();
