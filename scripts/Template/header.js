@@ -41,12 +41,17 @@ export function createHeader() {
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDSScOc9jICGGssMug0jWrOgeoFX6K78kLtw&amp;usqp=CAU"
                   alt="basket"
                 />
-                <div class="count"><strong></strong></div>
+                
               </a>
               <a href="/login.html" class="login-btn">Login</a>
             </div>
           </div>
         </div>`;
+
+  const basket = document.querySelector(".head-left .baskets");
+  if (getCount() > 0) {
+    basket.innerHTML += `<div class="count"><strong></strong></div>`;
+  }
 }
 
 export function updateBasketCount(count) {
