@@ -5,20 +5,26 @@ import { hideLoader, showLoader } from "./utils/loader.js";
 
 const categoryDiv = document.querySelector(".check");
 
-showLoader();
 export async function getCategories() {
-  hideLoader();
-  const data = await useFetch("categories");
+  showLoader();
+  try {
+    const data = await useFetch("categories");
 
-  data.forEach((item) => {
-    categoryDiv.innerHTML += `<div class="category-item" data-item-name="${item}">
+    data.forEach((item) => {
+      categoryDiv.innerHTML += `<div class="category-item" data-item-name="${item}">
               <input type="checkbox" id="${item}" class="category-checkbox" />
               <label for="${item}" class="checkbox"></label>
                  <label for="${item}" class="item-title">
              ${capitalizeFirstLetter(item)}
             </label>
     </div>`;
-  });
+    });
+  } catch (error) {
+    console.log(error);
+    categoryDiv.innerHTML = error;
+  } finally {
+    hideLoader;
+  }
 }
 
 async function getSelectedCategory(query) {
