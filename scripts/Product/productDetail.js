@@ -5,6 +5,11 @@ import { hideLoader, showLoader } from "../utils/loader.js";
 import { addCard, getCount } from "./Card/card.js";
 import { viewProduct } from "./view-product.js";
 
+window.addEventListener("DOMContentLoaded", () => {
+  createHeader();
+  updateBasketCount(getCount());
+});
+
 let params = new URLSearchParams(window.location.search);
 let productId = params.get("id");
 let category = params.get("category");
@@ -57,7 +62,6 @@ async function getProductDetail() {
     addBtn.addEventListener("click", () => {
       addCard(data1);
       updateBasketCount(getCount());
-      console.log(getCount());
     });
 
     let similarCategory = document.querySelector(".similar-category");
@@ -92,8 +96,3 @@ async function getProductDetail() {
 }
 
 getProductDetail();
-
-window.addEventListener("DOMContentLoaded", () => {
-  createHeader();
-  updateBasketCount(getCount());
-});
