@@ -47,8 +47,6 @@ export function createHeader() {
             </div>
           </div>
         </div>`;
-
-  const basket = document.querySelector(".head-left .baskets");
 }
 
 export function updateBasketCount(count) {
