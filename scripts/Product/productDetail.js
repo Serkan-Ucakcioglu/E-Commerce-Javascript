@@ -1,7 +1,8 @@
 import { useFetch } from "../Api/useFetch.js";
-import { createHeader } from "../Template/header.js";
+import { createHeader, updateBasketCount } from "../Template/header.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
+import { addCard, getCount } from "./Card/card.js";
 import { viewProduct } from "./view-product.js";
 
 let params = new URLSearchParams(window.location.search);
@@ -51,6 +52,12 @@ async function getProductDetail() {
       </ul>
     </div>
     `;
+    let addBtn = productElement.querySelector(".buy-btn");
+
+    addBtn.addEventListener("click", () => {
+      addCard(data1), updateBasketCount(getCount());
+      console.log(getCount());
+    });
 
     let similarCategory = document.querySelector(".similar-category");
 

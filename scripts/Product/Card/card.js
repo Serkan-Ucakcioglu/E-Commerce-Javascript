@@ -1,5 +1,5 @@
 function card() {
-  let card = [];
+  let card = JSON.parse(localStorage.getItem("basket")) || [];
   let basketCount = 0;
 
   return {
@@ -10,7 +10,7 @@ function card() {
           ...item,
           quantity: 1,
         });
-        basketCount++;
+        basketCount += 1;
       } else {
         isProductInBasket.quantity++;
       }
