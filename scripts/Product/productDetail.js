@@ -57,6 +57,7 @@ async function getProductDetail() {
       </ul>
     </div>
     `;
+
     let addBtn = productElement.querySelector(".buy-btn");
 
     addBtn.addEventListener("click", () => {
