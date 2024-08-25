@@ -34,12 +34,8 @@ function card() {
         isProductInBasket.quantity > 1 && isProductInBasket.quantity--;
       }
     },
-    getCount: () => {
-      return basketCount;
-    },
-    getCard: () => {
-      return card;
-    },
+    getCount: () => basketCount,
+    getCard: () => card,
   };
 }
 
