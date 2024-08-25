@@ -51,7 +51,7 @@ export function createHeader() {
 
 export function updateBasketCount(count) {
   const basket = document.querySelector(".head-left .baskets");
-  if (getCount() > 0) {
+  if (getCount() > 0 && getCount() < 2) {
     basket.innerHTML += `<div class="count"><strong></strong></div>`;
   }
   let basketCountElement = document.querySelector(".count strong");
