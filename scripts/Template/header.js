@@ -47,14 +47,13 @@ export function createHeader() {
             </div>
           </div>
         </div>`;
+}
 
+export function updateBasketCount(count) {
   const basket = document.querySelector(".head-left .baskets");
   if (getCount() > 0) {
     basket.innerHTML += `<div class="count"><strong></strong></div>`;
   }
-}
-
-export function updateBasketCount(count) {
   let basketCountElement = document.querySelector(".count strong");
   if (basketCountElement) {
     basketCountElement.textContent = count;
