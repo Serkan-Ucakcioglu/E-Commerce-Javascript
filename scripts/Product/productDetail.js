@@ -3,7 +3,7 @@ import { createHeader, updateBasketCount } from "../Template/header.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
 import { addCard, getCount } from "./Card/card.js";
-import { viewProduct } from "./view-product.js";
+import { viewProduct } from "../utils/view-product.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   createHeader();

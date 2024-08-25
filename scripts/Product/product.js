@@ -1,7 +1,7 @@
 import { useFetch } from "../Api/useFetch.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
-import { viewProduct } from "./view-product.js";
+import { viewProduct } from "../utils/view-product.js";
 
 const productList = document.querySelector(".product-list");
 
