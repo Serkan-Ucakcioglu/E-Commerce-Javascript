@@ -8,7 +8,7 @@ function basketLists() {
   console.log(card);
 
   card.map((item) => {
-    return (basketList.innerHTML = ` <div class="basket-card" id=${item.id}>
+    basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
             <div class="basket-product">
               <img
                 width="100px"
@@ -22,6 +22,7 @@ function basketLists() {
               ${item.title}
               </div>
             </div>
+            <div class="basket-operation">
             <div class="basket-quantity">${item.quantity}</div>
             <span class="basket-prices">${item.price}</span>
               <div class="remove-product">
@@ -44,7 +45,8 @@ function basketLists() {
             </g>
         </svg>
         <div>
-          </div>`);
+            </div>
+          </div>`;
   });
 }
 basketLists();
