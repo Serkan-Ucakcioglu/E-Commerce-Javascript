@@ -24,8 +24,9 @@ function basketLists() {
             </div>
             <div class="basket-quantity">${item.quantity}</div>
             <span class="basket-prices">${item.price}</span>
-              <div><svg fill="#e50606" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 408.483 408.483"
+              <div class="remove-product">
+              <svg fill="#e50606" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 408.483 408.483"
             xml:space="preserve" stroke="#e50606">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
