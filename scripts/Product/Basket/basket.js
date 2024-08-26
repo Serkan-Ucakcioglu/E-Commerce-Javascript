@@ -1,1 +1,3 @@
-console.log("hello baskeyt");
+import { createHeader } from "../../Template/header.js";
+
+window.addEventListener("DOMContentLoaded", createHeader);
