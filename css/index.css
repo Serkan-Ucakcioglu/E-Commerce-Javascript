@@ -667,3 +667,8 @@ a {
   align-items: center;
   gap: 10px;
 }
+.basket-product {
+  display: flex;
+  align-items: center;
+  white-space: pre-wrap;
+}
