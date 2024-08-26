@@ -1,5 +1,5 @@
 import { useFetch } from "../Api/useFetch.js";
-import { createHeader, updateBasketCount } from "../Template/header.js";
+import { updateBasketCount } from "../Template/header.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
 import { addCard, getCount } from "./Card/card.js";
