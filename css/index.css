@@ -375,7 +375,7 @@ a {
 }
 
 .card-price {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
 }
@@ -643,3 +643,9 @@ a {
 }
 
 /* Basket Page*/
+.tk {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
