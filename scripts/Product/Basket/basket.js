@@ -1,3 +1,3 @@
-import { createHeader } from "../../Template/header.js";
+import { uiUtils } from "../../utils/ui-utils.js";
 
-window.addEventListener("DOMContentLoaded", createHeader);
+window.addEventListener("DOMContentLoaded", uiUtils);
