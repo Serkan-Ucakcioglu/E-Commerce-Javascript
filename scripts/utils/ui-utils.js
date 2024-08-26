@@ -1,5 +1,5 @@
-import { getCount } from "../Product/Card/card";
-import { createHeader, updateBasketCount } from "../Template/header";
+import { getCount } from "../Product/Card/card.js";
+import { createHeader, updateBasketCount } from "../Template/header.js";
 
 export function uiUtils() {
   createHeader();
