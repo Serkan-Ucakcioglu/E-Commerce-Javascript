@@ -4,6 +4,7 @@ import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
 import { addCard, getCount } from "./Card/card.js";
 import { viewProduct } from "../utils/view-product.js";
+import { uiUtils } from "../utils/ui-utils.js";
 
 let params = new URLSearchParams(window.location.search);
 let productId = params.get("id");
@@ -93,7 +94,4 @@ async function getProductDetail() {
 
 getProductDetail();
 
-window.addEventListener("DOMContentLoaded", () => {
-  createHeader();
-  updateBasketCount(getCount());
-});
+window.addEventListener("DOMContentLoaded", uiUtils());
