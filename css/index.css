@@ -656,4 +656,7 @@ a {
   width: 800px;
   height: 800px;
   border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
