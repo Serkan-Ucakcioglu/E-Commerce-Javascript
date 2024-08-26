@@ -666,6 +666,8 @@ a {
   justify-content: space-evenly;
   align-items: center;
   gap: 10px;
+  border-bottom: 1px solid gray;
+  padding: 10px;
 }
 .basket-product {
   display: flex;
