@@ -660,3 +660,9 @@ a {
   flex-direction: column;
   gap: 15px;
 }
+
+.basket-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
