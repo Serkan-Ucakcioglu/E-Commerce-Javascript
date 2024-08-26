@@ -28,6 +28,7 @@ async function getProductDetail() {
             height="400px"
             src="${data1.image}"
             alt="image"
+            loading="lazy"
           />
         </div>
         <div class="details-product">

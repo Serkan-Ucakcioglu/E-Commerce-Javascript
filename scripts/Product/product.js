@@ -20,6 +20,7 @@ export async function getProducts(query) {
             class="product-img"
             src="${item.image}"
             alt="img"
+            loading="lazy"
           />
         </div>
 
