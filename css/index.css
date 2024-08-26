@@ -495,6 +495,14 @@ a {
   .similar-category-title {
     text-align: center;
   }
+
+  .similar-category {
+    justify-content: space-evenly;
+  }
+  .similar-card {
+    width: 140px !important;
+    border-radius: 10px !important;
+  }
 }
 
 .products {
