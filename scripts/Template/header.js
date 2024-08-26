@@ -35,7 +35,7 @@ export function createHeader() {
               />
             </div>
             <div class="head-left">
-              <a href="#" class="baskets">
+              <a href="basket.html" class="baskets">
                 <img
                   class="basket"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDSScOc9jICGGssMug0jWrOgeoFX6K78kLtw&amp;usqp=CAU"
