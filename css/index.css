@@ -483,6 +483,20 @@ a {
   gap: 5px;
 }
 
+@media only screen and (max-width: 767px) {
+  .product-detail {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > .product-images {
+      margin-bottom: 20px;
+    }
+  }
+  .similar-category-title {
+    text-align: center;
+  }
+}
+
 .products {
   width: 100%;
   padding: 10px;
