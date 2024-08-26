@@ -20,7 +20,7 @@ function basketLists() {
               />
               <div style="text-align:center;">
               ${item.title}
-              <span>Remove</span>
+              <span class="remove-product">Remove</span>
               </div>
             </div>
             <div class="basket-quantity">${item.quantity}</div>
