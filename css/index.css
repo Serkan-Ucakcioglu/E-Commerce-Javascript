@@ -674,16 +674,15 @@ a {
   align-items: center;
   justify-content: flex-start;
   white-space: pre-wrap;
-  flex-grow: 2;
-  > div {
-    flex: 1;
-  }
+  flex: 2;
   > img {
     flex-shrink: 0;
+    object-fit: contain;
   }
 }
 
 .basket-operation {
   display: flex;
-  flex-shrink: 0 !important;
+  justify-content: space-evenly;
+  flex: 1;
 }

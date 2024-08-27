@@ -11,8 +11,8 @@ function basketLists() {
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
             <div class="basket-product">
               <img
-                width="100px"
-                height="100px"
+                width="120"
+                height="120"
                 src=${item.image}
                 alt="image"
                 loading="lazy"
