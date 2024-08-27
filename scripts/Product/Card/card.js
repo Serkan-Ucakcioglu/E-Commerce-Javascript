@@ -32,6 +32,7 @@ function card() {
         localStorage.setItem("basketCount", basketCount);
       } else {
         isProductInBasket.quantity > 1 && isProductInBasket.quantity--;
+        localStorage.setItem("basket", JSON.stringify(card));
       }
     },
     getCount: () => basketCount,

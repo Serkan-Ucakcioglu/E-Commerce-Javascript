@@ -1,5 +1,5 @@
 import { uiUtils } from "../../utils/ui-utils.js";
-import { getCard } from "../Card/card.js";
+import { addCard, getCard, updateQuantity } from "../Card/card.js";
 
 const basketList = document.querySelector(".buy-product");
 
@@ -23,11 +23,11 @@ function basketLists() {
             </div>
             <div class="basket-operation">
             <div class="basket-quantity">
-            <button><svg class="fill-current text-gray-600 w-3 cursor-pointer" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button>
+            <button data-quantity="decrease"><svg class="fill-current text-gray-600 w-3 cursor-pointer" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button>
             <input value=${item.quantity} disabled  />
-            <button><svg class="fill-current text-gray-600 w-3 cursor-pointer" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button>
+            <button data-quantity="increase"><svg class="fill-current text-gray-600 w-3 cursor-pointer" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button>
             </div>
-            <span class="basket-prices">$${item.price}</span>
+            <span class="basket-prices">$${item.price * item.quantity}</span>
               <div class="remove-product">
               <svg fill="#e50606" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 408.483 408.483"
@@ -50,6 +50,24 @@ function basketLists() {
         <div>
             </div>
           </div>`;
+  });
+
+  const buttonQuantity = document.querySelectorAll("button[data-quantity]");
+  buttonQuantity.forEach((button) => {
+    const quantityType = button.getAttribute("data-quantity");
+    button.addEventListener("click", (e) => {
+      const basketCard = e.target.closest(".basket-card");
+      const item = getCard().find((item) => item.id == basketCard.id);
+      if (quantityType == "increase") {
+        addCard(item);
+      } else {
+        updateQuantity(item);
+      }
+      basketCard.querySelector("input").value = item.quantity;
+      basketCard.querySelector(".basket-prices").textContent = `$${
+        item.quantity * item.price
+      }`;
+    });
   });
 }
 basketLists();
