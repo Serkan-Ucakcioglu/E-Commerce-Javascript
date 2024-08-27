@@ -24,7 +24,7 @@ function basketLists() {
             </div>
             <div class="basket-operation">
             <div class="basket-quantity">${item.quantity}</div>
-            <span class="basket-prices">${item.price}</span>
+            <span class="basket-prices">$${item.price}</span>
               <div class="remove-product">
               <svg fill="#e50606" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 408.483 408.483"
