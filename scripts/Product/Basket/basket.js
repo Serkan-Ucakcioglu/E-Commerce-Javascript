@@ -12,6 +12,9 @@ const basketList = document.querySelector(".buy-product");
 
 function basketLists() {
   const card = getCard();
+  if (getCount() < 1) {
+    return (basketList.textContent = "Sepet boş");
+  }
 
   card.map((item) => {
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
