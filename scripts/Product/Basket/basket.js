@@ -1,5 +1,12 @@
+import { updateBasketCount } from "../../Template/header.js";
 import { uiUtils } from "../../utils/ui-utils.js";
-import { addCard, getCard, removeCard, updateQuantity } from "../Card/card.js";
+import {
+  addCard,
+  getCard,
+  getCount,
+  removeCard,
+  updateQuantity,
+} from "../Card/card.js";
 
 const basketList = document.querySelector(".buy-product");
 
@@ -64,7 +71,9 @@ function basketLists() {
         updateQuantity(item);
       } else if (quantityType == "remove") {
         removeCard(item);
+        basketCard.remove();
       }
+      updateBasketCount(getCount());
       basketCard.querySelector("input").value = item.quantity;
       basketCard.querySelector(".basket-prices").textContent = `$${
         item.quantity * item.price

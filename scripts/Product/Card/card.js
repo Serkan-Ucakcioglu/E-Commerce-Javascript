@@ -21,11 +21,8 @@ function card() {
     },
     removeCard: (item) => {
       const newCard = card.filter((product) => product.id !== item.id);
-      console.log(newCard);
-
       card = newCard;
-      console.log(card, "card");
-
+      basketCount -= 1;
       localStorage.setItem("basket", JSON.stringify(card));
       localStorage.setItem("basketCount", basketCount);
     },
@@ -33,11 +30,11 @@ function card() {
       let isProductInBasket = card.find((product) => product.id === item.id);
       if (!isProductInBasket) {
         basketCount -= 1;
-        localStorage.setItem("basketCount", basketCount);
       } else {
         isProductInBasket.quantity > 1 && isProductInBasket.quantity--;
-        localStorage.setItem("basket", JSON.stringify(card));
       }
+      localStorage.setItem("basketCount", basketCount);
+      localStorage.setItem("basket", JSON.stringify(card));
     },
     getCount: () => basketCount,
     getCard: () => card,
