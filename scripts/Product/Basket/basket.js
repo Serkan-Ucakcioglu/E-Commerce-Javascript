@@ -5,7 +5,6 @@ const basketList = document.querySelector(".buy-product");
 
 function basketLists() {
   const card = getCard();
-  console.log(card);
 
   card.map((item) => {
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
