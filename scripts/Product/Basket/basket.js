@@ -18,9 +18,9 @@ function basketLists() {
                 loading="lazy"
                
               />
-              <div style="text-align:center; white-space:pre-line;">
+              <span style="text-align:center; white-space:pre-line;">
               ${item.title}
-              </div>
+              </span>
             </div>
             <div class="basket-operation">
             <div class="basket-quantity">

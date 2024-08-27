@@ -660,11 +660,12 @@ a {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 10px;
+  padding: 15px;
 }
 .buy-product-title {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .basket-card {
@@ -686,6 +687,11 @@ a {
   > img {
     flex-shrink: 0;
     object-fit: contain;
+  }
+  > span {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
   }
 }
 
