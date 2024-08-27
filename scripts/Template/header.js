@@ -51,8 +51,13 @@ export function createHeader() {
 
 export function updateBasketCount(count) {
   const basket = document.querySelector(".head-left .baskets");
-  if (getCount() > 0 && getCount() < 2) {
-    basket.innerHTML += `<div class="count"><strong></strong></div>`;
+  const countDiv = document.querySelector(".head-left .baskets .count");
+  if (!countDiv) {
+    const divElement = document.createElement("div");
+    divElement.className = "count";
+    const strongElement = document.createElement("strong");
+    divElement.appendChild(strongElement);
+    basket.appendChild(divElement);
   }
   let basketCountElement = document.querySelector(".count strong");
   if (basketCountElement) {
