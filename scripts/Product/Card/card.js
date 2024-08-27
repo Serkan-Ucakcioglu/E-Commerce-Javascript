@@ -21,7 +21,11 @@ function card() {
     },
     removeCard: (item) => {
       const newCard = card.filter((product) => product.id !== item.id);
+      console.log(newCard);
+
       card = newCard;
+      console.log(card, "card");
+
       localStorage.setItem("basket", JSON.stringify(card));
       localStorage.setItem("basketCount", basketCount);
     },
