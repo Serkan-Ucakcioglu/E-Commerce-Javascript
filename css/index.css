@@ -664,6 +664,7 @@ a {
 .basket-card {
   display: flex;
   justify-content: space-evenly;
+  flex-basis: auto;
   align-items: center;
   gap: 10px;
   border-bottom: 0.5px solid gray;
@@ -683,6 +684,10 @@ a {
 
 .basket-operation {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex: 1;
+  flex-basis: 150px;
+}
+
+.remove-product {
 }
