@@ -52,7 +52,7 @@ export function createHeader() {
 export function updateBasketCount(count) {
   const basket = document.querySelector(".head-left .baskets");
   const countDiv = document.querySelector(".head-left .baskets .count");
-  if (!countDiv) {
+  if (!countDiv && getCount() > 0) {
     const divElement = document.createElement("div");
     divElement.className = "count";
     const strongElement = document.createElement("strong");
