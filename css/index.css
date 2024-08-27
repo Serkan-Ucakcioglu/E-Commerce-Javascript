@@ -684,12 +684,14 @@ a {
 
 .basket-operation {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex: 1;
   flex-basis: 150px;
 }
 
 .remove-product {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
