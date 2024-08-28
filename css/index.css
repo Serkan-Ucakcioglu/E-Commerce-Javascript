@@ -691,7 +691,6 @@ a {
   white-space: pre-wrap;
   flex: 2;
   height: 120px;
-
   > img {
     object-fit: contain;
   }
