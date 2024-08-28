@@ -684,7 +684,7 @@ a {
   max-height: 500px;
   gap: 10px;
   border-bottom: 0.5px solid gray;
-  padding: 5px;
+  padding: 8px;
 }
 .basket-product {
   display: flex;
