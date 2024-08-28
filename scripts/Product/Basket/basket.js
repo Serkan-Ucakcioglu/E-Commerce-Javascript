@@ -70,9 +70,11 @@ function basketLists() {
   const buttonQuantity = document.querySelectorAll("[data-quantity]");
   buttonQuantity.forEach((button) => {
     const quantityType = button.getAttribute("data-quantity");
+
     button.addEventListener("click", (e) => {
       const basketCard = e.target.closest(".basket-card");
       const item = getCard().find((item) => item.id == basketCard.id);
+
       if (quantityType == "increase") {
         addCard(item);
       } else if (quantityType == "decrease") {
@@ -84,6 +86,7 @@ function basketLists() {
         checkCount();
       }
       updateBasketCount(getCount());
+
       basketCard.querySelector("input").value = item.quantity;
       basketCard.querySelector(".basket-prices").textContent = `$${
         item.quantity * item.price
