@@ -666,6 +666,7 @@ a {
 }
 .basket-card-container {
   flex-grow: 1;
+  padding: 5px;
   overflow-y: auto;
 }
 
@@ -680,6 +681,7 @@ a {
   justify-content: space-around;
   flex-basis: auto;
   align-items: center;
+  max-height: 500px;
   gap: 10px;
   border-bottom: 0.5px solid gray;
   padding: 5px;
