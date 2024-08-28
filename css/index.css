@@ -659,10 +659,15 @@ a {
   border: 1px solid green;
   display: flex;
   flex-direction: column;
-
   gap: 15px;
   padding: 15px;
+  justify-content: space-between;
 }
+.basket-card-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
 .buy-product-title {
   display: flex;
   justify-content: space-between;
@@ -727,7 +732,6 @@ a {
 
 .kasa {
   padding: 5px;
-
   align-self: end;
 }
 

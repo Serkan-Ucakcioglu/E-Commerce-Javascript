@@ -8,7 +8,7 @@ import {
   updateQuantity,
 } from "../Card/card.js";
 
-const basketList = document.querySelector(".buy-product");
+const basketList = document.querySelector(".basket-card-container");
 
 function checkCount() {
   if (getCount() < 1) {
