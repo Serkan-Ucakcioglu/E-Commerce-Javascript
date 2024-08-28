@@ -90,5 +90,6 @@ function basketLists() {
     });
   });
 }
+
 basketLists();
 window.addEventListener("DOMContentLoaded", uiUtils);
