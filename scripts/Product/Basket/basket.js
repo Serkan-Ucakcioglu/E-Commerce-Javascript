@@ -23,8 +23,7 @@ function totalPrice() {
 
 function basketLists() {
   const card = getCard();
-  console.log(totalValue(), "total");
-  checkCount();
+
   card.map((item) => {
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
             <div class="basket-product">
