@@ -10,11 +10,14 @@ import {
 } from "../Card/card.js";
 
 const basketList = document.querySelector(".basket-card-container");
-
+const till = document.querySelector(".till");
 function checkCount() {
   if (getCount() < 1) {
     return (basketList.textContent = "Sepet boş");
   }
+}
+function totalPrice() {
+  till.innerHTML = `<strong>Total Price:$${totalValue()}</strong>`;
 }
 
 function basketLists() {
@@ -86,7 +89,7 @@ function basketLists() {
         checkCount();
       }
       updateBasketCount(getCount());
-
+      totalPrice();
       basketCard.querySelector("input").value = item.quantity;
       basketCard.querySelector(".basket-prices").textContent = `$${
         item.quantity * item.price
@@ -94,6 +97,6 @@ function basketLists() {
     });
   });
 }
-
+totalPrice();
 basketLists();
 window.addEventListener("DOMContentLoaded", uiUtils);
