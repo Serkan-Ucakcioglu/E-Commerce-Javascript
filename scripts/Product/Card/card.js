@@ -38,8 +38,20 @@ function card() {
     },
     getCount: () => basketCount,
     getCard: () => card,
+    totalValue: () => {
+      const total = card.reduce((acc, current) => {
+        return acc + current.price * current.quantity;
+      }, 0);
+      return total.toFixed(1);
+    },
   };
 }
 
-export const { addCard, removeCard, updateQuantity, getCount, getCard } =
-  card();
+export const {
+  addCard,
+  removeCard,
+  updateQuantity,
+  getCount,
+  getCard,
+  totalValue,
+} = card();

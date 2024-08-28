@@ -5,6 +5,7 @@ import {
   getCard,
   getCount,
   removeCard,
+  totalValue,
   updateQuantity,
 } from "../Card/card.js";
 
@@ -18,7 +19,7 @@ function checkCount() {
 
 function basketLists() {
   const card = getCard();
-
+  console.log(totalValue(), "total");
   checkCount();
   card.map((item) => {
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
