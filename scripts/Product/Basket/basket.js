@@ -66,8 +66,11 @@ function basketLists() {
             </g>
         </svg>
         <div>
+        
             </div>
-          </div>`;
+           
+          </div>
+           `;
   });
 
   const buttonQuantity = document.querySelectorAll("[data-quantity]");

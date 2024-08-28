@@ -665,7 +665,6 @@ a {
 }
 .basket-card-container {
   flex-grow: 1;
-  padding: 5px;
   overflow-y: auto;
 }
 
@@ -678,12 +677,18 @@ a {
 .basket-card {
   display: flex;
   justify-content: space-around;
-  flex-basis: auto;
+  border-bottom: 1px solid black;
   align-items: center;
   max-height: 500px;
   gap: 10px;
-  border-bottom: 0.5px solid gray;
-  padding: 8px;
+
+  padding: 8px 0px;
+}
+.test {
+  width: 100%;
+  height: 5px;
+  color: gray;
+  background-color: gray;
 }
 .basket-product {
   display: flex;
