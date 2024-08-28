@@ -66,9 +66,7 @@ function basketLists() {
             </g>
         </svg>
         <div>
-        
             </div>
-           
           </div>
            `;
   });
