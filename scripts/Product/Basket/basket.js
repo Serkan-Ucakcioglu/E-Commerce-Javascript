@@ -11,6 +11,7 @@ import {
 
 const basketList = document.querySelector(".basket-card-container");
 const till = document.querySelector(".till");
+
 function checkCount() {
   if (getCount() < 1) {
     return (basketList.textContent = "Sepet boş");
