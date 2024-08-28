@@ -10,12 +10,16 @@ import {
 
 const basketList = document.querySelector(".buy-product");
 
-function basketLists() {
-  const card = getCard();
+function checkCount() {
   if (getCount() < 1) {
     return (basketList.textContent = "Sepet boş");
   }
+}
 
+function basketLists() {
+  const card = getCard();
+
+  checkCount();
   card.map((item) => {
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
             <div class="basket-product">
@@ -72,9 +76,11 @@ function basketLists() {
         addCard(item);
       } else if (quantityType == "decrease") {
         updateQuantity(item);
+        checkCount();
       } else if (quantityType == "remove") {
         removeCard(item);
         basketCard.remove();
+        checkCount();
       }
       updateBasketCount(getCount());
       basketCard.querySelector("input").value = item.quantity;

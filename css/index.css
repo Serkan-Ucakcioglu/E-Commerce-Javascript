@@ -726,10 +726,9 @@ a {
 }
 
 .kasa {
-  margin-top: auto;
   padding: 5px;
 
-  justify-items: end;
+  align-self: end;
 }
 
 .remove-product {
