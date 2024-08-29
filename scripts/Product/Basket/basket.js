@@ -28,14 +28,11 @@ function basketLists() {
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
             <div class="basket-product">
               <img
-                width="110"
-                height="110"
                 src=${item.image}
                 alt="image"
                 loading="lazy"
-               
               />
-              <span style="text-align:center; white-space:pre-line;">
+              <span>
               ${item.title}
               </span>
             </div>
