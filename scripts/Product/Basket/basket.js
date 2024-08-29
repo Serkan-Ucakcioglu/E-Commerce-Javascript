@@ -25,6 +25,8 @@ function basketLists() {
   const card = getCard();
 
   card.map((item) => {
+    console.log(item.category, "item cate");
+
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
             <div class="basket-product">
               <img
@@ -32,9 +34,11 @@ function basketLists() {
                 alt="image"
                 loading="lazy"
               />
-              <span>
+              <a href=${`product.html?id=${
+                item.id
+              }&category=${encodeURIComponent(item.category)}`} >
               ${item.title}
-              </span>
+              </a>
             </div>
             <div class="basket-operation">
             <div class="basket-quantity">
