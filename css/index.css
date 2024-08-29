@@ -615,9 +615,9 @@ a {
 }
 
 .similar-category-title {
-  margin-left: 20px;
   margin-bottom: 5px;
   font-weight: 450;
+  text-align: center;
 }
 
 .similar-card {
@@ -741,8 +741,6 @@ a {
   transition: box-shadow 0.3s ease;
 }
 
-
-
 .basket-product {
   display: flex;
   align-items: center;
@@ -811,7 +809,7 @@ a {
   display: flex;
   width: 100%;
   margin-top: 10px;
-  height: 60px;
+  height: 40px;
   justify-content: center;
   align-items: center;
   margin-top: auto;
