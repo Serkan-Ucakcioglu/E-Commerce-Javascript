@@ -702,8 +702,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  gap: 15px;
-  padding: 5px;
+  gap: 10px;
+  padding: 10px 5px;
   box-sizing: border-box;
 }
 
@@ -740,6 +740,8 @@ a {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   transition: box-shadow 0.3s ease;
 }
+
+
 
 .basket-product {
   display: flex;
@@ -792,6 +794,8 @@ a {
     width: 20px;
     height: 25px;
     text-align: center;
+    border: 1px solid gray;
+    border-radius: 50%;
   }
 
   >button {
