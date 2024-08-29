@@ -697,6 +697,7 @@ a {
   width: 800px;
   max-height: 500px;
   border: 1px solid gray;
+  background-color: #f5f5dc;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -746,6 +747,7 @@ a {
     object-fit: contain;
     width: 100px;
     max-height: 90px;
+    mix-blend-mode: multiply;
   }
 
   >a {
