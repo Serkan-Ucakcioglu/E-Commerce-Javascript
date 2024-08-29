@@ -10,7 +10,6 @@ export async function getProducts(query) {
     const data = await useFetch(query);
 
     productList.innerHTML = "";
-
     data.forEach((item) => {
       productList.innerHTML += `
       <div class="card" id="${item.id}">
