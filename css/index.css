@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +12,7 @@
   flex-direction: column;
   gap: 10px;
 }
+
 .loader {
   display: none;
   position: fixed;
@@ -32,18 +34,23 @@ a {
   .head-title {
     justify-content: flex-start !important;
   }
+
   .count {
     margin-right: 10px;
   }
+
   .product-title {
     display: none;
   }
+
   #search {
     display: none !important;
   }
+
   .search-svg {
     display: none;
   }
+
   .shoplane-title {
     font-size: 23px !important;
   }
@@ -134,11 +141,13 @@ a {
   align-items: center;
   margin-right: 10px;
 }
+
 .search-svg {
   position: absolute;
   padding: 10px;
   margin-top: 4px;
 }
+
 .baskets {
   display: flex;
 }
@@ -169,9 +178,11 @@ a {
     width: 95%;
     margin-top: 5px;
   }
+
   .prev-slider {
     top: 45%;
   }
+
   .next-slider {
     top: 45%;
   }
@@ -186,17 +197,20 @@ a {
     display: block;
   }
 }
+
 .slider-section {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .slider {
   max-width: 1100px;
   width: 90%;
   margin-top: 30px;
   position: relative;
 }
+
 .slider button {
   border: none;
   outline: none;
@@ -247,6 +261,7 @@ a {
   from {
     opacity: 0.7;
   }
+
   to {
     opacity: 1;
   }
@@ -278,6 +293,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 .category-item {
   display: flex;
   gap: 5px;
@@ -285,6 +301,7 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .category-item input {
   display: none;
 }
@@ -304,7 +321,7 @@ a {
   border: 1px solid gray;
 }
 
-.category-checkbox:checked + .checkbox {
+.category-checkbox:checked+.checkbox {
   color: white;
   border: none;
   background-color: blue;
@@ -377,6 +394,7 @@ a {
   font-weight: 600;
   text-align: center;
 }
+
 .items {
   display: flex;
   justify-content: center;
@@ -384,6 +402,7 @@ a {
   gap: 1rem;
   margin-top: 8px;
 }
+
 .view-btn {
   width: 95%;
   background: #0d6efd;
@@ -396,6 +415,7 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .view-btn:hover {
   background: #0f5aca;
 }
@@ -421,6 +441,7 @@ a {
     padding: 0.5rem;
     margin-bottom: 5px;
   }
+
   .category h1 {
     text-align: center;
     margin-bottom: 10px;
@@ -433,10 +454,12 @@ a {
     gap: 5px;
     flex-wrap: wrap;
   }
+
   .checkbox {
     width: 1.4rem;
     height: 1.4rem;
   }
+
   .product-img {
     width: 100%;
     max-height: 150px;
@@ -449,6 +472,7 @@ a {
     font-weight: 400;
     white-space: nowrap;
   }
+
   .category-item {
     flex-direction: row;
     align-items: center;
@@ -490,10 +514,12 @@ a {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-    > .product-images {
+
+    >.product-images {
       margin-bottom: 15px;
     }
   }
+
   .similar-category-title {
     text-align: center;
   }
@@ -501,12 +527,14 @@ a {
   .similar-category {
     justify-content: space-evenly;
   }
+
   .similar-card {
     width: 140px !important;
     border-radius: 10px !important;
   }
+
   .product-images {
-    > img {
+    >img {
       width: 280px;
       height: 260px;
     }
@@ -516,7 +544,8 @@ a {
     margin-left: 0px;
     justify-content: center !important;
     gap: 10px !important;
-    > h4 {
+
+    >h4 {
       font-size: 20px !important;
       text-align: center;
       margin-top: 5px;
@@ -533,13 +562,15 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .product-images {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  > img {
+
+  >img {
     object-fit: contain;
     background: transparent;
     z-index: -1;
@@ -552,10 +583,12 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 7px;
-  > span {
+
+  >span {
     font-size: 16px;
   }
-  > h4 {
+
+  >h4 {
     white-space: pre-line;
     white-space-collapse: collapse;
   }
@@ -580,6 +613,7 @@ a {
   padding: 10px;
   gap: 10px;
 }
+
 .similar-category-title {
   margin-left: 20px;
   margin-bottom: 5px;
@@ -596,23 +630,27 @@ a {
   gap: 5px;
   border: 1px solid rgb(183, 161, 161);
   border-radius: 12%;
-  > div {
+
+  >div {
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    > span {
+
+    >span {
       font-size: 15px !important;
       font-weight: 400 !important;
     }
   }
-  > a {
+
+  >a {
     margin-top: 5px !important;
     width: 70% !important;
     padding: 5px;
     cursor: pointer;
   }
-  > img {
+
+  >img {
     object-fit: contain;
     width: 100%;
     height: 100px;
@@ -632,9 +670,11 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .buy-btn:hover {
   background: #0f5aca;
 }
+
 .similar-card:hover {
   box-shadow: 1px 2px 8px 4px rgba(120, 119, 119, 0.649);
 }
@@ -646,7 +686,8 @@ a {
   align-items: flex-start;
   justify-content: center !important;
   margin-top: 50px;
-  > .container {
+
+  >.container {
     width: 100%;
     max-width: 800px;
   }
@@ -664,6 +705,7 @@ a {
   padding: 5px;
   box-sizing: border-box;
 }
+
 .basket-card-container {
   overflow-y: auto;
   display: flex;
@@ -677,6 +719,11 @@ a {
   justify-content: space-between;
   margin-bottom: 10px;
   padding: 10px 20px;
+
+  >h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 
 .basket-card {
@@ -696,12 +743,13 @@ a {
   flex: 2;
   height: 90px;
 
-  > img {
+  >img {
     object-fit: contain;
     width: 100px;
     max-height: 90px;
   }
-  > a {
+
+  >a {
     font-size: 14px;
     font-weight: bold;
     color: black;
@@ -709,7 +757,8 @@ a {
     display: block;
     margin-left: 10px;
   }
-  > a:hover {
+
+  >a:hover {
     color: blue;
   }
 }
@@ -732,12 +781,14 @@ a {
   width: 90px;
   justify-content: space-between;
   gap: 5px;
-  > input {
+
+  >input {
     width: 20px;
     height: 25px;
     text-align: center;
   }
-  > button {
+
+  >button {
     width: 15px;
     height: 15px;
     border: none;
@@ -750,7 +801,6 @@ a {
   display: flex;
   width: 100%;
   height: 20px;
-
   justify-content: center;
   align-items: center;
   align-self: end;
