@@ -32,8 +32,9 @@ function basketLists() {
                 alt="image"
                 loading="lazy"
               />
-              <a href=${`product.html?id=${item.id
-      }&category=${encodeURIComponent(item.category)}`} >
+              <a href=${`product.html?id=${
+                item.id
+              }&category=${encodeURIComponent(item.category)}`} >
               ${item.title}
               </a>
             </div>
