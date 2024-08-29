@@ -654,7 +654,7 @@ a {
 
 .buy-product {
   width: 800px;
-  height: 490px;
+  max-height: 500px;
   border: 1px solid gray;
   display: flex;
   flex-direction: column;
@@ -669,8 +669,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: auto;
-  box-sizing: border-box;
+  align-items: space-between;
 }
 
 .buy-product-title {
@@ -682,35 +681,35 @@ a {
 .basket-card {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   align-items: center;
   height: 120px;
+  padding: 15px;
   margin-top: 5px;
-  margin-bottom: 0;
-  flex-basis: auto;
-  box-sizing: border-box;
 }
 
 .basket-product {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex: 1;
+  flex: 2;
   height: 90px;
-  box-sizing: border-box;
+
   > img {
     object-fit: contain;
     width: 100px;
     max-height: 90px;
   }
-  > span {
+  > a {
     font-size: 14px;
     font-weight: bold;
     color: black;
-
-    text-align: left; /* Metni sola hizalayın */
+    text-align: left;
     display: block;
-    margin-left: 10px; /* Sol kenardan biraz boşluk bırakın */
+    margin-left: 10px;
+  }
+  > a:hover {
+    color: blue;
   }
 }
 
