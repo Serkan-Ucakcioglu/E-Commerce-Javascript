@@ -1,7 +1,6 @@
 function card() {
   let card = JSON.parse(localStorage.getItem("basket")) || [];
   let basketCount = parseInt(localStorage.getItem("basketCount"), 10) || 0;
-  console.log(basketCount, "basketcount");
 
   return {
     addCard: (item) => {
@@ -28,8 +27,8 @@ function card() {
     },
     updateQuantity: (item) => {
       let isProductInBasket = card.find((product) => product.id === item.id);
-      if (isProductInBasket.quantity == 1) {
-        removeCard(item);
+      if (!isProductInBasket) {
+        basketCount--;
       } else {
         isProductInBasket.quantity > 1 && isProductInBasket.quantity--;
       }
@@ -42,7 +41,7 @@ function card() {
       const total = card.reduce((acc, current) => {
         return acc + current.price * current.quantity;
       }, 0);
-      return total.toFixed(1);
+      return total.toFixed(2);
     },
   };
 }

@@ -21,20 +21,10 @@ function totalPrice() {
   till.innerHTML = `<strong>Total Price:$${totalValue()}</strong>`;
 }
 
-function renderBasketList() {
-  basketList.innerHTML = "";
-  const card = getCard();
-  card.map((item) => basketLists(item));
-  updateBasketCount(getCount());
-  totalPrice();
-}
-
 function basketLists() {
   const card = getCard();
 
   card.map((item) => {
-    console.log(item.category, "item cate");
-
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
             <div class="basket-product">
               <img
@@ -54,7 +44,7 @@ function basketLists() {
             <input value=${item.quantity} disabled  />
             <button data-quantity="increase"><svg class="fill-current text-gray-600 w-3 cursor-pointer" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button>
             </div>
-            <span class="basket-prices">$${item.price * item.quantity}</span>
+            <span class="basket-prices">$${totalValue()}</span>
               <div class="remove-product" data-quantity="remove">
               <svg fill="#e50606" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 408.483 408.483"
@@ -92,13 +82,18 @@ function basketLists() {
         addCard(item);
       } else if (quantityType == "decrease") {
         updateQuantity(item);
-        checkCount();
       } else if (quantityType == "remove") {
         removeCard(item);
         basketCard.remove();
-        checkCount();
       }
-      renderBasketList();
+
+      checkCount();
+      updateBasketCount(getCount());
+      totalPrice();
+      basketCard.querySelector("input").value = item.quantity;
+      basketCard.querySelector(
+        ".basket-prices"
+      ).textContent = `$${totalValue()}`;
     });
   });
 }
