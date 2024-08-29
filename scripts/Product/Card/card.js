@@ -28,8 +28,8 @@ function card() {
     },
     updateQuantity: (item) => {
       let isProductInBasket = card.find((product) => product.id === item.id);
-      if (!isProductInBasket) {
-        basketCount -= 1;
+      if (isProductInBasket.quantity == 1) {
+        removeCard(item);
       } else {
         isProductInBasket.quantity > 1 && isProductInBasket.quantity--;
       }

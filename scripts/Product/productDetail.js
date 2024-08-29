@@ -3,7 +3,6 @@ import { updateBasketCount } from "../Template/header.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
 import { addCard, getCount } from "./Card/card.js";
-import { viewProduct } from "../utils/view-product.js";
 import { uiUtils } from "../utils/ui-utils.js";
 
 let params = new URLSearchParams(window.location.search);
@@ -78,13 +77,13 @@ async function getProductDetail() {
           <span> ${capitalizeFirstLetter(item.category)} </span>
           <span class="card-price"><strong>$</strong>${item.price}</span>
         </div>
-        <a class="view-btn"  data-id="${item.id}" data-category="${
+        <a  href=${`product.html?id=${item.id}&category=${encodeURIComponent(
+          item.category
+        )}`} class="view-btn"  data-id="${item.id}" data-category="${
         item.category
       }">View Product</a>
       </li>`;
     });
-
-    viewProduct(".view-btn");
   } catch (error) {
     productElement.innerHTML = `<p>Error loading product details. Please try again later.</p>`;
     console.error("Error fetching product details:", error);
