@@ -21,6 +21,14 @@ function totalPrice() {
   till.innerHTML = `<strong>Total Price:$${totalValue()}</strong>`;
 }
 
+function renderBasketList() {
+  basketList.innerHTML = "";
+  const card = getCard();
+  card.map((item) => basketLists(item));
+  updateBasketCount(getCount());
+  totalPrice();
+}
+
 function basketLists() {
   const card = getCard();
 
@@ -90,12 +98,7 @@ function basketLists() {
         basketCard.remove();
         checkCount();
       }
-      updateBasketCount(getCount());
-      totalPrice();
-      basketCard.querySelector("input").value = item.quantity;
-      basketCard.querySelector(".basket-prices").textContent = `$${
-        item.quantity * item.price
-      }`;
+      renderBasketList();
     });
   });
 }
