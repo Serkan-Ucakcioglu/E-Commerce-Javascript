@@ -9,9 +9,9 @@ export async function getCategories() {
   showLoader();
   try {
     const data = await useFetch("categories");
-
+    let category = "";
     data.forEach((item) => {
-      categoryDiv.innerHTML += `<div class="category-item" data-item-name="${item}">
+      category += `<div class="category-item" data-item-name="${item}">
               <input type="checkbox" id="${item}" class="category-checkbox" />
               <label for="${item}" class="checkbox"></label>
                  <label for="${item}" class="item-title">
@@ -19,6 +19,7 @@ export async function getCategories() {
             </label>
     </div>`;
     });
+    categoryDiv.innerHTML = category;
   } catch (error) {
     console.log(error);
     categoryDiv.innerHTML = error;

@@ -18,7 +18,7 @@ async function getProductDetail() {
       useFetch(`category/${category}`),
     ]);
 
-    productElement.innerHTML = `
+    let productDiv = `
     <div class="tree-product">
       <div class="product-detail" id=${data1.id}>
         <div class="product-images">
@@ -51,6 +51,7 @@ async function getProductDetail() {
       <ul class="similar-category"></ul>
     </div>
     `;
+    productElement.innerHTML = productDiv;
 
     let addBtn = productElement.querySelector(".buy-btn");
 
@@ -60,9 +61,9 @@ async function getProductDetail() {
     });
 
     let similarCategory = document.querySelector(".similar-category");
-
+    let similarDiv = "";
     categoryData.forEach((item) => {
-      similarCategory.innerHTML += `
+      similarDiv += `
       <li class="similar-card" id=${item.id}>
         <img
           width="100px"
@@ -82,6 +83,7 @@ async function getProductDetail() {
       }">View Product</a>
       </li>`;
     });
+    similarCategory.innerHTML = similarDiv;
   } catch (error) {
     productElement.innerHTML = `<p>Error loading product details. Please try again later.</p>`;
     console.error("Error fetching product details:", error);

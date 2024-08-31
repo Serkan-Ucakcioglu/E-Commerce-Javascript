@@ -8,11 +8,14 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
+    const fragment = document.createDocumentFragment();
 
     productList.innerHTML = "";
     data.forEach((item) => {
-      productList.innerHTML += `
-      <div class="card" id="${item.id}">
+      let cardDiv = document.createElement("div");
+      cardDiv.classList.add("card");
+      cardDiv.id = item.id;
+      cardDiv.innerHTML = `
         <div class="card-img">
           <img
             class="product-img"
@@ -36,8 +39,10 @@ export async function getProducts(query) {
         item.category
       }">View Product</a>
         </div>
-      </div>`;
+      `;
+      fragment.appendChild(cardDiv);
     });
+    productList.appendChild(fragment);
   } catch (error) {
     console.log(error);
     productList.innerHTML = error;
