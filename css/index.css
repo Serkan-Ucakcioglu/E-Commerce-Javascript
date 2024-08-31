@@ -702,6 +702,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  border-radius: 10px;
   gap: 10px;
   padding: 10px 5px;
   box-sizing: border-box;
@@ -739,6 +740,10 @@ a {
 .basket-card:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   transition: box-shadow 0.3s ease;
+}
+
+.basket-card:last-child {
+  border-bottom: none;
 }
 
 .basket-product {
@@ -809,10 +814,11 @@ a {
   display: flex;
   width: 100%;
   margin-top: 10px;
-  height: 40px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   margin-top: auto;
+  border-top: 1px dashed black;
 }
 
 .remove-product {
