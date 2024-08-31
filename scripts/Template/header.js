@@ -11,7 +11,7 @@ export function createHeader() {
             </div>
             <div id="search">
               <div class="search-svg">
-                <img href="../../assets/basket.svg" alt="basket">
+                <img src="/../../assets/search.svg" alt="search">
               </div>
               <input
                 type="text"
