@@ -48,9 +48,7 @@ async function getProductDetail() {
         </div>
       </div>
       <h2 class="similar-category-title">Similar Product</h2>
-      <ul class="similar-category">
-        
-      </ul>
+      <ul class="similar-category"></ul>
     </div>
     `;
 
