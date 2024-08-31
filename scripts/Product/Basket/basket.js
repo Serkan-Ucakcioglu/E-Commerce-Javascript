@@ -1,4 +1,5 @@
 import { updateBasketCount } from "../../Template/header.js";
+import { capitalizeFirstLetter } from "../../utils/firsletter.js";
 import { uiUtils } from "../../utils/ui-utils.js";
 import {
   addCard,
@@ -35,7 +36,7 @@ function basketLists() {
               <a href=${`product.html?id=${
                 item.id
               }&category=${encodeURIComponent(item.category)}`} >
-              ${item.title}
+              ${capitalizeFirstLetter(item.title)}
               </a>
             </div>
             <div class="basket-operation">
