@@ -24,7 +24,7 @@ export async function getCategories() {
     console.log(error);
     categoryDiv.innerHTML = error;
   } finally {
-    hideLoader;
+    hideLoader();
   }
 }
 
