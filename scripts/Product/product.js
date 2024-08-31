@@ -41,7 +41,7 @@ export async function getProducts(query) {
     productList.innerHTML = cards;
   } catch (error) {
     console.log(error);
-    productList.innerHTML = error;
+    productList.innerHTML = `<p>Error loading products. Please try again later.</p>`;
   } finally {
     hideLoader();
   }

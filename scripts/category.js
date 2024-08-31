@@ -22,7 +22,7 @@ export async function getCategories() {
     categoryDiv.innerHTML = category;
   } catch (error) {
     console.log(error);
-    categoryDiv.innerHTML = error;
+    categoryDiv.innerHTML = `<p>Error loading Categorys. Please try again later.</p>`;
   } finally {
     hideLoader();
   }
