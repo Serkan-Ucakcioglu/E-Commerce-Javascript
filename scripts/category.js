@@ -9,6 +9,7 @@ export async function getCategories() {
   showLoader();
   try {
     const data = await useFetch("categories");
+
     let category = "";
     data.forEach((item) => {
       category += `<div class="category-item" data-item-name="${item}">
