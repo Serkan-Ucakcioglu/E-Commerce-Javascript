@@ -8,14 +8,11 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
-    const fragment = document.createDocumentFragment();
+    let cards = "";
 
-    productList.innerHTML = "";
     data.forEach((item) => {
-      let cardDiv = document.createElement("div");
-      cardDiv.classList.add("card");
-      cardDiv.id = item.id;
-      cardDiv.innerHTML = `
+      cards += `
+      <div class="card" id=${item.id}>
         <div class="card-img">
           <img
             class="product-img"
@@ -24,7 +21,6 @@ export async function getProducts(query) {
             loading="lazy"
           />
         </div>
-
         <div class="items">
           <h1 class="card-title">${capitalizeFirstLetter(item.title)}</h1>
           <div class="card-detail">
@@ -39,10 +35,10 @@ export async function getProducts(query) {
         item.category
       }">View Product</a>
         </div>
+        </div>
       `;
-      fragment.appendChild(cardDiv);
     });
-    productList.appendChild(fragment);
+    productList.innerHTML = cards;
   } catch (error) {
     console.log(error);
     productList.innerHTML = error;
