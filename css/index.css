@@ -785,13 +785,13 @@ a {
 .basket-quantity {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center !important;
   border: 1px solid gray;
   border-radius: 20px;
   padding: 5px 10px;
-  width: 90px;
+  width: 100px;
   justify-content: space-between;
-  gap: 7px;
+  gap: 4px;
 
   >input {
     width: 30px;
@@ -802,8 +802,8 @@ a {
   }
 
   >button {
-    width: 15px;
-    height: 15px;
+    display: flex;
+    align-items: center;
     border: none;
     background: transparent;
     cursor: pointer;
