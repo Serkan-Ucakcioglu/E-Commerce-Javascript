@@ -904,3 +904,12 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.extra-links {
+  display: flex;
+  gap: 15px;
+
+  >a {
+    font-size: 13px;
+  }
+}
