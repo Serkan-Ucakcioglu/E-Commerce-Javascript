@@ -850,9 +850,17 @@ a {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 10px;
 
-  >h2 {
-    text-align: center;
+  >div h2 {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 300;
   }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
 }
