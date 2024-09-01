@@ -836,6 +836,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #E1EAED;
 
   >.container {
     display: flex;
@@ -846,7 +847,8 @@ a {
 .login-form {
   width: 450px;
   height: 440px;
-  border-radius: 5px;
+  background-color: white;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
