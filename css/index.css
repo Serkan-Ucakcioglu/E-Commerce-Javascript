@@ -920,6 +920,10 @@ a {
   transform: translateY(-2px);
 }
 
+.submit:disabled {
+  opacity: 0.5;
+}
+
 .extra-links {
   display: flex;
   gap: 15px;
