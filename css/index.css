@@ -836,7 +836,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E1EAED;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
 
   >.container {
     display: flex;
@@ -862,13 +862,18 @@ a {
     font-style: normal;
     text-decoration: none;
     color: black;
-    font-weight: 300;
+    font-weight: 350;
+  }
+
+  >img {
+    background: transparent;
   }
 }
 
 .input-groups {
   display: flex;
   flex-direction: column;
+
   gap: 5px;
 }
 
@@ -882,6 +887,7 @@ a {
   >label {
     color: #58626B;
     font-size: 13px;
+    margin-bottom: 3px;
   }
 
   >input {
@@ -900,7 +906,7 @@ a {
 
 .submit {
   display: block;
-  width: 90%;
+  width: 95%;
   height: 35px;
   padding: 8px;
   background-color: #4931A8;
