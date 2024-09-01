@@ -865,15 +865,16 @@ a {
   width: 300px;
   display: flex;
   flex-direction: column;
-
+  margin-top: 10px;
 
 
   >input {
     width: 100%;
     height: 30px;
     outline: none;
-    border: 1px solid #EAEBEE;
+    border: 1px solid #84929E;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px #EAEBEE;
+    padding: 0px 5px;
+
   }
 }
