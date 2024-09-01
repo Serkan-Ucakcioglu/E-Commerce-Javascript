@@ -851,4 +851,8 @@ a {
   display: flex;
   flex-direction: column;
   padding: 10px;
+
+  >h2 {
+    text-align: center;
+  }
 }
