@@ -866,7 +866,7 @@ a {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-
+  gap: 5px;
 
   >input {
     width: 100%;
