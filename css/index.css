@@ -852,6 +852,7 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  gap: 5px;
 
   >div h2 {
     text-align: left;
@@ -861,6 +862,18 @@ a {
 }
 
 .input-group {
+  width: 300px;
   display: flex;
   flex-direction: column;
+
+
+
+  >input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: 1px solid #EAEBEE;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #EAEBEE;
+  }
 }
