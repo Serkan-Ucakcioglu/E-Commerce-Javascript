@@ -862,7 +862,7 @@ a {
 }
 
 .input-group {
-  width: 300px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -870,11 +870,14 @@ a {
 
   >input {
     width: 100%;
-    height: 30px;
+    height: 35px;
     outline: none;
-    border: 1px solid #84929E;
+    border: 0.5px solid #84929E;
     border-radius: 5px;
     padding: 0px 5px;
+  }
 
+  >input:focus {
+    border: 1px solid #5f6366;
   }
 }
