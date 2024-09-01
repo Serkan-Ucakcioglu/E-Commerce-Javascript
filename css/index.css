@@ -881,3 +881,13 @@ a {
     border: 1px solid #5f6366;
   }
 }
+
+.submit {
+  width: 80%;
+  padding: 8px;
+  background-color: #4931A8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
