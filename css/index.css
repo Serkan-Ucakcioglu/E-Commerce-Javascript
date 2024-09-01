@@ -862,6 +862,12 @@ a {
   }
 }
 
+.input-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .input-group {
   width: 350px;
   display: flex;
