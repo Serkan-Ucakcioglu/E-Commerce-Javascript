@@ -844,20 +844,22 @@ a {
 }
 
 .login-form {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 440px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   gap: 5px;
 
-  >div h2 {
-    text-align: left;
-    font-size: 25px;
+  >h2 {
+    font-size: 35px;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
     font-weight: 300;
   }
 }
@@ -869,7 +871,7 @@ a {
 }
 
 .input-group {
-  width: 350px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -895,7 +897,8 @@ a {
 }
 
 .submit {
-  width: 350px;
+  display: block;
+  width: 90%;
   height: 35px;
   padding: 8px;
   background-color: #4931A8;
