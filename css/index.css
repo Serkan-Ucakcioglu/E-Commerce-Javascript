@@ -929,6 +929,12 @@ a {
   opacity: 0.5;
 }
 
+.error-message {
+  font-size: 13px;
+  color: red;
+  text-align: left;
+}
+
 .extra {
   display: flex;
   justify-content: space-between;
