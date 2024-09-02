@@ -1,6 +1,7 @@
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const submitBtn = document.querySelector(".submit");
+const loginForm = document.querySelector(".login-form");
 
 function showError(inputElement, message) {
   clearErrorMessage(inputElement);
@@ -72,4 +73,9 @@ emailInput.addEventListener("input", () => {
 passwordInput.addEventListener("input", () => {
   validatePassword();
   checkValidity();
+});
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("submit");
 });
