@@ -4,7 +4,6 @@ const submitBtn = document.querySelector(".submit");
 
 function showError(inputElement, message) {
   clearErrorMessage(inputElement);
-
   let errorSpan = document.createElement("span");
   errorSpan.classList.add("error-message");
   errorSpan.textContent = message;
