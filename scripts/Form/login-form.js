@@ -59,7 +59,7 @@ function validatePassword() {
 }
 
 function checkValidity() {
-  if (validateEmail() && validatePassword) {
+  if (validateEmail() && validatePassword()) {
     submitBtn.disabled = false;
   } else {
     submitBtn.disabled = true;
