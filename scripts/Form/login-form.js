@@ -54,7 +54,6 @@ function validatePassword() {
     return false;
   } else {
     clearErrorMessage(passwordInput);
-    checkValidity();
     return true;
   }
 }
@@ -67,5 +66,11 @@ function checkValidity() {
   }
 }
 
-emailInput.addEventListener("input", validateEmail);
-passwordInput.addEventListener("input", validatePassword);
+emailInput.addEventListener("input", () => {
+  validateEmail();
+  checkValidity();
+});
+passwordInput.addEventListener("input", () => {
+  validatePassword();
+  checkValidity();
+});
