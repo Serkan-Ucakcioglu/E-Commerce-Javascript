@@ -77,7 +77,7 @@ function checkValidity() {
   }
 }
 
-emailInput.addEventListener("click", () => {
+emailInput.addEventListener("focus", () => {
   emailFocus = true;
 });
 
@@ -86,7 +86,7 @@ emailInput.addEventListener("input", () => {
   checkValidity();
 });
 
-passwordInput.addEventListener("click", () => {
+passwordInput.addEventListener("focus", () => {
   passwordFocus = true;
 });
 passwordInput.addEventListener("input", () => {
