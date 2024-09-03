@@ -14,8 +14,8 @@ async function getProductDetail() {
   showLoader();
   try {
     let [data1, categoryData] = await Promise.all([
-      useFetch(`${productId}`),
-      useFetch(`category/${category}`),
+      useFetch(`products/${productId}`),
+      useFetch(`products/category/${category}`),
     ]);
 
     let productDiv = `

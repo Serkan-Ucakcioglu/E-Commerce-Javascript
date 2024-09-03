@@ -8,7 +8,7 @@ const categoryDiv = document.querySelector(".check");
 export async function getCategories() {
   showLoader();
   try {
-    const data = await useFetch("categories");
+    const data = await useFetch("products/categories");
 
     let category = "";
     data.forEach((item) => {
@@ -33,7 +33,7 @@ async function getSelectedCategory(query) {
   let endpoint = "";
 
   if (query) {
-    endpoint += `category/${query}`;
+    endpoint += `products/category/${query}`;
   }
   getProducts(endpoint);
 }

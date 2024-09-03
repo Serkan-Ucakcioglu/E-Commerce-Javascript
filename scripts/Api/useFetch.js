@@ -4,7 +4,7 @@ export async function useFetch(query) {
   let endpoint = `${base_url}`;
 
   if (query) {
-    endpoint = `${base_url}/${query}`;
+    endpoint = `${base_url}${query}`;
   }
 
   const response = await fetch(`${endpoint}`);
