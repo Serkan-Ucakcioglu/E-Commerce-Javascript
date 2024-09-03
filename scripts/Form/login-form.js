@@ -32,6 +32,8 @@ function validateEmail() {
     if (!email) {
       showError(emailInput, "Email is required!");
       return false;
+    } else if (email.length < 5) {
+      showError(emailInput, "Minimum length 6!");
     }
     //   else if (!emailPattern.test(email)) {
     //     showError(emailInput, "Please enter a valid email address.");
