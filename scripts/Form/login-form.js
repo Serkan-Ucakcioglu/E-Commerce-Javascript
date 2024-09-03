@@ -5,6 +5,9 @@ const passwordInput = document.querySelector("#password");
 const submitBtn = document.querySelector(".submit");
 const loginForm = document.querySelector(".login-form");
 
+let emailFocus = false;
+let passwordFocus = false;
+
 function showError(inputElement, message) {
   clearErrorMessage(inputElement);
   let errorSpan = document.createElement("span");
@@ -25,17 +28,19 @@ function validateEmail() {
   const email = emailInput.value.trim();
   const emailPattern = /[A-Za-z]/;
 
-  if (!email) {
-    showError(emailInput, "Email is required!");
-    return false;
-  }
-  //   else if (!emailPattern.test(email)) {
-  //     showError(emailInput, "Please enter a valid email address.");
-  //     return false;
-  //   }
-  else {
-    clearErrorMessage(emailInput);
-    return true;
+  if (emailFocus) {
+    if (!email) {
+      showError(emailInput, "Email is required!");
+      return false;
+    }
+    //   else if (!emailPattern.test(email)) {
+    //     showError(emailInput, "Please enter a valid email address.");
+    //     return false;
+    //   }
+    else {
+      clearErrorMessage(emailInput);
+      return true;
+    }
   }
 }
 
@@ -44,21 +49,23 @@ function validatePassword() {
   const digitPattern = /\d/;
   const letterPattern = /[A-Za-z]/;
 
-  if (!password) {
-    showError(passwordInput, "Password required!");
-    return false;
-  } else if (password.length < 4) {
-    showError(passwordInput, "Password must be at least 7 characters long.");
-    return false;
-  } else if (!digitPattern.test(password)) {
-    showError(passwordInput, "Password must contain at least one digit.");
-    return false;
-  } else if (!letterPattern.test(password)) {
-    showError(passwordInput, "Password must contain at least one lettern.");
-    return false;
-  } else {
-    clearErrorMessage(passwordInput);
-    return true;
+  if (passwordFocus) {
+    if (!password) {
+      showError(passwordInput, "Password required!");
+      return false;
+    } else if (password.length < 4) {
+      showError(passwordInput, "Password must be at least 7 characters long.");
+      return false;
+    } else if (!digitPattern.test(password)) {
+      showError(passwordInput, "Password must contain at least one digit.");
+      return false;
+    } else if (!letterPattern.test(password)) {
+      showError(passwordInput, "Password must contain at least one lettern.");
+      return false;
+    } else {
+      clearErrorMessage(passwordInput);
+      return true;
+    }
   }
 }
 
@@ -70,9 +77,17 @@ function checkValidity() {
   }
 }
 
+emailInput.addEventListener("click", () => {
+  emailFocus = true;
+});
+
 emailInput.addEventListener("input", () => {
   validateEmail();
   checkValidity();
+});
+
+passwordInput.addEventListener("click", () => {
+  passwordFocus = true;
 });
 passwordInput.addEventListener("input", () => {
   validatePassword();
