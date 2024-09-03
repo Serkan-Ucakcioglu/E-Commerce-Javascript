@@ -8,8 +8,8 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
-    let cards = "";
 
+    let cards = "";
     data.forEach((item) => {
       cards += `
       <div class="card" id=${item.id}>
@@ -40,7 +40,6 @@ export async function getProducts(query) {
     });
     productList.innerHTML = cards;
   } catch (error) {
-    console.log(error);
     productList.innerHTML = `<p>Error loading products. Please try again later.</p>`;
   } finally {
     hideLoader();

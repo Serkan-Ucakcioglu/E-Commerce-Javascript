@@ -33,9 +33,10 @@ async function getSelectedCategory(query) {
   let endpoint = "";
 
   if (query) {
-    endpoint += `products/category/${query}`;
+    endpoint += `category/${query}`;
   }
-  getProducts(endpoint);
+
+  getProducts("products" + endpoint);
 }
 
 categoryDiv.addEventListener("click", (event) => {
