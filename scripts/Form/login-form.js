@@ -1,3 +1,6 @@
+import loginAuth from "../Auth/loginAuth.js";
+import { getCookie } from "../utils/cookie.js";
+
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const submitBtn = document.querySelector(".submit");
@@ -21,15 +24,17 @@ function clearErrorMessage(inputElement) {
 
 function validateEmail() {
   const email = emailInput.value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern = /[A-Za-z]/;
 
   if (!email) {
     showError(emailInput, "Email is required!");
     return false;
-  } else if (!emailPattern.test(email)) {
-    showError(emailInput, "Please enter a valid email address.");
-    return false;
-  } else {
+  }
+  //   else if (!emailPattern.test(email)) {
+  //     showError(emailInput, "Please enter a valid email address.");
+  //     return false;
+  //   }
+  else {
     clearErrorMessage(emailInput);
     return true;
   }
@@ -43,7 +48,7 @@ function validatePassword() {
   if (!password) {
     showError(passwordInput, "Password required!");
     return false;
-  } else if (password.length < 6) {
+  } else if (password.length < 4) {
     showError(passwordInput, "Password must be at least 7 characters long.");
     return false;
   } else if (!digitPattern.test(password)) {
@@ -75,7 +80,12 @@ passwordInput.addEventListener("input", () => {
   checkValidity();
 });
 
-loginForm.addEventListener("submit", (e) => {
+loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  console.log("submit");
+
+  let body = {
+    username: emailInput.value,
+    password: passwordInput.value,
+  };
+  await loginAuth(body);
 });
