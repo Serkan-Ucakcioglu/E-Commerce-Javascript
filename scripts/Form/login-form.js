@@ -1,5 +1,4 @@
 import loginAuth from "../Auth/loginAuth.js";
-import { getCookie } from "../utils/cookie.js";
 
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
