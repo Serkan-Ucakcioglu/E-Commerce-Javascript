@@ -30,13 +30,13 @@ export async function getCategories() {
 }
 
 async function getSelectedCategory(query) {
-  let endpoint = "";
+  let endpoint = "products";
 
   if (query) {
-    endpoint += `category/${query}`;
+    endpoint = `products/category/${query}`;
   }
 
-  getProducts("products" + endpoint);
+  getProducts(endpoint);
 }
 
 categoryDiv.addEventListener("click", (event) => {

@@ -5,7 +5,7 @@ import { initializeSlider } from "./slider.js";
 import { createHeader, updateBasketCount } from "./Template/header.js";
 
 function init() {
-  initializeSlider(), getCategories(), getProducts("products");
+  initializeSlider(), getCategories(), getProducts("products/");
   createHeader();
   updateBasketCount(getCount());
 }
