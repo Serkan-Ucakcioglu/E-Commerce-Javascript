@@ -18,7 +18,6 @@ function showError(inputElement, message) {
 
 function clearErrorMessage(inputElement) {
   let error = inputElement.parentNode.querySelector(".error-message");
-
   if (error) {
     return error.remove();
   }
