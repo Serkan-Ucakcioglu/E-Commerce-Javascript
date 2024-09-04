@@ -4,7 +4,7 @@ import { uiUtils } from "../../utils/ui-utils.js";
 import {
   addCard,
   getCard,
-  getCount,
+  getBasketItemCount,
   removeCard,
   totalValue,
   updateQuantity,
@@ -14,7 +14,7 @@ const basketList = document.querySelector(".basket-card-container");
 const till = document.querySelector(".till");
 
 function checkCount() {
-  if (getCount() < 1) {
+  if (getBasketItemCount() < 1) {
     return (basketList.textContent = "Sepet boş");
   }
 }
@@ -72,7 +72,7 @@ function basketLists() {
       }
 
       checkCount();
-      updateBasketCount(getCount());
+      updateBasketCount(getBasketItemCount());
       totalPrice();
       basketCard.querySelector("input").value = item.quantity;
       basketCard.querySelector(

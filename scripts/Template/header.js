@@ -1,4 +1,4 @@
-import { getCount } from "../Product/Card/card.js";
+import { getBasketItemCount } from "../Product/Card/card.js";
 
 export function createHeader() {
   let selectedElement = document.querySelector(".header");
@@ -38,7 +38,7 @@ export function createHeader() {
 export function updateBasketCount(count) {
   const basket = document.querySelector(".head-left .baskets");
   const countDiv = document.querySelector(".head-left .baskets .count");
-  if (!countDiv && getCount() > 0) {
+  if (!countDiv && getBasketItemCount() > 0) {
     const divElement = document.createElement("div");
     divElement.className = "count";
     const strongElement = document.createElement("strong");

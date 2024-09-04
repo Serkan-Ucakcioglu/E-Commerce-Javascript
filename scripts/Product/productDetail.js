@@ -2,7 +2,7 @@ import { useFetch } from "../Api/useFetch.js";
 import { updateBasketCount } from "../Template/header.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
-import { addCard, getCount } from "./Card/card.js";
+import { addCard, getBasketItemCount } from "./Card/card.js";
 import { uiUtils } from "../utils/ui-utils.js";
 
 let params = new URLSearchParams(window.location.search);
@@ -57,7 +57,7 @@ async function getProductDetail() {
 
     addBtn.addEventListener("click", () => {
       addCard(data1);
-      updateBasketCount(getCount());
+      updateBasketCount(getBasketItemCount());
     });
 
     let similarCategory = document.querySelector(".similar-category");

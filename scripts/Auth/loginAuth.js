@@ -1,5 +1,5 @@
 import base_url from "../Api/api.js";
-import { setCookie } from "../utils/cookie.js";
+import { getCookie, setCookie } from "../utils/cookie.js";
 
 export default async function loginAuth({ username, password }) {
   try {
@@ -12,11 +12,20 @@ export default async function loginAuth({ username, password }) {
     });
     const data = await response.json();
 
-    if (!response.ok) {
-      throw new Error("Error");
+    if (response.ok) {
+      setCookie("token", data.token, "1");
+      window.location.href = "dashboard.html";
     }
     setCookie("token", data.token, "1");
   } catch (error) {
     console.log(error);
   }
 }
+
+function checkLogin() {
+  if (getCookie()) {
+    window.location.href = "dashboard.html";
+  }
+}
+
+window.addEventListener("DOMContentLoaded", checkLogin);

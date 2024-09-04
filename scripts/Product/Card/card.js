@@ -35,7 +35,7 @@ function card() {
       localStorage.setItem("basketCount", basketCount);
       localStorage.setItem("basket", JSON.stringify(card));
     },
-    getCount: () => basketCount,
+    getBasketItemCount: () => basketCount,
     getCard: () => card,
     totalValue: () => {
       const total = card.reduce((acc, current) => {
@@ -50,7 +50,7 @@ export const {
   addCard,
   removeCard,
   updateQuantity,
-  getCount,
+  getBasketItemCount,
   getCard,
   totalValue,
 } = card();
