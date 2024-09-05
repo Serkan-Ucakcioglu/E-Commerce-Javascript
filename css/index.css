@@ -271,10 +271,15 @@ a {
 .product {
   background: white;
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
   gap: 10px;
   padding: 20px;
   margin-top: 20px;
+
+  >.container {
+    display: flex;
+    gap: 50px;
+  }
 }
 
 .category {
@@ -334,15 +339,16 @@ a {
 
 .product-list {
   display: flex;
-  max-width: 1300px;
-  gap: 10px;
+  gap: 13px;
   flex-wrap: wrap;
-  flex-grow: 1;
+  flex-grow: 1 !important;
   justify-content: space-evenly;
+  margin-left: 10px;
+  align-self: flex-end;
 }
 
 .card {
-  width: 290px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
