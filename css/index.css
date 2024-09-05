@@ -342,9 +342,8 @@ a {
   gap: 13px;
   flex-wrap: wrap;
   flex-grow: 1 !important;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin-left: 10px;
-  align-self: flex-end;
 }
 
 .card {
