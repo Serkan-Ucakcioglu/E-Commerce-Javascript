@@ -1,4 +1,4 @@
-import { useFetch } from "../Api/useFetch.js";
+import { useFetch } from "../api/useFetch.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
 

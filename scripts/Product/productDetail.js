@@ -1,8 +1,8 @@
-import { useFetch } from "../Api/useFetch.js";
-import { updateBasketCount } from "../Template/header.js";
+import { useFetch } from "../api/useFetch.js";
+import { updateBasketCount } from "../template/header.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
-import { addCard, getBasketItemCount } from "./Card/card.js";
+import { addCard, getBasketItemCount } from "./card-operation/index.js";
 import { uiUtils } from "../utils/ui-utils.js";
 
 let params = new URLSearchParams(window.location.search);

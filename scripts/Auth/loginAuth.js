@@ -1,4 +1,4 @@
-import base_url from "../Api/api.js";
+import base_url from "../api/api.js";
 import { getCookie, setCookie } from "../utils/cookie.js";
 
 export default async function loginAuth({ username, password }) {

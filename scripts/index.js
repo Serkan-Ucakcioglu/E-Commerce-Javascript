@@ -1,13 +1,13 @@
 import { getCategories } from "./category.js";
-import { getCount } from "./Product/Card/card.js";
-import { getProducts } from "./Product/product.js";
+import { getBasketItemCount } from "./product/card-operation/cardFunction.js";
+import { getProducts } from "./product/productList.js";
 import { initializeSlider } from "./slider.js";
-import { createHeader, updateBasketCount } from "./Template/header.js";
+import { createHeader, updateBasketCount } from "./template/header.js";
 
 function init() {
   initializeSlider(), getCategories(), getProducts("products/");
   createHeader();
-  updateBasketCount(getCount());
+  updateBasketCount(getBasketItemCount());
 }
 
 window.addEventListener("DOMContentLoaded", init);
