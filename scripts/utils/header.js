@@ -1,4 +1,4 @@
-import { getBasketItemCount } from "../product/card-operation/cardFunction.js";
+import { getBasketItemCount } from "../product/card-operation/card-function.js";
 
 export function createHeader() {
   let header = document.querySelector("header");

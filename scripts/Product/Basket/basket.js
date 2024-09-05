@@ -1,4 +1,4 @@
-import { updateBasketCount } from "../../template/header.js";
+import { updateBasketCount } from "../../utils/header.js";
 import { capitalizeFirstLetter } from "../../utils/firsletter.js";
 import { uiUtils } from "../../utils/ui-utils.js";
 import {
@@ -8,7 +8,7 @@ import {
   updateQuantity,
   getCard,
   totalValue,
-} from "../../product/card-operation/cardFunction.js";
+} from "../card-operation/card-function.js";
 
 const basketList = document.querySelector(".basket-card-container");
 const till = document.querySelector(".till");
