@@ -1,38 +1,10 @@
 import { getBasketItemCount } from "../product/card-operation/cardFunction.js";
 
 export function createHeader() {
-  let selectedElement = document.querySelector(".header");
-  selectedElement.innerHTML = ` <div class="container">
-          <div class="head-bar">
-            <div class="head-title">
-              <a href="/" class="shoplane-title">SHOPLANE</a>
-              <h1 class="product-title">Product</h1>
-              <h1 class="product-title">Product</h1>
-            </div>
-            <div id="search">
-              <div class="search-svg">
-                <img src="/../../assets/search.svg" alt="search">
-              </div>
-              <input
-                type="text"
-                id="search-input"
-                name="searchBox"
-                placeholder="Search for Clothing and Accessories"
-              />
-            </div>
-            <div class="head-left">
-              <a href="basket.html" class="baskets">
-                <img
-                  class="basket"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDSScOc9jICGGssMug0jWrOgeoFX6K78kLtw&amp;usqp=CAU"
-                  alt="basket"
-                />
-                
-              </a>
-              <a href="/login.html" class="login-btn">Login</a>
-            </div>
-          </div>
-        </div>`;
+  let header = document.querySelector("header");
+  let template = document.querySelector("#header-template");
+  const clone = template.content.cloneNode(true);
+  header.appendChild(clone);
 }
 
 export function updateBasketCount(count) {
