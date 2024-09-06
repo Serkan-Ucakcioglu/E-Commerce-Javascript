@@ -8,8 +8,8 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
-
     let cards = "";
+
     data.forEach((item) => {
       cards += `
       <div class="card" id=${item.id}>
