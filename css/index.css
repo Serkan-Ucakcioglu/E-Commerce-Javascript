@@ -271,7 +271,6 @@ a {
 .product {
   background: white;
   display: flex;
-  justify-content: flex-start;
   gap: 10px;
   padding: 20px;
   margin-top: 20px;
@@ -343,7 +342,7 @@ a {
   flex-wrap: wrap;
   flex-grow: 1 !important;
   justify-content: flex-start;
-  margin-left: 10px;
+  margin-left: 1.6rem;
 }
 
 .card {
