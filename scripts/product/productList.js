@@ -1,6 +1,7 @@
 import { useFetch } from "../api/useFetch.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
+import { pagination, nextPage, prevPage } from "./pagination.js";
 
 const productList = document.querySelector(".product-list");
 
@@ -9,6 +10,8 @@ export async function getProducts(query) {
   try {
     const data = await useFetch(query);
     let cards = "";
+    const { newData, totalPage } = pagination(data);
+    console.log(newData);
 
     data.forEach((item) => {
       cards += `
