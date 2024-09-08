@@ -48,9 +48,10 @@ export async function getProducts(query) {
 
     const nextButton = document.querySelector(".next-btn");
 
-    nextButton.addEventListener("click", () => {
-      nextPage(data.length);
-      pagination(data);
+    nextButton.addEventListener("click", async () => {
+      await nextPage(4);
+      await pagination(data);
+
       createCard(pagiData);
     });
   } catch (error) {
