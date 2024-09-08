@@ -18,3 +18,5 @@ function prevPage() {
     currentPage -= 1;
   }
 }
+
+export { pagination, nextPage, prevPage };
