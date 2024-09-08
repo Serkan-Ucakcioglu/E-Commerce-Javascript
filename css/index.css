@@ -277,6 +277,7 @@ a {
 
   >.container {
     display: flex;
+    flex-direction: column;
     gap: 30px;
   }
 }
@@ -334,6 +335,10 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 4px;
+}
+
+.product-wrapper {
+  display: flex;
 }
 
 .product-list {
@@ -428,6 +433,13 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.pagi {
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center !important;
 }
 
 @media only screen and (max-width: 767px) {

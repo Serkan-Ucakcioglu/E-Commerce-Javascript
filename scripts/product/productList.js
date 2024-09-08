@@ -1,7 +1,7 @@
 import { useFetch } from "../api/useFetch.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
-import { pagination, nextPage, prevPage } from "./pagination.js";
+import { pagination, nextPage, prevPage, pagiData } from "./pagination.js";
 
 const productList = document.querySelector(".product-list");
 
@@ -33,7 +33,6 @@ function createCard(data) {
       item.category
     }">View Product</a>
         </div>
-        <button data-pagi="next">nextpage<button>
         </div>
       `;
   });
@@ -44,16 +43,15 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
+    pagination(data);
+    createCard(pagiData);
 
-    pagi;
-    createCard(newData);
-
-    const nextButton = document.querySelector("[data-pagi]");
+    const nextButton = document.querySelector(".next-btn");
 
     nextButton.addEventListener("click", () => {
       nextPage(data.length);
-
-      console.log(news, "news");
+      pagination(data);
+      createCard(pagiData);
     });
   } catch (error) {
     productList.innerHTML = `<p>Error loading products. Please try again later.</p>`;
