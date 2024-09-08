@@ -48,11 +48,17 @@ export async function getProducts(query) {
     createCard(pagiData);
 
     const nextButton = document.querySelector(".next-btn");
+    const prevButton = document.querySelector(".prev-btn");
 
     nextButton.addEventListener("click", () => {
       nextPage(4);
       pagination(data);
+      createCard(pagiData);
+    });
 
+    prevButton.addEventListener("click", () => {
+      prevPage();
+      pagination(data);
       createCard(pagiData);
     });
   } catch (error) {

@@ -5,7 +5,6 @@ let pagiData = [];
 function pagination(data) {
   let startIndex = (currentPage - 1) * itemsPerPage;
   let endIndex = startIndex + itemsPerPage;
-  console.log(startIndex, endIndex, "start-end");
 
   let newData = data.slice(startIndex, endIndex);
   pagiData = newData;
@@ -14,11 +13,11 @@ function pagination(data) {
 function nextPage(length) {
   if (currentPage !== length) {
     currentPage += 1;
-    console.log(currentPage, "next-pagidata pagination.js");
   }
 }
+
 function prevPage() {
-  if (currentPage !== 0) {
+  if (currentPage - 1 !== 0) {
     currentPage -= 1;
   }
 }
