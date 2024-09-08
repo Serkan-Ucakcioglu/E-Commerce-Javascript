@@ -13,7 +13,7 @@ export async function getProducts(query) {
     const { newData, totalPage } = pagination(data);
     console.log(newData);
 
-    data.forEach((item) => {
+    newData.forEach((item) => {
       cards += `
       <div class="card" id=${item.id}>
         <div class="card-img">
