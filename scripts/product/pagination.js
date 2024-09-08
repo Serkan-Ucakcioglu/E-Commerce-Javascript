@@ -1,5 +1,6 @@
 let itemsPerPage = 4;
 let currentPage = 1;
+let startIndex = currentPage - 1;
 let endIndex = currentPage + itemsPerPage;
 
 function pagination(data) {
