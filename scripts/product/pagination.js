@@ -3,11 +3,11 @@ let currentPage = 1;
 let startIndex = currentPage - 1;
 let endIndex = currentPage + itemsPerPage;
 
-function pagination(data) {
-  let totalPage = Math.ceil(data.length / itemsPerPage);
-  let newData = data.slice(currentPage - 1, endIndex);
+let pagiData = [];
 
-  return { newData, totalPage };
+function pagination(data) {
+  let newData = data.slice(currentPage - 1, endIndex);
+  pagiData = newData;
 }
 
 function nextPage(length) {
@@ -21,4 +21,4 @@ function prevPage() {
   }
 }
 
-export { pagination, nextPage, prevPage };
+export { pagination, nextPage, prevPage, pagiData };

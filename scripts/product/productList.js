@@ -45,18 +45,15 @@ export async function getProducts(query) {
   try {
     const data = await useFetch(query);
 
-    let { newData, totalPage } = pagination(data);
+    pagi;
     createCard(newData);
 
     const nextButton = document.querySelector("[data-pagi]");
 
     nextButton.addEventListener("click", () => {
       nextPage(data.length);
-      let { newData: news } = pagination(data);
-      newData = news;
-      console.log(news, "news");
 
-      createCard(news);
+      console.log(news, "news");
     });
   } catch (error) {
     productList.innerHTML = `<p>Error loading products. Please try again later.</p>`;
