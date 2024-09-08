@@ -4,7 +4,7 @@ import { hideLoader, showLoader } from "../utils/loader.js";
 import { pagination, nextPage, prevPage, pagiData } from "./pagination.js";
 
 const productList = document.querySelector(".product-list");
-
+const pageCount = document.querySelector(".page-count");
 function createCard(data) {
   productList.innerHTML = "";
   let cards = "";
@@ -49,6 +49,10 @@ export async function getProducts(query) {
 
     const nextButton = document.querySelector(".next-btn");
     const prevButton = document.querySelector(".prev-btn");
+
+    for (let index = 1; index < 5; index++) {
+      pageCount.innerHTML += `<span>${index}</span>`;
+    }
 
     nextButton.addEventListener("click", () => {
       nextPage(4);
