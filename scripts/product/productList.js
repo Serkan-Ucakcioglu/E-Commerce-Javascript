@@ -43,14 +43,15 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
+
     pagination(data);
     createCard(pagiData);
 
     const nextButton = document.querySelector(".next-btn");
 
-    nextButton.addEventListener("click", async () => {
-      await nextPage(4);
-      await pagination(data);
+    nextButton.addEventListener("click", () => {
+      nextPage(4);
+      pagination(data);
 
       createCard(pagiData);
     });
