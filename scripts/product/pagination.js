@@ -6,6 +6,8 @@ let endIndex = currentPage + itemsPerPage;
 function pagination(data) {
   let totalPage = Math.ceil(data.length / itemsPerPage);
   let newData = data.slice(currentPage - 1, endIndex);
+
+  return { newData, totalPage };
 }
 
 function nextPage(length) {
