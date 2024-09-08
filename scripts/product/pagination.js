@@ -12,3 +12,8 @@ function nextPage(length) {
     currentPage += 1;
   }
 }
+function prevPage() {
+  if (currentPage !== 0) {
+    currentPage -= 1;
+  }
+}
