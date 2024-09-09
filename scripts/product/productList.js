@@ -51,7 +51,7 @@ export async function getProducts(query) {
     const prevButton = document.querySelector(".prev-btn");
 
     for (let index = 1; index < 5; index++) {
-      pageCount.innerHTML += `<span>${index}</span>`;
+      pageCount.innerHTML += `<span class="page">${index}</span>`;
     }
 
     nextButton.addEventListener("click", () => {

@@ -450,7 +450,14 @@ a {
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
   transition: 300ms all;
+  border: 1px solid black;
+}
+
+.pagi-btn:hover {
+  background: white;
+  color: black;
 }
 
 .page-count {
@@ -458,11 +465,18 @@ a {
   gap: 20px;
 }
 
-.pagi-btn:hover {
+.page {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 300ms all;
+  padding: 8px;
+}
+
+.page:hover {
   background: white;
   color: black;
-  border: 1px solid black;
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 767px) {
