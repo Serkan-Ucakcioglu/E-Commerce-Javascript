@@ -1,7 +1,13 @@
 import { useFetch } from "../api/useFetch.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
-import { pagination, nextPage, prevPage, pagiData } from "./pagination.js";
+import {
+  pagination,
+  nextPage,
+  prevPage,
+  pagiData,
+  updateCurrentPage,
+} from "./pagination.js";
 
 const productList = document.querySelector(".product-list");
 const pageCount = document.querySelector(".page-count");
@@ -51,7 +57,7 @@ export async function getProducts(query) {
     const prevButton = document.querySelector(".prev-btn");
 
     for (let index = 1; index < 5; index++) {
-      pageCount.innerHTML += `<span class="page">${index}</span>`;
+      pageCount.innerHTML += `<span class="page" data-page=${index}>${index}</span>`;
     }
 
     nextButton.addEventListener("click", () => {
@@ -65,6 +71,17 @@ export async function getProducts(query) {
       pagination(data);
       createCard(pagiData);
     });
+
+    const allPage = document.querySelectorAll(".page");
+
+    for (const page of allPage) {
+      page.addEventListener("click", (e) => {
+        const pageValue = page.getAttribute("data-page");
+        updateCurrentPage(pageValue);
+        pagination(data);
+        createCard(pagiData);
+      });
+    }
   } catch (error) {
     productList.innerHTML = `<p>Error loading products. Please try again later.</p>`;
   } finally {

@@ -1,6 +1,8 @@
 let itemsPerPage = 4;
 let currentPage = 1;
 let pagiData = [];
+const nextButton = document.querySelector(".next-btn");
+const prevButton = document.querySelector(".prev-btn");
 
 function pagination(data) {
   let startIndex = (currentPage - 1) * itemsPerPage;
@@ -10,8 +12,6 @@ function pagination(data) {
   pagiData = newData;
 }
 
-const nextButton = document.querySelector(".next-btn");
-const prevButton = document.querySelector(".prev-btn");
 function nextPage(length) {
   prevButton.disabled = false;
   if (currentPage !== length) {
@@ -32,4 +32,8 @@ function prevPage() {
   }
 }
 
-export { pagination, nextPage, prevPage, pagiData };
+function updateCurrentPage(value) {
+  if (value) return (currentPage = value);
+}
+
+export { pagination, nextPage, prevPage, pagiData, updateCurrentPage };
