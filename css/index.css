@@ -453,6 +453,11 @@ a {
   transition: 300ms all;
 }
 
+.page-count {
+  display: flex;
+  gap: 20px;
+}
+
 .pagi-btn:hover {
   background: white;
   color: black;
