@@ -10,15 +10,24 @@ function pagination(data) {
   pagiData = newData;
 }
 
+const nextButton = document.querySelector(".next-btn");
+const prevButton = document.querySelector(".prev-btn");
 function nextPage(length) {
   if (currentPage !== length) {
+    prevButton.disabled = false;
+    nextButton.disabled = false;
     currentPage += 1;
+  } else {
+    nextButton.disabled = true;
   }
 }
 
 function prevPage() {
   if (currentPage - 1 !== 0) {
+    prevButton.disabled = false;
     currentPage -= 1;
+  } else {
+    prevButton.disabled = true;
   }
 }
 

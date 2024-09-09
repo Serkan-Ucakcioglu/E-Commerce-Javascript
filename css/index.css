@@ -460,6 +460,10 @@ a {
   color: black;
 }
 
+.pagi-btn:disabled {
+  opacity: 0.5;
+}
+
 .page-count {
   display: flex;
   gap: 15px;
