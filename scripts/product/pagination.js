@@ -13,8 +13,8 @@ function pagination(data) {
 const nextButton = document.querySelector(".next-btn");
 const prevButton = document.querySelector(".prev-btn");
 function nextPage(length) {
+  prevButton.disabled = false;
   if (currentPage !== length) {
-    prevButton.disabled = false;
     nextButton.disabled = false;
     currentPage += 1;
   } else {
@@ -23,6 +23,7 @@ function nextPage(length) {
 }
 
 function prevPage() {
+  nextButton.disabled = false;
   if (currentPage - 1 !== 0) {
     prevButton.disabled = false;
     currentPage -= 1;
