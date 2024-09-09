@@ -462,16 +462,18 @@ a {
 
 .page-count {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .page {
+  text-align: center;
   background-color: black;
   color: white;
   border-radius: 5px;
   cursor: pointer;
   transition: 300ms all;
   padding: 8px;
+  border: 1px solid black;
 }
 
 .page:hover {
