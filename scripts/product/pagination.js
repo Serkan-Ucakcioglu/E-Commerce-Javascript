@@ -12,6 +12,13 @@ function pagination(data) {
   pagiData = newData;
 }
 
+function changePage(newPage, data, length) {
+  updateCurrentPage(newPage);
+  nextButton.disabled = currentPage == length;
+  prevButton.disabled = currentPage == 0;
+  pagination(data);
+}
+
 function nextPage(length) {
   prevButton.disabled = false;
   if (currentPage !== length) {
@@ -36,4 +43,11 @@ function updateCurrentPage(value) {
   if (value) return (currentPage = value);
 }
 
-export { pagination, nextPage, prevPage, pagiData, updateCurrentPage };
+export {
+  pagination,
+  nextPage,
+  prevPage,
+  pagiData,
+  updateCurrentPage,
+  changePage,
+};
