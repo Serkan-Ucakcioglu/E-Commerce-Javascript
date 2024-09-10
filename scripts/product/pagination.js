@@ -16,7 +16,7 @@ function pagination(data) {
 function changePage(newPage, data, length) {
   updateCurrentPage(newPage);
   nextButton.disabled = currentPage == length;
-  prevButton.disabled = currentPage == 0;
+  prevButton.disabled = currentPage - 1 == 0;
   pagination(data);
 }
 
