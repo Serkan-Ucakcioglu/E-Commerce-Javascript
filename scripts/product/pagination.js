@@ -29,7 +29,6 @@ function updateActivePage() {
   const activePage = document.querySelector(
     `.page[data-page="${currentPage}"]`
   );
-  console.log(activePage);
 
   if (activePage) {
     activePage.classList.add("page-active");
