@@ -54,12 +54,6 @@ export async function getProducts(query) {
 
     addPaginationListeners(data, totalPages);
     createCard(pagiData);
-
-    for (let index = 1; index < 5; index++) {
-      pageCount.innerHTML += `<span class="page" data-page=${index}>${index}</span>`;
-    }
-
-    const allPage = document.querySelectorAll(".page");
   } catch (error) {
     productList.innerHTML = `<p>Error loading products. Please try again later.</p>`;
   } finally {
