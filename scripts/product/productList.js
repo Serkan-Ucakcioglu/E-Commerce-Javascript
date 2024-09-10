@@ -7,6 +7,7 @@ import {
   prevPage,
   pagiData,
   updateCurrentPage,
+  changePage,
 } from "./pagination.js";
 
 const productList = document.querySelector(".product-list");
@@ -87,4 +88,19 @@ export async function getProducts(query) {
   } finally {
     hideLoader();
   }
+}
+
+function addPaginationListeners(data, totalPages) {
+  const nextButton = document.querySelector(".next-btn");
+  const prevButton = document.querySelector(".prev-btn");
+  const allPages = document.querySelectorAll(".page");
+
+  nextButton.addEventListener("click", () => nextPage());
+
+  allPages.forEach((page) => {
+    page.addEventListener("click", (e) => {
+      const pageValue = e.target.getAttribute("data-page");
+      changePage(pageValue, data, totalPages);
+    });
+  });
 }

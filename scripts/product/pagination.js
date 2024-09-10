@@ -19,7 +19,7 @@ function changePage(newPage, data, length) {
   pagination(data);
 }
 
-function nextPage(length) {
+function nextPage(length, data) {
   prevButton.disabled = false;
   if (currentPage !== length) {
     nextButton.disabled = false;
@@ -29,7 +29,7 @@ function nextPage(length) {
   }
 }
 
-function prevPage() {
+function prevPage(data) {
   nextButton.disabled = false;
   if (currentPage - 1 !== 0) {
     prevButton.disabled = false;
