@@ -1,6 +1,7 @@
 let itemsPerPage = 4;
 let currentPage = 1;
 let pagiData = [];
+
 const nextButton = document.querySelector(".next-btn");
 const prevButton = document.querySelector(".prev-btn");
 
