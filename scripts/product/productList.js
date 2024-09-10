@@ -63,9 +63,12 @@ export async function getProducts(query) {
 }
 
 function renderPaginationList(totalPages) {
+  pageCount.innerHTML = "";
+  let page = "";
   for (let index = 1; index <= totalPages; index++) {
-    pageCount.innerHTML += `<button class="page" data-page=${index}>${index}</button>`;
+    page += `<button class="page" data-page=${index}>${index}</button>`;
   }
+  pageCount.innerHTML = page;
 
   const firstPage = document.querySelector("[data-page='1']");
   if (firstPage) {
