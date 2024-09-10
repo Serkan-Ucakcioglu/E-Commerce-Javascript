@@ -7,10 +7,8 @@ const prevButton = document.querySelector(".prev-btn");
 function pagination(data) {
   let startIndex = (currentPage - 1) * itemsPerPage;
   let endIndex = startIndex + itemsPerPage;
-
   let newData = data.slice(startIndex, endIndex);
   pagiData = newData;
-  console.log(pagiData, "pagidata", "new", newData);
 }
 
 function changePage(newPage, data, length) {
