@@ -67,6 +67,12 @@ function renderPaginationList(totalPages) {
   for (let index = 1; index <= totalPages; index++) {
     pageCount.innerHTML += `<button class="page" data-page=${index}>${index}</button>`;
   }
+  const firstPage = document.querySelector("[data-page='1']");
+  console.log(firstPage);
+
+  if (firstPage) {
+    firstPage.classList.add("page-active");
+  }
 }
 
 function addPaginationListeners(data, totalPages) {
