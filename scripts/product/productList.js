@@ -7,6 +7,7 @@ import {
   prevPage,
   pagiData,
   changePage,
+  updateActivePage,
 } from "./pagination.js";
 const productList = document.querySelector(".product-list");
 const pageCount = document.querySelector(".page-count");
@@ -64,7 +65,7 @@ export async function getProducts(query) {
 
 function renderPaginationList(totalPages) {
   for (let index = 1; index <= totalPages; index++) {
-    pageCount.innerHTML += `<button class="page" id=${index} data-page=${index}>${index}</button>`;
+    pageCount.innerHTML += `<button class="page" data-page=${index}>${index}</button>`;
   }
 }
 
@@ -81,7 +82,6 @@ function addPaginationListeners(data, totalPages) {
   });
 
   allPages.forEach((page) => {
-    page.classList.remove("page-active");
     page.addEventListener("click", (e) => {
       const pageValue = e.target.getAttribute("data-page");
       changePage(pageValue, data, totalPages);
