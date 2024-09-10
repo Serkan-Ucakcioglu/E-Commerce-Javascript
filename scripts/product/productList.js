@@ -49,7 +49,6 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
-
     pagination(data);
     createCard(pagiData);
 
