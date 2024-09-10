@@ -60,15 +60,6 @@ export async function getProducts(query) {
     }
 
     const allPage = document.querySelectorAll(".page");
-
-    for (const page of allPage) {
-      page.addEventListener("click", (e) => {
-        const pageValue = page.getAttribute("data-page");
-        updateCurrentPage(pageValue);
-        pagination(data);
-        createCard(pagiData);
-      });
-    }
   } catch (error) {
     productList.innerHTML = `<p>Error loading products. Please try again later.</p>`;
   } finally {
