@@ -53,7 +53,6 @@ export async function getProducts(query) {
     createCard(pagiData);
 
     const totalPages = Math.ceil(data.length / 4);
-
     renderPaginationList(totalPages);
     addPaginationListeners(data, totalPages);
   } catch (error) {
