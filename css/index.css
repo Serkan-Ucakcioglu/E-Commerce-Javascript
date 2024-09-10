@@ -499,6 +499,26 @@ a {
     gap: 1px;
     padding: 10px;
     margin-top: 5px;
+
+    >.container {
+      width: 100% !important;
+    }
+  }
+
+  .product-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-list {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .card {
+    width: 250px;
+    height: auto !important;
   }
 
   .category {
