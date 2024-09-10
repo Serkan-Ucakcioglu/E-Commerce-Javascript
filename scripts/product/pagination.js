@@ -17,6 +17,21 @@ function changePage(newPage, data, length) {
   nextButton.disabled = currentPage == length;
   prevButton.disabled = currentPage - 1 == 0;
   pagination(data);
+  updateActivePage();
+}
+function updateActivePage() {
+  const allPages = document.querySelectorAll(".page");
+
+  allPages.forEach((page) => {
+    page.classList.remove("page-active");
+  });
+
+  const activePage = document.querySelector(
+    `.page[data-page="${currentPage}"]`
+  );
+  if (activePage) {
+    activePage.classList.add("page-active");
+  }
 }
 
 function nextPage(length, data) {

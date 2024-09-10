@@ -7,7 +7,6 @@ import {
   prevPage,
   pagiData,
   changePage,
-  currentPage,
 } from "./pagination.js";
 const productList = document.querySelector(".product-list");
 const pageCount = document.querySelector(".page-count");
@@ -87,22 +86,6 @@ function addPaginationListeners(data, totalPages) {
       const pageValue = e.target.getAttribute("data-page");
       changePage(pageValue, data, totalPages);
       createCard(pagiData);
-      updateActivePage();
     });
   });
-}
-
-function updateActivePage() {
-  const allPages = document.querySelectorAll(".page");
-
-  allPages.forEach((page) => {
-    page.classList.remove("page-active");
-  });
-
-  const activePage = document.querySelector(
-    `.page[data-page="${currentPage}"]`
-  );
-  if (activePage) {
-    activePage.classList.add("page-active");
-  }
 }
