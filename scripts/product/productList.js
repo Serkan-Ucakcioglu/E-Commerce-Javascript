@@ -78,7 +78,7 @@ function addPaginationListeners(data, totalPages) {
     nextPage(totalPages, data), createCard(pagiData);
   });
   prevButton.addEventListener("click", () => {
-    prevPage(data), createCard(pagiData);
+    prevPage(data, totalPages), createCard(pagiData);
   });
 
   allPages.forEach((page) => {

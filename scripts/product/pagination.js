@@ -33,12 +33,12 @@ function nextPage(length, data) {
   }
 }
 
-function prevPage(data) {
+function prevPage(data, length) {
   nextButton.disabled = false;
   if (currentPage - 1 !== 0) {
     prevButton.disabled = false;
     currentPage -= 1;
-    changePage(currentPage, data, Math.ceil(data.length / itemsPerPage));
+    changePage(currentPage, data, length);
   } else {
     prevButton.disabled = true;
   }
