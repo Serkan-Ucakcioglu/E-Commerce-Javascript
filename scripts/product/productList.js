@@ -6,12 +6,11 @@ import {
   nextPage,
   prevPage,
   pagiData,
-  updateCurrentPage,
   changePage,
 } from "./pagination.js";
-
 const productList = document.querySelector(".product-list");
 const pageCount = document.querySelector(".page-count");
+
 function createCard(data) {
   productList.innerHTML = "";
   let cards = "";
@@ -50,14 +49,23 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
-    const totalPages = Math.ceil(data.length / 4);
 
-    addPaginationListeners(data, totalPages);
+    pagination(data);
     createCard(pagiData);
+
+    const totalPages = Math.ceil(data.length / 4);
+    renderPaginationList(totalPages);
+    addPaginationListeners(data, totalPages);
   } catch (error) {
     productList.innerHTML = `<p>Error loading products. Please try again later.</p>`;
   } finally {
     hideLoader();
+  }
+}
+
+function renderPaginationList(totalPages) {
+  for (let index = 1; index <= totalPages; index++) {
+    pageCount.innerHTML += `<button class="page" data-page=${index}>${index}</button>`;
   }
 }
 
@@ -73,6 +81,7 @@ function addPaginationListeners(data, totalPages) {
     page.addEventListener("click", (e) => {
       const pageValue = e.target.getAttribute("data-page");
       changePage(pageValue, data, totalPages);
+      createCard(pagiData);
     });
   });
 }

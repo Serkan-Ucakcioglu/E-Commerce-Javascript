@@ -10,6 +10,7 @@ function pagination(data) {
 
   let newData = data.slice(startIndex, endIndex);
   pagiData = newData;
+  console.log(pagiData, "pagidata", "new", newData);
 }
 
 function changePage(newPage, data, length) {
@@ -21,6 +22,8 @@ function changePage(newPage, data, length) {
 
 function nextPage(length, data) {
   prevButton.disabled = false;
+  console.log("click");
+
   if (currentPage !== length) {
     nextButton.disabled = false;
     currentPage += 1;
@@ -42,7 +45,7 @@ function prevPage(data) {
 }
 
 function updateCurrentPage(value) {
-  if (value) return (currentPage = value);
+  currentPage = parseInt(value, 10);
 }
 
 export {
