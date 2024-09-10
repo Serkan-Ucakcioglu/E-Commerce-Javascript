@@ -44,4 +44,5 @@ export {
   pagiData,
   updateCurrentPage,
   changePage,
+  currentPage,
 };

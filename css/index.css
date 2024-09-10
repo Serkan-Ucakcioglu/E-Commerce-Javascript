@@ -486,6 +486,11 @@ a {
   color: black;
 }
 
+.page-active {
+  background: white;
+  color: black;
+}
+
 @media only screen and (max-width: 767px) {
   .product {
     background: white;
