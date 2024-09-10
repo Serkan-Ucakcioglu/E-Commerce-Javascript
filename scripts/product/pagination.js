@@ -24,6 +24,7 @@ function nextPage(length, data) {
   if (currentPage !== length) {
     nextButton.disabled = false;
     currentPage += 1;
+    changePage(currentPage, data, length);
   } else {
     nextButton.disabled = true;
   }
@@ -34,6 +35,7 @@ function prevPage(data) {
   if (currentPage - 1 !== 0) {
     prevButton.disabled = false;
     currentPage -= 1;
+    changePage(currentPage, data, Math.ceil(data.length / itemsPerPage));
   } else {
     prevButton.disabled = true;
   }

@@ -96,6 +96,7 @@ function addPaginationListeners(data, totalPages) {
   const allPages = document.querySelectorAll(".page");
 
   nextButton.addEventListener("click", () => nextPage(totalPages, data));
+  prevButton.addEventListener("click", () => prevPage(data));
 
   allPages.forEach((page) => {
     page.addEventListener("click", (e) => {
