@@ -50,28 +50,14 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
+    const totalPages = Math.ceil(data.length / 4);
 
-    pagination(data);
+    addPaginationListeners(data, totalPages);
     createCard(pagiData);
-
-    const nextButton = document.querySelector(".next-btn");
-    const prevButton = document.querySelector(".prev-btn");
 
     for (let index = 1; index < 5; index++) {
       pageCount.innerHTML += `<span class="page" data-page=${index}>${index}</span>`;
     }
-
-    nextButton.addEventListener("click", () => {
-      nextPage(4);
-      pagination(data);
-      createCard(pagiData);
-    });
-
-    prevButton.addEventListener("click", () => {
-      prevPage();
-      pagination(data);
-      createCard(pagiData);
-    });
 
     const allPage = document.querySelectorAll(".page");
 
