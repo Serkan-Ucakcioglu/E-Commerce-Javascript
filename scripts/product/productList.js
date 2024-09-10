@@ -8,6 +8,7 @@ import {
   pagiData,
   changePage,
 } from "./pagination.js";
+
 const productList = document.querySelector(".product-list");
 const pageCount = document.querySelector(".page-count");
 
