@@ -25,7 +25,6 @@ function updateActivePage() {
   allPages.forEach((page) => {
     page.classList.remove("page-active");
   });
-  const test = document.querySelectorAll("[data-page]");
 
   const activePage = document.querySelector(
     `.page[data-page="${currentPage}"]`
