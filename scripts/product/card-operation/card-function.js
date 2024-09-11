@@ -14,7 +14,6 @@ function card() {
       } else {
         isProductInBasket.quantity++;
       }
-
       localStorage.setItem("basket", JSON.stringify(card));
       localStorage.setItem("basketCount", basketCount);
     },
