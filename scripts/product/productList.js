@@ -11,6 +11,7 @@ import {
 
 const productList = document.querySelector(".product-list");
 const pageCount = document.querySelector(".page-count");
+const pagi = document.querySelector(".pagi");
 
 function createCard(data) {
   productList.innerHTML = "";
@@ -50,12 +51,18 @@ export async function getProducts(query) {
   showLoader();
   try {
     const data = await useFetch(query);
-    pagination(data);
-    createCard(pagiData);
-
     const totalPages = Math.ceil(data.length / 4);
-    renderPaginationList(totalPages);
-    addPaginationListeners(data, totalPages);
+
+    if (totalPages > 1) {
+      pagi.style.display = "flex";
+      pagination(data);
+      createCard(pagiData);
+      renderPaginationList(totalPages);
+      addPaginationListeners(data, totalPages);
+    } else {
+      createCard(data);
+      pagi.style.display = "none";
+    }
   } catch (error) {
     productList.innerHTML = `<p>Error loading products. Please try again later.</p>`;
   } finally {
