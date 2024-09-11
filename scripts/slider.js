@@ -18,6 +18,7 @@ export function showSlider(index) {
   } else if (index < 0) {
     sliderIndex = slider.length - 1;
   }
+
   slider.forEach((slide) => slide.classList.remove("active-img"));
   slider[sliderIndex].classList.add("active-img");
 }
