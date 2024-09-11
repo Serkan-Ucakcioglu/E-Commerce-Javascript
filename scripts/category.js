@@ -31,7 +31,6 @@ export async function getCategories() {
 
 async function getSelectedCategory(query) {
   let endpoint = "products";
-
   if (query) {
     endpoint = `products/category/${query}`;
   }
