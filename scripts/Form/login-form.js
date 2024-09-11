@@ -1,4 +1,4 @@
-import loginAuth from "../Auth/loginAuth.js";
+import loginAuth from "../auth/loginAuth.js";
 
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
