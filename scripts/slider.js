@@ -1,9 +1,8 @@
 const slider = document.querySelectorAll(".slider img");
-
-let sliderIndex = 0;
-let invalidTimer = null;
 const nextButton = document.querySelector(".next-slider");
 const prevButton = document.querySelector(".prev-slider");
+let sliderIndex = 0;
+let invalidTimer = null;
 
 export function initializeSlider() {
   if (sliderIndex < 3) {
