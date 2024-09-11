@@ -10,6 +10,7 @@ export function createHeader() {
 export function updateBasketCount(count) {
   const basket = document.querySelector(".head-left .baskets");
   const countDiv = document.querySelector(".head-left .baskets .count");
+
   if (!countDiv && getBasketItemCount() > 0) {
     const divElement = document.createElement("div");
     divElement.className = "count";
@@ -17,6 +18,7 @@ export function updateBasketCount(count) {
     divElement.appendChild(strongElement);
     basket.appendChild(divElement);
   }
+
   let basketCountElement = document.querySelector(".count strong");
   if (basketCountElement) {
     basketCountElement.textContent = count;
