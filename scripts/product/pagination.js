@@ -19,6 +19,7 @@ function changePage(newPage, data, length) {
   pagination(data);
   updateActivePage();
 }
+
 function updateActivePage() {
   const allPages = document.querySelectorAll(".page");
 

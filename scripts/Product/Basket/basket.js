@@ -18,6 +18,7 @@ function checkCount() {
     return (basketList.textContent = "Sepet boş");
   }
 }
+
 function totalPrice() {
   till.innerHTML = `<strong>Total Price:$${totalValue()}</strong>`;
 }
