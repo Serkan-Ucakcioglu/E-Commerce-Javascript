@@ -5,10 +5,10 @@ import { hideLoader, showLoader } from "../utils/loader.js";
 import { addCard, getBasketItemCount } from "./card-operation/card-function.js";
 import { uiUtils } from "../utils/ui-utils.js";
 
+const productElement = document.querySelector(".products .container");
 let params = new URLSearchParams(window.location.search);
 let productId = params.get("id");
 let category = params.get("category");
-const productElement = document.querySelector(".products .container");
 
 async function getProductDetail() {
   showLoader();
