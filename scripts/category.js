@@ -20,6 +20,7 @@ export async function getCategories() {
             </label>
     </div>`;
     });
+
     categoryDiv.innerHTML = category;
   } catch (error) {
     console.log(error);
