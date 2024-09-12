@@ -25,7 +25,6 @@ function clearErrorMessage(inputElement) {
 
 function validateEmail() {
   const email = emailInput.value.trim();
-  const emailPattern = /[A-Za-z]/;
 
   if (emailFocus) {
     if (!email) {
