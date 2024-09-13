@@ -923,19 +923,23 @@ a {
     flex-direction: column;
     align-items: start;
     height: 200px;
+    gap: 10px;
   }
+
 
   .basket-product {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 14px;
   }
 
   .basket-operation {
     width: 100%;
     justify-content: center;
     gap: 10px;
-
+    margin-top: 10px;
   }
 }
 
