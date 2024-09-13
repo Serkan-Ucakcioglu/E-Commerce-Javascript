@@ -909,6 +909,19 @@ a {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 767px) {
+
+
+  .basket-card {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .basket-product {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 
 /* Login */
