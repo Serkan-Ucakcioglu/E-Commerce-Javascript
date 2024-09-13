@@ -912,14 +912,30 @@ a {
 @media only screen and (max-width: 767px) {
 
 
+
+  .buy-product {
+    max-width: 400px;
+  }
+
+
+
   .basket-card {
     flex-direction: column;
     align-items: start;
+    height: 200px;
   }
 
   .basket-product {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .basket-operation {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+
   }
 }
 
