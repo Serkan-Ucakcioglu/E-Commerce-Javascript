@@ -507,6 +507,7 @@ a {
   }
 
   .product-list {
+    justify-content: center;
     padding: 10px;
     margin: 0;
   }
@@ -921,6 +922,7 @@ a {
 
   .buy-product {
     max-width: 400px;
+    padding: 0px 15px;
   }
 
 
