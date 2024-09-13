@@ -912,6 +912,12 @@ a {
 @media only screen and (max-width: 767px) {
 
 
+  .basket-list {
+    >.container {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   .buy-product {
     max-width: 400px;
