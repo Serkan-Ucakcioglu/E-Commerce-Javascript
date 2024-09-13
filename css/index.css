@@ -928,8 +928,8 @@ a {
   .basket-card {
     flex-direction: column;
     align-items: center;
-    height: 200px;
-    gap: 10px;
+    height: 220px;
+    gap: 5px;
   }
 
 
