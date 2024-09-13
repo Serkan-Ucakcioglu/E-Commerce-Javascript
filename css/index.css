@@ -924,7 +924,6 @@ a {
   }
 
 
-
   .basket-card {
     flex-direction: column;
     align-items: center;
@@ -944,7 +943,8 @@ a {
   .basket-operation {
     width: 100%;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
     margin-top: 10px;
   }
 }
