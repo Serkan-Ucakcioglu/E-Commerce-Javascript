@@ -1,5 +1,5 @@
 import { useFetch } from "../api/useFetch.js";
-import { updateBasketCount } from "../utils/header.js";
+import { updateHeaderBasketCount } from "../utils/header.js";
 import { capitalizeFirstLetter } from "../utils/firsletter.js";
 import { hideLoader, showLoader } from "../utils/loader.js";
 import { addCard, getBasketItemCount } from "./card-operation/card-function.js";
@@ -57,7 +57,7 @@ async function getProductDetail() {
 
     addBtn.addEventListener("click", () => {
       addCard(data1);
-      updateBasketCount(getBasketItemCount());
+      updateHeaderBasketCount(getBasketItemCount());
     });
 
     let similarCategory = document.querySelector(".similar-category");
