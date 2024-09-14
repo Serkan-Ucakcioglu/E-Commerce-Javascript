@@ -80,6 +80,7 @@ function basketLists() {
       checkCount();
       updateHeaderBasketCount(getBasketItemCount());
       totalPrice();
+
       basketCard.querySelector("input").value = item.quantity;
       basketCard.querySelector(
         ".basket-prices"
