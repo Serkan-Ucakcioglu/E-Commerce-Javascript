@@ -24,6 +24,7 @@ function checkCount() {
   }
 }
 
+/Total price of products/;
 function totalPrice() {
   till.innerHTML = `<strong>Total Price:$${totalValue()}</strong>`;
 }
@@ -31,6 +32,7 @@ function totalPrice() {
 function basketLists() {
   const card = getCard();
 
+  /Basket Product List/;
   card.map((item) => {
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
             <div class="basket-product">
@@ -60,6 +62,7 @@ function basketLists() {
            `;
   });
 
+  /Button Quantity + and - /;
   const buttonQuantity = document.querySelectorAll("[data-quantity]");
   buttonQuantity.forEach((button) => {
     const quantityType = button.getAttribute("data-quantity");
