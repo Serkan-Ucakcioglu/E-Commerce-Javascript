@@ -10,12 +10,15 @@ import {
   totalValue,
 } from "../card-operation/card-function.js";
 
+const allBasket = document.querySelector(".basket-list");
 const basketList = document.querySelector(".basket-card-container");
 const till = document.querySelector(".till");
 
 function checkCount() {
   if (getBasketItemCount() < 1) {
-    return (basketList.textContent = "Sepet boş");
+    allBasket.style.display = "none";
+  } else {
+    basketLists();
   }
 }
 
@@ -81,5 +84,6 @@ function basketLists() {
   });
 }
 totalPrice();
-basketLists();
+checkCount();
+
 window.addEventListener("DOMContentLoaded", uiUtils);
