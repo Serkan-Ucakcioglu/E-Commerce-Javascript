@@ -722,7 +722,7 @@ a {
     justify-content: space-between;
 
     >span {
-      font-size: 15px !important;
+      font-size: 12px !important;
       font-weight: 400 !important;
     }
   }
