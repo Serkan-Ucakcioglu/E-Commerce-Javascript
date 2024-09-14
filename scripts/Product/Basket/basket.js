@@ -90,6 +90,7 @@ function basketLists() {
     });
   });
 }
+
 basketLists();
 totalPrice();
 checkCount();
