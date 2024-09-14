@@ -5,6 +5,7 @@ let pagiData = [];
 const nextButton = document.querySelector(".next-btn");
 const prevButton = document.querySelector(".prev-btn");
 
+/Slice Data/;
 function pagination(data) {
   let startIndex = (currentPage - 1) * itemsPerPage;
   let endIndex = startIndex + itemsPerPage;
@@ -12,6 +13,7 @@ function pagination(data) {
   pagiData = newData;
 }
 
+/Pagination change page number/;
 function changePage(newPage, data, length) {
   updateCurrentPage(newPage);
   nextButton.disabled = currentPage == length;
@@ -20,6 +22,7 @@ function changePage(newPage, data, length) {
   updateActivePage();
 }
 
+/active page number /;
 function updateActivePage() {
   const allPages = document.querySelectorAll(".page");
 
@@ -50,6 +53,7 @@ function prevPage(data, length) {
   }
 }
 
+/update page number/;
 function updateCurrentPage(value) {
   currentPage = parseInt(value, 10);
 }
