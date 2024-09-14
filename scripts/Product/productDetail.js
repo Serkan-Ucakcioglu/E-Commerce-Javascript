@@ -80,7 +80,7 @@ async function getProductDetail() {
           item.category
         )}`} class="view-btn"  data-id="${item.id}" data-category="${
         item.category
-      }">View Product</a>
+      }">View</a>
       </li>`;
     });
     similarCategory.innerHTML = similarDiv;
