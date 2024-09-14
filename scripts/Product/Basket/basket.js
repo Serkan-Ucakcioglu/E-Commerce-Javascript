@@ -1,4 +1,4 @@
-import { updateBasketCount } from "../../utils/header.js";
+import { updateHeaderBasketCount } from "../../utils/header.js";
 import { capitalizeFirstLetter } from "../../utils/firsletter.js";
 import { uiUtils } from "../../utils/ui-utils.js";
 import {
