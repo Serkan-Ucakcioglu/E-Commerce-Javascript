@@ -67,6 +67,8 @@ function basketLists() {
     button.addEventListener("click", (e) => {
       const basketCard = e.target.closest(".basket-card");
       const item = getCard().find((item) => item.id == basketCard.id);
+      const basketCardInput = basketCard.querySelector("input");
+      const basketItemPrice = basketCard.querySelector(".basket-prices");
 
       if (quantityType == "increase") {
         addCard(item);
@@ -81,10 +83,8 @@ function basketLists() {
       updateHeaderBasketCount(getBasketItemCount());
       totalPrice();
 
-      basketCard.querySelector("input").value = item.quantity;
-      basketCard.querySelector(
-        ".basket-prices"
-      ).textContent = `$${totalValue()}`;
+      basketCardInput.value = item.quantity;
+      basketItemPrice.textContent = `$${totalValue()}`;
     });
   });
 }
