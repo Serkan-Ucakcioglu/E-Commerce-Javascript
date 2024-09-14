@@ -7,7 +7,7 @@ export function createHeader() {
   header.appendChild(clone);
 }
 
-export function updateBasketCount(count) {
+export function updateHeaderBasketCount(count) {
   const basket = document.querySelector(".head-left .baskets");
   const countDiv = document.querySelector(".head-left .baskets .count");
 

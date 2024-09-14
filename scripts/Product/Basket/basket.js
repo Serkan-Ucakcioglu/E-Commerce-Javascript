@@ -78,7 +78,7 @@ function basketLists() {
       }
 
       checkCount();
-      updateBasketCount(getBasketItemCount());
+      updateHeaderBasketCount(getBasketItemCount());
       totalPrice();
       basketCard.querySelector("input").value = item.quantity;
       basketCard.querySelector(
