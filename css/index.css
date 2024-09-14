@@ -925,14 +925,12 @@ a {
     padding: 5px 15px;
   }
 
-
   .basket-card {
     flex-direction: column;
     align-items: center;
     height: 220px;
     gap: 5px;
   }
-
 
   .basket-product {
     display: flex;
