@@ -17,6 +17,10 @@ const till = document.querySelector(".till");
 function checkCount() {
   if (getBasketItemCount() < 1) {
     allBasket.style.display = "none";
+    const errorDiv = document.createElement("div");
+    errorDiv.classList.add("basket-error");
+    errorDiv.textContent = "Your cart is empty !";
+    document.body.appendChild(errorDiv);
   } else {
     basketLists();
   }
