@@ -742,6 +742,11 @@ a {
   }
 }
 
+.card-title {
+  font-size: 0.7rem;
+}
+
+
 .buy-btn {
   width: 100%;
   background: #0d6efd;
