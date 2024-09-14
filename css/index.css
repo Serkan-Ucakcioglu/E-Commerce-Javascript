@@ -29,6 +29,10 @@ a {
     justify-content: flex-start !important;
   }
 
+  .head-left {
+    gap: 20px;
+  }
+
   .count {
     margin-right: 10px;
   }
