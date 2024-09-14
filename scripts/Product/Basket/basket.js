@@ -21,8 +21,6 @@ function checkCount() {
     errorDiv.classList.add("basket-error");
     errorDiv.textContent = "Your cart is empty !";
     document.body.appendChild(errorDiv);
-  } else {
-    basketLists();
   }
 }
 
@@ -32,7 +30,7 @@ function totalPrice() {
 
 function basketLists() {
   const card = getCard();
-  basketList.innerHTML = "";
+
   card.map((item) => {
     basketList.innerHTML += ` <div class="basket-card" id=${item.id}>
             <div class="basket-product">
@@ -89,7 +87,7 @@ function basketLists() {
     });
   });
 }
-
+basketLists();
 totalPrice();
 checkCount();
 window.addEventListener("DOMContentLoaded", uiUtils);
