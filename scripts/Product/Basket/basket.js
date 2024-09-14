@@ -87,7 +87,7 @@ function basketLists() {
     });
   });
 }
+
 totalPrice();
 checkCount();
-
 window.addEventListener("DOMContentLoaded", uiUtils);
