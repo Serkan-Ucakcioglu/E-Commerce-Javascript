@@ -50,7 +50,7 @@ function basketLists() {
             </div>
             <span class="basket-prices">$${totalValue()}</span>
               <div class="remove-product" data-quantity="remove">
-               <img src="../../../assets/remove.svg" alt="remove">
+              <img src="../../../assets/remove.svg" alt="remove">
         <div>
             </div>
           </div>
