@@ -1,7 +1,7 @@
 import { getBasketItemCount } from "../product/card-operation/card-function.js";
-import { createHeader, updateBasketCount } from "./header.js";
+import { createHeader, updateHeaderBasketCount } from "./header.js";
 
 export function uiUtils() {
   createHeader();
-  updateBasketCount(getBasketItemCount());
+  updateHeaderBasketCount(getBasketItemCount());
 }
