@@ -16,7 +16,7 @@ const till = document.querySelector(".till");
 
 function checkCount() {
   if (getBasketItemCount() < 1) {
-    allBasket.remove();
+    allBasket.style.display = "none";
   } else {
     basketLists();
   }
