@@ -60,6 +60,7 @@ export async function getProducts(query) {
   }
 }
 
+/Pagination Page number/;
 function renderPaginationList(totalPages) {
   pageCount.innerHTML = "";
   let page = "";
@@ -74,6 +75,7 @@ function renderPaginationList(totalPages) {
   }
 }
 
+/Create Paginaiton/;
 function addPaginationListeners(data, totalPages) {
   const nextButton = document.querySelector(".next-btn");
   const prevButton = document.querySelector(".prev-btn");
@@ -95,6 +97,7 @@ function addPaginationListeners(data, totalPages) {
   });
 }
 
+/Check total page/;
 function pageCountCheck(totalPages, data) {
   if (totalPages > 1) {
     paginationDiv.style.display = "flex";
