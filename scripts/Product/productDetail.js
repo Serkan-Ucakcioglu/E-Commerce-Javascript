@@ -13,36 +13,36 @@ let category = params.get("category");
 async function getProductDetail() {
   showLoader();
   try {
-    let [data1, categoryData] = await Promise.all([
+    let [data, categoryData] = await Promise.all([
       useFetch(`products/${productId}`),
       useFetch(`products/category/${category}`),
     ]);
 
     let productDiv = `
     <div class="tree-product">
-      <div class="product-detail" id=${data1.id}>
+      <div class="product-detail" id=${data.id}>
         <div class="product-images">
           <img
             width="400px"
             height="400px"
-            src="${data1.image}"
+            src="${data.image}"
             alt="image"
             loading="lazy"
           />
         </div>
         <div class="details-product">
-          <h4>${capitalizeFirstLetter(data1.title)}</h4>
+          <h4>${capitalizeFirstLetter(data.title)}</h4>
           <div class="product-description">
             <strong>Description</strong>: ${capitalizeFirstLetter(
-              data1.description.substring(0, 200)
+              data.description.substring(0, 200)
             )}
           </div>
-          <span><strong>Price: </strong> $${data1.price}</span>
+          <span><strong>Price: </strong> $${data.price}</span>
           <span><strong>Category: </strong> ${capitalizeFirstLetter(
-            data1.category
+            data.category
           )}</span>
-          <span><strong>Rating: </strong> ${data1.rating.rate} (${
-      data1.rating.count
+          <span><strong>Rating: </strong> ${data.rating.rate} (${
+      data.rating.count
     } reviews)</span>
      <a class="buy-btn">Buy</a>
         </div>
@@ -56,7 +56,7 @@ async function getProductDetail() {
     let addBtn = productElement.querySelector(".buy-btn");
 
     addBtn.addEventListener("click", () => {
-      addCard(data1);
+      addCard(data);
       updateHeaderBasketCount(getBasketItemCount());
     });
 
