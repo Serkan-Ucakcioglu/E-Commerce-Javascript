@@ -90,7 +90,6 @@ a {
 }
 
 .head-title {
-  width: 50rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
