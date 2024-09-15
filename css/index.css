@@ -29,10 +29,6 @@ a {
     justify-content: flex-start !important;
   }
 
-  .head-left {
-    gap: 20px;
-  }
-
   .count {
     margin-right: 10px;
   }
@@ -100,7 +96,6 @@ a {
 
 .head-left {
   display: flex;
-  flex-grow: 1;
   gap: 20px;
   align-content: center;
   justify-content: space-between;
