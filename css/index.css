@@ -164,7 +164,7 @@ a {
 }
 
 #search-input {
-  width: 26em;
+  width: 100%;
   height: 3em;
   padding: 2px 50px;
   background-color: rgb(241, 241, 241);
