@@ -276,7 +276,7 @@ a {
   padding: 20px;
   margin-top: 20px;
 
-  >.container {
+  > .container {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -327,7 +327,7 @@ a {
   border: 1px solid gray;
 }
 
-.category-checkbox:checked+.checkbox {
+.category-checkbox:checked + .checkbox {
   color: white;
   border: none;
   background-color: blue;
@@ -500,7 +500,7 @@ a {
     padding: 10px;
     margin-top: 5px;
 
-    >.container {
+    > .container {
       width: 100% !important;
     }
   }
@@ -584,8 +584,6 @@ a {
     align-items: center;
     gap: 10px;
   }
-
-
 }
 
 /* Product.html CSS */
@@ -605,7 +603,7 @@ a {
     justify-content: center !important;
     align-items: center !important;
 
-    >.product-images {
+    > .product-images {
       margin-bottom: 15px;
     }
   }
@@ -624,7 +622,7 @@ a {
   }
 
   .product-images {
-    >img {
+    > img {
       width: 280px;
       height: 260px;
     }
@@ -635,7 +633,7 @@ a {
     justify-content: center !important;
     gap: 10px !important;
 
-    >h4 {
+    > h4 {
       font-size: 20px !important;
       text-align: center;
       margin-top: 5px;
@@ -660,7 +658,7 @@ a {
   align-items: center;
   gap: 15px;
 
-  >img {
+  > img {
     object-fit: contain;
     background: transparent;
     z-index: -1;
@@ -674,11 +672,11 @@ a {
   justify-content: space-evenly;
   gap: 7px;
 
-  >span {
+  > span {
     font-size: 16px;
   }
 
-  >h4 {
+  > h4 {
     white-space: pre-line;
     white-space-collapse: collapse;
   }
@@ -721,26 +719,26 @@ a {
   border: 1px solid rgb(183, 161, 161);
   border-radius: 12%;
 
-  >div {
+  > div {
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    >span {
+    > span {
       font-size: 12px !important;
       font-weight: 400 !important;
     }
   }
 
-  >a {
+  > a {
     margin-top: 5px !important;
     width: 70% !important;
     padding: 5px;
     cursor: pointer;
   }
 
-  >img {
+  > img {
     object-fit: contain;
     width: 100%;
     height: 100px;
@@ -751,7 +749,6 @@ a {
 .card-title {
   font-size: 0.7rem;
 }
-
 
 .buy-btn {
   width: 100%;
@@ -782,7 +779,7 @@ a {
   justify-content: center !important;
   margin-top: 50px;
 
-  >.container {
+  > .container {
     width: 100%;
     max-width: 800px;
   }
@@ -821,7 +818,7 @@ a {
   justify-content: space-between;
   padding: 5px 20px;
 
-  >h3 {
+  > h3 {
     font-size: 18px;
     font-weight: 500;
   }
@@ -853,14 +850,14 @@ a {
   flex: 2;
   height: 90px;
 
-  >img {
+  > img {
     object-fit: contain;
     width: 100px;
     max-height: 90px;
     mix-blend-mode: multiply;
   }
 
-  >a {
+  > a {
     font-size: 14px;
     font-weight: bold;
     color: black;
@@ -869,7 +866,7 @@ a {
     margin-left: 10px;
   }
 
-  >a:hover {
+  > a:hover {
     color: blue;
   }
 }
@@ -893,7 +890,7 @@ a {
   justify-content: space-between;
   gap: 4px;
 
-  >input {
+  > input {
     width: 30px;
     height: 25px;
     text-align: center;
@@ -901,7 +898,7 @@ a {
     border-radius: 50%;
   }
 
-  >button {
+  > button {
     display: flex;
     align-items: center;
     border: none;
@@ -931,7 +928,7 @@ a {
   .basket-list {
     padding: 0px 15px;
 
-    >.container {
+    > .container {
       display: flex;
       justify-content: center;
     }
@@ -966,7 +963,6 @@ a {
   }
 }
 
-
 /* Login */
 .login {
   width: 100%;
@@ -976,7 +972,7 @@ a {
   align-items: center;
   background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
 
-  >.container {
+  > .container {
     display: flex;
     justify-content: center;
     width: 90%;
@@ -997,7 +993,7 @@ a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   gap: 5px;
 
-  >h2 {
+  > h2 {
     font-size: 35px;
     font-style: normal;
     text-decoration: none;
@@ -1005,7 +1001,7 @@ a {
     font-weight: 350;
   }
 
-  >img {
+  > img {
     background: transparent;
   }
 }
@@ -1025,22 +1021,22 @@ a {
   margin-bottom: 10px;
   gap: 5px;
 
-  >label {
-    color: #58626B;
+  > label {
+    color: #58626b;
     font-size: 13px;
     margin-bottom: 3px;
   }
 
-  >input {
+  > input {
     width: 100%;
     height: 45px;
     outline: none;
-    border: 0.5px solid #84929E;
+    border: 0.5px solid #84929e;
     border-radius: 5px;
     padding: 0px 10px;
   }
 
-  >input:focus {
+  > input:focus {
     border: 1px solid #909090;
   }
 }
@@ -1078,14 +1074,14 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  >label {
+  > label {
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 13px;
   }
 
-  >a {
+  > a {
     font-size: 12px;
   }
 }
@@ -1096,11 +1092,11 @@ a {
   gap: 15px;
   margin-top: 10px;
 
-  >a {
+  > a {
     font-size: 13px;
   }
 
-  >span {
+  > span {
     font-size: 13px;
     color: #909090;
     font-weight: 400;
