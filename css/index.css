@@ -217,7 +217,7 @@ a {
   display: none;
   aspect-ratio: 16 / 9;
   height: 300px;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .active-img {
