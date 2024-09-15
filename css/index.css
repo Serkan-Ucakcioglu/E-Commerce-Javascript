@@ -80,7 +80,9 @@ a {
 .head-bar {
   display: flex;
   align-items: center;
+  height: 90px;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .product-title {
