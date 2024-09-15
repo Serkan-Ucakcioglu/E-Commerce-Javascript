@@ -98,9 +98,9 @@ a {
 }
 
 .head-left {
-  width: 20rem;
   display: flex;
   flex-grow: 1;
+  gap: 20px;
   align-content: center;
   justify-content: space-between;
 }
