@@ -18,6 +18,8 @@ async function getProductDetail() {
       useFetch(`products/category/${category}`),
     ]);
 
+    document.title = capitalizeFirstLetter(data.category);
+
     let productDiv = `
     <div class="tree-product">
       <div class="product-detail" id=${data.id}>
