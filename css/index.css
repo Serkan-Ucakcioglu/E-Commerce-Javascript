@@ -686,7 +686,7 @@ a {
 }
 
 .product-description {
-  white-space: pre-line;
+  white-space: normal;
   font-size: 14px;
   font-weight: 400;
 }
