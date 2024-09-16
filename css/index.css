@@ -5,7 +5,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
-  outline: 1px solid red;
 }
 
 .loader {
@@ -405,7 +404,8 @@ a {
 
 .items {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   flex: 1;
