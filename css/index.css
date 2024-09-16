@@ -667,12 +667,13 @@ a {
 }
 
 .details-product {
-  width: 250px;
+  height: 350px;
   display: flex;
+  align-self: end;
   flex-direction: column;
-  justify-content: space-evenly;
   flex: 1;
-  gap: 7px;
+  padding: 10px;
+  justify-content: space-between;
 
   > span {
     font-size: 16px;
@@ -686,7 +687,7 @@ a {
 
 .product-description {
   white-space: pre-line;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 }
 
