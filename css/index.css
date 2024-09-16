@@ -716,7 +716,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  gap: 5px;
+  gap: 7px;
   border: 1px solid rgb(183, 161, 161);
   border-radius: 12%;
 
@@ -746,6 +746,9 @@ a {
     flex-grow: 1;
   }
 }
+.similar-card:hover {
+  box-shadow: 1px 2px 8px 4px rgba(120, 119, 119, 0.649);
+}
 
 .card-title {
   font-size: 0.7rem;
@@ -766,10 +769,6 @@ a {
 
 .buy-btn:hover {
   background: #0f5aca;
-}
-
-.similar-card:hover {
-  box-shadow: 1px 2px 8px 4px rgba(120, 119, 119, 0.649);
 }
 
 /* Basket Page*/
