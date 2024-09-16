@@ -35,11 +35,6 @@ function createCard(data) {
             )}</div>
             <div class="card-price">$${item.price}</div>
           </div>
-          <a href=${`product.html?id=${item.id}&category=${encodeURIComponent(
-            item.category
-          )}`} class="view-btn" data-id="${item.id}" data-category="${
-      item.category
-    }">View Product</a>
         </div>
         </div>
       `;
