@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
+  outline: 1px solid red;
 }
 
 .loader {
@@ -364,7 +365,6 @@ a {
 
 .card-img {
   display: flex;
-  flex-grow: 1;
 }
 
 .card:hover {
