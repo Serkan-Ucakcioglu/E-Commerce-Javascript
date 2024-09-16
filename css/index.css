@@ -408,6 +408,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex: 1;
   gap: 1rem;
   margin-top: 8px;
 }
