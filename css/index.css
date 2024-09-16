@@ -672,14 +672,11 @@ a {
   display: flex;
   align-self: end;
   flex-direction: column;
-  flex: 1;
   padding: 10px;
   justify-content: space-between;
-
   > span {
     font-size: 16px;
   }
-
   > h4 {
     white-space: pre-line;
     white-space-collapse: collapse;
