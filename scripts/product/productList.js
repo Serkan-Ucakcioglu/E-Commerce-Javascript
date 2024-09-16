@@ -18,7 +18,11 @@ function createCard(data) {
   let cards = "";
   data.forEach((item) => {
     cards += `
-      <div class="card" id=${item.id}>
+      <a href=${`product.html?id=${item.id}&category=${encodeURIComponent(
+        item.category
+      )}`} class="card" data-id="${item.id}" data-category="${
+      item.category
+    }" class="card" id=${item.id}>
         <div class="card-img">
           <img
             class="product-img"
@@ -36,7 +40,7 @@ function createCard(data) {
             <div class="card-price">$${item.price}</div>
           </div>
         </div>
-        </div>
+        </a>
       `;
   });
   productList.innerHTML = cards;
