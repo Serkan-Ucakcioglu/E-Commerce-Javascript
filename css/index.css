@@ -711,7 +711,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   gap: 7px;
   border: 0.5px solid gray;
   border-radius: 10px;
@@ -747,7 +747,7 @@ a {
 }
 
 .card-title {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .buy-btn {
