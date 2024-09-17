@@ -625,14 +625,13 @@ a {
   }
 
   .details-product {
-    margin-left: 0px;
+    width: 100% !important;
     justify-content: center !important;
-    gap: 10px !important;
-
+    gap: 10px;
+    height: auto !important;
     > h4 {
-      font-size: 20px !important;
-      text-align: center;
-      margin-top: 5px;
+      font-size: 18px !important;
+      text-align: left;
       white-space: normal !important;
     }
   }
@@ -654,7 +653,7 @@ a {
     }
   }
   .similar-category {
-    padding: 0;
+    padding: 0 !important;
   }
 }
 
