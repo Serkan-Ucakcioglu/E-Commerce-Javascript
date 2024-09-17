@@ -613,7 +613,7 @@ a {
   }
 
   .similar-card {
-    width: 140px !important;
+    width: 47% !important;
     border-radius: 10px !important;
   }
 
@@ -758,7 +758,6 @@ a {
 
 .card-title {
   font-size: 0.8rem;
-  height: 20px;
 }
 
 .buy-btn {
