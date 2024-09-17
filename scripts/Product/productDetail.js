@@ -70,8 +70,8 @@ async function getProductDetail() {
           src="${item.image}"
           alt="image"
         />
-        <div class="similar-detail">
         <h5 class="card-title">${capitalizeFirstLetter(item.title)}</h5>
+        <div class="similar-detail">
         <div>
           <span> ${capitalizeFirstLetter(item.category)} </span>
           <span class="card-price"><strong>$</strong>${item.price}</span>
