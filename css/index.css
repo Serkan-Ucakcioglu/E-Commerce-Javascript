@@ -647,6 +647,17 @@ a {
   justify-content: center;
 }
 
+@media only screen and (max-width: 767px) {
+  .products {
+    > .container {
+      width: 100%;
+    }
+  }
+  .similar-category {
+    padding: 0;
+  }
+}
+
 .product-images {
   display: flex;
   flex-direction: column;
@@ -733,7 +744,6 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1;
   gap: 10px;
   > div {
     width: 100%;
