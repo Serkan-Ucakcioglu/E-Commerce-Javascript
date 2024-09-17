@@ -182,7 +182,7 @@ a {
 
   .slider img {
     width: 100%;
-    object-fit: fill;
+    object-fit: fill !important;
     max-height: 220px;
   }
 
@@ -515,11 +515,6 @@ a {
     margin: 0;
   }
 
-  .card {
-    width: 250px;
-    height: auto !important;
-  }
-
   .category {
     display: inline;
     height: 8.7rem;
@@ -572,8 +567,8 @@ a {
   }
 
   .card {
-    max-width: 10rem;
-    max-height: 30rem;
+    width: 47%;
+    height: auto;
     padding: 0.7rem;
   }
 
