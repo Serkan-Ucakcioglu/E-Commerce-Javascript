@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
-  outline: 1px solid red;
 }
 
 .loader {
