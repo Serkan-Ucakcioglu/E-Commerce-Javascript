@@ -721,6 +721,7 @@ a {
   flex-direction: column;
   gap: 5px;
   flex: 1;
+  padding: 5px;
   > img {
     object-fit: contain;
     width: 100%;
@@ -738,10 +739,10 @@ a {
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-  > span {
-    font-size: 12px !important;
-    font-weight: 400 !important;
+    > span {
+      font-size: 14px !important;
+      font-weight: 400 !important;
+    }
   }
   > a {
     margin-top: 5px !important;
