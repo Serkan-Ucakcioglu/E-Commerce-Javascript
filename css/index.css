@@ -716,13 +716,6 @@ a {
   border: 0.5px solid gray;
   border-radius: 10px;
 
-  > a {
-    margin-top: 5px !important;
-    width: 100% !important;
-    padding: 5px;
-    cursor: pointer;
-  }
-
   > img {
     object-fit: contain;
     width: 100%;
@@ -731,6 +724,7 @@ a {
   }
 }
 .similar-detail {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -738,6 +732,16 @@ a {
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+  > span {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+  > a {
+    margin-top: 5px !important;
+    width: 100% !important;
+    padding: 5px;
+    cursor: pointer;
   }
 }
 
