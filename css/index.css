@@ -720,13 +720,13 @@ a {
     object-fit: contain;
     width: 100%;
     height: 150px;
-    flex-grow: 1;
   }
 }
 .similar-detail {
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 7px;
   > div {
     width: 100%;
