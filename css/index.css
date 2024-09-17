@@ -796,10 +796,12 @@ a {
 }
 
 .basket-error {
-  font-size: 30px;
-  font-weight: 300;
   text-align: center;
   margin-top: 50px;
+  > p {
+    font-size: 25px;
+    font-weight: 300;
+  }
 }
 
 .buy-product {

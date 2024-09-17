@@ -20,7 +20,8 @@ function checkCount() {
     const errorDiv = document.createElement("div");
     const p = document.createElement("p");
     errorDiv.classList.add("basket-error");
-    p.textContent = "Your cart is empty !";
+    p.innerHTML =
+      "Your cart is empty!<br>To fill your cart with Shoplane's world of opportunities <br>you can go to the home page for the product list.";
     errorDiv.appendChild(p);
     document.body.appendChild(errorDiv);
   }
