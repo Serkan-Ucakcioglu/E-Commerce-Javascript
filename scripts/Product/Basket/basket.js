@@ -18,8 +18,10 @@ function checkCount() {
   if (getBasketItemCount() < 1) {
     allBasket.style.display = "none";
     const errorDiv = document.createElement("div");
+    const p = document.createElement("p");
     errorDiv.classList.add("basket-error");
-    errorDiv.textContent = "Your cart is empty !";
+    p.textContent = "Your cart is empty !";
+    errorDiv.appendChild(p);
     document.body.appendChild(errorDiv);
   }
 }
