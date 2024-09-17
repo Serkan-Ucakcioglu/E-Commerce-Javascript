@@ -66,11 +66,13 @@ async function getProductDetail() {
     categoryData.forEach((item) => {
       similarDiv += `
       <li class="similar-card" id=${item.id}>
+        <div class="similar-product">
         <img
           src="${item.image}"
           alt="image"
-        />
+        />        
         <h5 class="card-title">${capitalizeFirstLetter(item.title)}</h5>
+        </div>
         <div class="similar-detail">
         <div>
           <span> ${capitalizeFirstLetter(item.category)} </span>
