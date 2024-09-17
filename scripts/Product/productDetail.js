@@ -67,8 +67,6 @@ async function getProductDetail() {
       similarDiv += `
       <li class="similar-card" id=${item.id}>
         <img
-          width="100px"
-          height="100px"
           src="${item.image}"
           alt="image"
         />
