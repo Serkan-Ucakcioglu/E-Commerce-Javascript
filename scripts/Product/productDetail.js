@@ -70,6 +70,7 @@ async function getProductDetail() {
           src="${item.image}"
           alt="image"
         />
+        <div class="similar-detail">
         <h5 class="card-title">${capitalizeFirstLetter(item.title)}</h5>
         <div>
           <span> ${capitalizeFirstLetter(item.category)} </span>
@@ -80,6 +81,7 @@ async function getProductDetail() {
         )}`} class="view-btn"  data-id="${item.id}" data-category="${
         item.category
       }">View</a>
+      </div>
       </li>`;
     });
     similarCategory.innerHTML = similarDiv;
