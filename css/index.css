@@ -596,6 +596,7 @@ a {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
+    margin-bottom: 0px;
   }
 
   .similar-category-title {
