@@ -167,12 +167,14 @@ a {
 
 /*  Slider  */
 @media only screen and (max-width: 767px) {
-  .slider {
-    width: 95%;
-    margin-top: 5px;
+  .slider-section {
     > .container {
       width: 100%;
     }
+  }
+  .slider {
+    width: 95%;
+    margin-top: 5px;
   }
 
   .prev-slider {
