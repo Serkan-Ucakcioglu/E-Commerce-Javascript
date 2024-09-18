@@ -618,7 +618,6 @@ a {
 
   .details-product {
     width: 100% !important;
-    flex-basis: 350px;
     justify-content: center !important;
     gap: 10px;
     height: auto !important;
