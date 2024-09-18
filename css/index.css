@@ -596,10 +596,6 @@ a {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-
-    > .product-images {
-      margin-bottom: 15px;
-    }
   }
 
   .similar-category-title {
