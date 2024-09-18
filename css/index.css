@@ -611,11 +611,8 @@ a {
     border-radius: 10px !important;
   }
 
-  .product-images {
-    > img {
-      width: 280px;
-      height: 260px;
-    }
+  .product-images img {
+    object-fit: contain;
   }
 
   .details-product {
