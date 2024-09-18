@@ -565,7 +565,7 @@ a {
   }
 
   .card {
-    width: calc(50% - 3px);
+    width: calc(50% - 7px);
     height: auto;
     padding: 0.7rem;
   }
