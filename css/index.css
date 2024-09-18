@@ -344,7 +344,7 @@ a {
   gap: 13px;
   flex-wrap: wrap;
   flex-grow: 1 !important;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin-left: 1.6rem;
 }
 
