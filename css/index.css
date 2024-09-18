@@ -495,7 +495,7 @@ a {
     background: white;
     flex-direction: column;
     gap: 1px;
-    padding: 10px;
+    padding: 5px;
     margin-top: 5px;
 
     > .container {
