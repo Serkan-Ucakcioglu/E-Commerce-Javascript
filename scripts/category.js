@@ -43,7 +43,7 @@ categoryDiv.addEventListener("click", (event) => {
   if (event.target.matches("input[type='checkbox']")) {
     const checkbox = event.target;
     const allCheckboxes = document.querySelectorAll(".category-checkbox");
-
+    const productList = document.querySelector(".product-list");
     allCheckboxes.forEach((cb) => {
       if (cb !== checkbox) {
         cb.checked = false;
