@@ -495,7 +495,7 @@ a {
     background: white;
     flex-direction: column;
     gap: 1px;
-    padding: 5px;
+    padding: 3px;
     margin-top: 5px;
 
     > .container {
@@ -565,7 +565,7 @@ a {
   }
 
   .card {
-    width: 47%;
+    width: calc(50% - 3px);
     height: auto;
     padding: 0.7rem;
   }
