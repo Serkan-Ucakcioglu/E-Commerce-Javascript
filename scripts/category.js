@@ -48,13 +48,16 @@ categoryDiv.addEventListener("click", (event) => {
       if (cb !== checkbox) {
         cb.checked = false;
         cb.classList.remove("on");
+      } else {
       }
     });
 
     if (checkbox.checked) {
+      productList.style.justifyContent = "flex-start";
       checkbox.classList.add("on");
       getSelectedCategory(checkbox.id);
     } else {
+      productList.style.justifyContent = "space-between";
       checkbox.classList.remove("on");
       getSelectedCategory();
     }
