@@ -170,6 +170,9 @@ a {
   .slider {
     width: 95%;
     margin-top: 5px;
+    > .container {
+      width: 100%;
+    }
   }
 
   .prev-slider {
