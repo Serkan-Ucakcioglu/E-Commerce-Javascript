@@ -24,8 +24,6 @@ async function getProductDetail() {
       <div class="product-detail" id=${data.id}>
         <div class="product-images">
           <img
-            width="400px"
-            height="400px"
             src="${data.image}"
             alt="image"
             loading="lazy"
