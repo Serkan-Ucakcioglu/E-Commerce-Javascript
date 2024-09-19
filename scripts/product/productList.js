@@ -81,7 +81,7 @@ function addPaginationListeners(data, totalPages) {
   const allPages = document.querySelectorAll(".page");
 
   nextButton.addEventListener("click", () => {
-    nextPage(totalPages, data), createCard(pagiData);
+    nextPage(data, length), createCard(pagiData);
   });
   prevButton.addEventListener("click", () => {
     prevPage(data, totalPages), createCard(pagiData);

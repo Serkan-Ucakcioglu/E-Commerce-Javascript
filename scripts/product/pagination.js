@@ -39,7 +39,7 @@ function updateActivePage() {
   }
 }
 
-function nextPage(length, data) {
+function nextPage(data, length) {
   if (currentPage !== length) {
     currentPage += 1;
     changePage(currentPage, data, length);
