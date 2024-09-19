@@ -48,7 +48,6 @@ categoryDiv.addEventListener("click", (event) => {
       if (cb !== checkbox) {
         cb.checked = false;
         cb.classList.remove("on");
-      } else {
       }
     });
 
