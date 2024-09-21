@@ -82,6 +82,7 @@ function addPaginationListeners(data, totalPages) {
 
   nextButton.addEventListener("click", () => {
     nextPage(data, length), createCard(pagiData);
+    console.log("nextpage calıstı");
   });
   prevButton.addEventListener("click", () => {
     prevPage(data, totalPages), createCard(pagiData);
@@ -89,7 +90,12 @@ function addPaginationListeners(data, totalPages) {
 
   allPages.forEach((page) => {
     page.addEventListener("click", (e) => {
+      console.log(e.target, "click");
+      console.log("pccalıstı");
+
       const pageValue = e.target.getAttribute("data-page");
+      console.log(pageValue);
+
       changePage(pageValue, data, totalPages);
       createCard(pagiData);
     });
@@ -99,6 +105,8 @@ function addPaginationListeners(data, totalPages) {
 /Check total page/;
 function pageCountCheck(totalPages, data) {
   if (totalPages > 1) {
+    console.log("calıstı");
+
     paginationDiv.style.display = "flex";
     pagination(data);
     createCard(pagiData);

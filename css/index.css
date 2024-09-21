@@ -272,7 +272,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding: 20px;
+  padding: 20px 0px;
   margin-top: 20px;
 
   > .container {
@@ -350,12 +350,12 @@ a {
 }
 
 .card {
-  width: 280px;
   height: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1 1 200px;
   gap: 10px;
   padding: 10px;
   text-decoration: none;
@@ -573,8 +573,8 @@ a {
   }
 
   .card {
-    width: calc(50% - 7px);
     height: auto;
+    flex-basis: calc(50% - 7px);
     padding: 0.7rem;
   }
 
