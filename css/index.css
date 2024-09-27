@@ -376,7 +376,7 @@ a {
 }
 
 .product-img {
-  width: 100%;
+  max-width: 100%;
   height: 230px;
   object-fit: contain;
   background: transparent;
