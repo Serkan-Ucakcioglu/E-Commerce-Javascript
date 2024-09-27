@@ -589,6 +589,10 @@ a {
   .card {
     flex: 0 1 calc(33% - 8px);
   }
+  .card-detail {
+    flex-direction: column;
+    gap: 5px;
+  }
   .card-category {
     font-size: 13px;
   }
