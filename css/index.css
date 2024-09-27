@@ -497,7 +497,7 @@ a {
   color: black;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 764px) {
   .product {
     background: white;
     flex-direction: column;
@@ -582,6 +582,15 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 1089px) {
+  .card {
+    flex: 0 1 calc(33% - 8px);
+  }
+  .card-category {
+    font-size: 13px;
   }
 }
 
