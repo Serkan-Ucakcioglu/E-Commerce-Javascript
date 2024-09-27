@@ -587,7 +587,7 @@ a {
 
 @media only screen and (max-width: 1089px) {
   .card {
-    flex: 0 1 calc(50% - 8px);
+    flex: 1 1 calc(50% - 8px);
   }
   .card-detail {
     flex-direction: column;
