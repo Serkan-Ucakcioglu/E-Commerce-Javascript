@@ -592,6 +592,7 @@ a {
   }
 
   .card {
+    max-width: 500px;
     flex: 1 1 calc(50% - 8px);
   }
   .card-detail {
