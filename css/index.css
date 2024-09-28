@@ -350,6 +350,7 @@ a {
 }
 
 .card {
+  max-width: 350px;
   height: 360px;
   display: flex;
   flex-direction: column;
